@@ -1,0 +1,98 @@
+$base_font_size_px: 16;
+@import 'common/functions';
+@import 'common/variables';
+@import 'common/mixins';
+
+.prfw-cfd-popup {
+    display: none;
+
+    .modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        display: none;
+        overflow: hidden;
+        outline: 0;
+
+        &-backdrop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background-color: rgba($brand_black, 0.5);
+        }
+    }
+
+    &__dialog {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        width: auto;
+        margin: 0;
+        overflow: hidden;
+        transform: translateY(-50%);
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: em(600);
+        min-height: 16em;
+        padding: em(30);
+        margin: auto;
+        overflow-y: auto;
+        color: $brand_base;
+        background-color: $brand_white;
+        outline: 0;
+    }
+
+    &__title {
+        @include responsive-font(24);
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin-bottom: 2em;
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &__btn-wrapper {
+        text-align: center;
+
+        .prfw-btn-primary {
+            min-width: em(150);
+            padding: 1em;
+            font-weight: $font_weight_bold;
+            color: $brand_white;
+            text-transform: uppercase;
+            cursor: pointer;
+            background-color: $brand_success;
+            border-radius: em(4);
+
+            &:focus,
+            &:hover {
+                background-color: darken($brand_success, 10%);
+            }
+        }
+    }
+
+    &.prfw-cfd-popup-open {
+        &,
+        .modal,
+        .prfw-modal {
+            display: block;
+        }
+    }
+}

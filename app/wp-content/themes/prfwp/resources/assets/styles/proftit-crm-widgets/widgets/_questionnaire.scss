@@ -1,0 +1,233 @@
+//WIDGET
+.#{questionnaireprfw} {
+    &__page-index {
+        color: rgba($brand_base, 0.6);
+        text-align: center;
+    }
+
+    &__list {
+        padding-left: 2.5em;
+        list-style: none;
+    }
+
+    &__header {
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    &__question {
+        position: relative;
+        font-size: 1.6rem;
+        color: $brand_base;
+
+        &-counter {
+            position: absolute;
+            top: 0;
+            left: -2.5em;
+            display: inline-block;
+            width: 1.8em;
+            text-align: right;
+        }
+    }
+
+    &__answers {
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 2.5em;
+    }
+
+    &__footer {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+    }
+
+    &__title-complete {
+        margin-bottom: 25px;
+    }
+
+    label {
+        font-size: 1.6rem;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.5em;
+        font: inherit;
+        line-height: 1;
+        color: $brand_dark;
+        background-color: transparent;
+        border: 1px solid transparent;
+        border-bottom-color: $brand_gray;
+        border-radius: 0;
+    }
+
+    .chosen-container {
+        width: 100% !important;
+        height: 6rem;
+        padding: 0 1.9rem;
+        font-size: 1.8rem;
+        border: 1px solid $brand_gray;
+
+        &-active {
+            border-color: $brand_primary;
+        }
+
+        .chosen-search {
+            input {
+                padding-left: 2em;
+            }
+        }
+
+        .chosen-single {
+            height: 100%;
+            padding-left: 0;
+        }
+
+        &.chosen-with-drop .chosen-drop {
+            max-height: 50em;
+        }
+    }
+
+    [class*='prfw__control'] {
+        margin-bottom: 3em;
+    }
+
+    .prfw-form-control {
+        @include responsive-font(18);
+        padding: 1.9rem;
+        height: 6rem;
+        //color: $brand_primary;
+        background-color: transparent;
+        border: 1px solid $brand_gray !important;
+        border-radius: em(10, 16);
+
+        &:focus {
+            border-color: $brand_primary;
+        }
+    }
+
+    .prfw-btn {
+        @include button();
+        @include button_lg();
+        color: $brand_white;
+        background-color: $brand_primary;
+        border-color: transparent;
+        text-transform: initial;
+
+        &-primary {
+            color: $brand_white;
+
+            &:hover {
+                background-color: $brand_primary_active;
+            }
+        }
+
+        &-prev {
+            border: transparent;
+            background-color: transparent;
+            color: $brand_dark;
+
+            &:hover {
+                background-color: rgba($brand_primary, 0.2);
+            }
+        }
+
+        &-skip {
+            color: $brand_primary;
+            border: transparent;
+            background-color: transparent;
+
+            &:hover {
+                background-color: rgba($brand_primary, 0.2);
+            }
+        }
+
+        &-next {
+            &:hover {
+                background-color: $brand_primary_active;
+            }
+        }
+    }
+
+    .prfw-radio {
+        input + span {
+            width: em(24, 16);
+            height: em(24, 16);
+
+            &::before {
+                position: relative;
+                top: initial;
+                left: initial;
+                transform: none;
+                border: 2px solid $brand_gray;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .prfw-checkbox {
+        &:not(.prf-id-general-terms-checkbox-field) {
+            color: $brand_base;
+            position: relative;
+            display: block;
+            height: 4rem;
+
+            input {
+                &:checked + span {
+                    &::before {
+                        background-color: $brand_primary;
+                        border-color: $brand_primary;
+                    }
+                }
+            }
+        }
+
+        input + span {
+            width: 2rem;
+            min-width: 2rem;
+            height: 2rem;
+            margin-right: 1em;
+
+            &::before {
+                background-color: transparent;
+                border-color: $brand_gray;
+                border-width: 2px;
+                border-radius: em(6, 16);
+            }
+
+            &::after {
+                background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26"><path  fill="%23fff" d="M22.6 4.7L20.8 3.5C20.3 3.2 19.6 3.3 19.3 3.8L10.5 16.8 6.4 12.7C6 12.3 5.3 12.3 4.9 12.7L3.4 14.3C2.9 14.7 2.9 15.4 3.4 15.8L9.6 22C9.9 22.3 10.5 22.6 11 22.6 11.5 22.6 12 22.3 12.3 21.8L22.9 6.2C23.2 5.7 23.1 5.1 22.6 4.7Z"/></svg>');
+            }
+        }
+    }
+
+    .prf-id-general-terms-checkbox-field {
+        margin-top: 1em;
+
+        p {
+            font-size: 1.6rem;
+        }
+
+        a {
+            color: $brand_primary;
+            text-decoration: none;
+
+            strong {
+                font-weight: normal;
+                text-decoration: none !important;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

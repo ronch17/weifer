@@ -1,0 +1,13 @@
+.acfm-section {
+    position: relative;
+    z-index: 1;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &.acfm-z-index--minus {
+        z-index: -1;
+    }
+}

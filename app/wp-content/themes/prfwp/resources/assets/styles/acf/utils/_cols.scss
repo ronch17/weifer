@@ -1,0 +1,74 @@
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+    $min: map-get($breakpoints, $name);
+
+    @return if($min != 0, $min, null);
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+    $min: breakpoint-min($name, $breakpoints);
+
+    @if $min {
+        @media (min-width: $min) {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+    @return if(breakpoint-min($name, $breakpoints) == null, '', '-#{$name}');
+}
+
+@mixin make-col($size, $columns) {
+    flex: 0 0 percentage($size / $columns);
+    // Add a `max-width` to ensure content within each column does not blow out
+    // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+    // do not appear to require this.
+    max-width: percentage($size / $columns);
+}
+
+$grid-breakpoints: (
+    md: 992px,
+    lg: 1400px,
+);
+
+@mixin make-grid-columns($columns, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            @for $i from 1 through $columns {
+                @if ($i == 1) or ($i >= 23) {
+                    // dont
+                } @else {
+                    .acfm-col#{$infix}-#{$i} {
+                        @include make-col($i, $columns);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include make-grid-columns(24);
+
+// Custom weifer columns adjustment
+
+.acfm-col-md-8,
+.acfm-col-lg-8 {
+    flex: 0 0 32%;
+}
+
+.acfm-col-lg-12 {
+    flex: 0 0 49%;
+    @media #{$lg} {
+        max-width: 49%;
+    }
+}

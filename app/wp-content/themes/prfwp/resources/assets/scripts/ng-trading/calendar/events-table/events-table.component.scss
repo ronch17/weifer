@@ -1,0 +1,35 @@
+@import 'resources/assets/styles/calendar/calendar-imports';
+
+:local {
+    .table {
+        @include responsive-font(16, 10);
+    }
+
+    .head {
+        display: flex;
+    }
+
+    .headCell {
+        flex: 1;
+        font-weight: bold;
+        line-height: 5.2rem;
+        color: $brand_secondary;
+        text-transform: capitalize;
+        background-color: #f0f0f1;
+
+        &:nth-child(4) {
+            min-width: 40%;
+        }
+
+        &:nth-child(2) {
+            min-width: 30%;
+        }
+    }
+}
+
+.cell {
+    &--time {
+        width: 2.45rem;
+        padding-left: 1.4rem;
+    }
+}

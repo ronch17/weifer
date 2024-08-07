@@ -1,0 +1,43 @@
+.prfwp-navbar__menu {
+    li {
+        position: relative;
+
+        //@media #{$navbar_breakpoint} {
+        //    background-color: $brand_white;
+        //}
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+        padding: 1em 0 0.5em;
+        margin: 0 1em 0.5em;
+        overflow: hidden;
+        font-weight: $font_weight_medium;
+        white-space: nowrap;
+        vertical-align: middle;
+
+        &::before {
+            position: absolute;
+            right: 51%;
+            bottom: 0;
+            left: 51%;
+            z-index: 4;
+            height: 2px;
+            content: '';
+            background: $brand_primary;
+            transition-timing-function: ease-out;
+            transition-duration: 0.3s;
+            transition-property: left, right;
+        }
+    }
+
+    a:hover::before {
+        right: 0;
+        left: 0;
+    }
+
+    .active > a {
+        border-bottom: 2px solid $brand_primary;
+    }
+}

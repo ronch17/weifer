@@ -1,0 +1,65 @@
+.acfm-row {
+    &__col:not(:last-child) {
+        margin-bottom: 2em;
+    }
+
+    &--reverse-columns {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .acfm-row__col {
+            &:first-child {
+                margin-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+    @media #{$lg} {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+
+        &--justify-center {
+            justify-content: center;
+        }
+
+        &--justify-between {
+            justify-content: space-between;
+        }
+
+        &--justify-left {
+            justify-content: flex-start;
+        }
+
+        &--justify-right {
+            justify-content: flex-end;
+        }
+
+        &--align-center {
+            align-items: center;
+        }
+
+        &--align-stretch {
+            align-items: stretch;
+        }
+
+        &__col {
+            position: relative;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 0;
+
+            &:not(:last-child) {
+                @media #{$xl} {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

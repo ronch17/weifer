@@ -1,0 +1,77 @@
+$base-font-size-px: 16;
+$animation-speed: 10s;
+@import 'resources/assets/styles/common/functions';
+@import 'resources/assets/styles/common/variables';
+@import 'resources/assets/styles/common/mixins';
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateY(-320px);
+    }
+}
+
+:local {
+    .table {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .body {
+        .acfm-assets-ticker & {
+            flex-direction: column;
+            max-height: em(510);
+            animation: 'scroll' $animation-speed linear infinite;
+            flex-wrap: nowrap;
+        }
+
+        .acfm-assets-table & {
+            flex-direction: column;
+        }
+
+        .acfm-assets-column & {
+            flex-direction: column;
+            padding: 0 1rem;
+        }
+
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        @media #{$xl} {
+            .row {
+                position: relative;
+            }
+
+            .acfm-assets-ticker & {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .head {
+        display: flex;
+    }
+
+    .headCell {
+        flex: 1;
+        line-height: 5.2rem;
+        color: $brand_white;
+        text-transform: capitalize;
+        background-color: $brand_secondary;
+
+        &:first-child {
+            min-width: 40%;
+        }
+    }
+}
+
+.cell {
+    &--name {
+        width: 100%;
+    }
+}

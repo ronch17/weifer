@@ -1,0 +1,245 @@
+.acfm-cpt-tax-tabs {
+    &__container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+
+        @media #{$xl} {
+            z-index: 5;
+            margin-top: -40rem;
+        }
+    }
+
+    &__term {
+        display: none;
+        border-top: 0;
+
+        &.active {
+            display: block;
+        }
+
+        &:not(.show) {
+            opacity: 0;
+        }
+
+        &__description {
+            padding: 1em 0;
+        }
+
+        &__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+        font-weight: $font_weight_medium;
+        border-right: 1px solid;
+        border-left: 1px solid;
+
+        &-wrapper {
+            position: relative;
+            margin-bottom: 4rem;
+        }
+
+        &-toggle {
+            position: relative;
+            padding: 1em 4.5em 1em 1.5em;
+            border: 1px solid $brand_primary;
+
+            &::after {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 3em;
+                content: '';
+                border-left: 1px solid $brand_black;
+            }
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: 1em;
+                width: 0;
+                height: 0;
+                content: '';
+                border: 0.5em solid transparent;
+                border-top-color: $brand_black;
+                border-bottom-width: 0;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__badge {
+            position: absolute;
+            display: inline-block;
+            min-width: 1.6em;
+            padding: 0 0.4em;
+
+            @include responsive-font(20, 14);
+            color: $brand_dark;
+            text-align: center;
+
+            .#{acfm-cpt-tax-tabs__nav-toggle} & {
+                right: auto;
+            }
+
+            &::before {
+                padding: 0 0.1em;
+                content: '(';
+            }
+
+            &::after {
+                padding: 0 0.1em;
+                content: ')';
+            }
+        }
+
+        &-toggle,
+        &__link {
+            @include responsive-font(20, 14);
+            display: flex;
+            flex: 1;
+            flex-basis: 3em;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 2em;
+            line-height: 1.4;
+            text-decoration: none;
+            background-color: $brand_light;
+
+            svg {
+                display: none;
+            }
+        }
+
+        &__link {
+            position: relative;
+            min-height: 4.5rem;
+            padding: 0.8em 1.8em 0.8em 0.5em;
+            text-align: center;
+            border-bottom: 1px solid $brand_primary;
+
+            > span {
+                position: relative;
+            }
+        }
+    }
+
+    @media #{$md} {
+        &__container {
+            padding-top: 0;
+        }
+
+        &__nav {
+            position: initial;
+            flex-direction: row;
+            justify-content: space-between;
+            overflow: visible;
+            border-right: 0;
+            border-left: 0;
+
+            &-wrapper {
+                margin: 2rem 0 7rem;
+            }
+
+            &-toggle {
+                flex: initial;
+                background-color: transparent;
+            }
+
+            &__badge {
+                @include transition();
+                top: initial;
+                bottom: 0;
+                padding: 0 0.4em;
+
+                .active & {
+                    @include transition();
+                    color: $brand_white;
+                }
+            }
+
+            &__link {
+                @include transition();
+                @include brand-shadow();
+                flex: initial;
+                flex: 1;
+                padding: 2em 2em 2em 0;
+                margin: 0 1em;
+                border-bottom: 0;
+                border-radius: $brand_border_radius;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.active {
+                    @include transition();
+                    color: $brand_white;
+                    background-color: $brand_primary;
+
+                    svg {
+                        color: $brand_white;
+                    }
+                }
+            }
+        }
+
+        &__term {
+            &__list {
+                column-count: 2;
+                column-gap: 2em;
+            }
+        }
+    }
+
+    @media #{$xl} {
+        &__nav {
+            &-toggle {
+                display: none;
+            }
+
+            &-wrapper {
+                position: relative;
+                margin-bottom: 16rem;
+            }
+
+            &__link {
+                position: relative;
+
+                svg {
+                    display: block;
+                    align-self: center;
+                    margin: 0 0 2rem 1em;
+                    color: $brand_primary;
+                }
+
+                &.active {
+                    svg {
+                        color: $brand_white;
+                    }
+                }
+            }
+        }
+        &__term {
+            &__list {
+                column-count: 2;
+                column-gap: 14em;
+            }
+        }
+    }
+}

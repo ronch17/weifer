@@ -1,0 +1,43 @@
+// stylelint-disable selector-max-compound-selectors
+// stylelint-disable selector-max-type
+
+.prfwp-navbar__menu {
+    .pll-parent-menu-item {
+        img {
+            display: inline-block;
+            width: 1.15em;
+            height: 1.1em;
+            margin: 0;
+            border-radius: 50%;
+        }
+    }
+
+    @media #{$navbar_breakpoint} {
+        .pll-parent-menu-item {
+            > a {
+                padding: 1em 0 0;
+
+                img {
+                    margin-top: -0.2em;
+                }
+            }
+
+            .sub-menu {
+                flex-direction: column;
+            }
+
+            .lang-item {
+                > a {
+                    align-items: unset;
+                    justify-content: end;
+                }
+            }
+        }
+
+        .sub-menu-toggle {
+            .pll-parent-menu-item & {
+                right: 0;
+            }
+        }
+    }
+}

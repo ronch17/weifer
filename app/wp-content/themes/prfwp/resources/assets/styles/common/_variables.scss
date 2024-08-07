@@ -1,0 +1,150 @@
+/* stylelint-disable */
+@import '../configs/maps/colors';
+
+/** Font */
+$font_base: 'Montserrat', sans-serif;
+$font_secondary: false;
+
+$letter_spacing: false;
+
+$font_weight_light: 300;
+$font_weight_regular: 400;
+$font_weight_medium: 500;
+$font_weight_bold: 700;
+
+$base_font_size: #{$base_font_size_px / 10}rem;
+
+/** Brand border-radius */
+$brand_border_radius: 1.5rem;
+
+/** Brand shadow */
+$brand_shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+/** Header colors */
+$header_initial_background: $brand_white;
+$header_sticky_background: $brand_white;
+$header_link_color: $brand_base;
+
+/** LoginPopup  */
+$loginPopup_top_position: calc(100% + 15px);
+$loginPopup_width: em(340, 16);
+
+/** Buttons  */
+$brand_button_radius: 5rem;
+$button_second_margin: 1vw;
+$button_primary_background: $brand_primary;
+$button_primary_background_hover: $brand_primary_active;
+
+/**  CustomerTopBar  */
+$customerTopBar_fullWidth: false;
+$customerTopBar_color: $brand_white;
+$customerTopBar_background: $brand_primary;
+$customerTopBar_chosen_background: $brand_white;
+
+/** Box Model  */
+$spacer: 2rem;
+$enable-rounded: false;
+
+/** Animation & Transitions */
+$easing: cubic-bezier(0.4, 0.25, 0.3, 1);
+
+/** Breakpoint */
+// Small screen / phone
+$xs: (
+    min-width: em(321, 16),
+);
+$sm: (
+    min-width: em(576, 16),
+);
+// Medium screen / tablet
+$until_md: (
+    max-width: em(767, 16),
+);
+$md: (
+    min-width: em(768, 16),
+);
+$until_lg: (
+    max-width: em(991, 16),
+);
+$lg: (
+    min-width: em(992, 16),
+);
+// Large screen / desktop
+$until_xl: (
+    max-width: em(1199, 16),
+);
+$xl: (
+    min-width: em(1200, 16),
+);
+$until_xxl: (
+    max-width: em(1599, 16),
+);
+$xxl: (
+    min-width: em(1600, 16),
+);
+
+/** Navbar */
+$navbar_until_breakpoint: $until_xl;
+$navbar_breakpoint: $xl;
+
+/** Growl */
+$growl_padding: 0.8em;
+$growl_shadow: 0 em(1) em(3) 0 rgba($brand_black, 0.2);
+
+/** Block-ui */
+$block_ui_loader_border_color: rgba($brand_dark, 0.2);
+
+/** Forms */
+$form_control_color: $brand_dark;
+$form_control_placeholder: $brand_base;
+$form_control_background: $brand_white;
+$form_control_height: 5rem;
+$form_control_radius: em(6);
+$form_control_border_color: $brand_dark;
+$form_control_border: 1px solid $form_control_border_color;
+
+/** Controls  */
+$controls_radius: $form_control_radius;
+$controls_label_color: $brand_primary;
+$controls_color: $form_control_color;
+$controls_placeholder_color: $form_control_placeholder;
+$controls_border_focus_color: $brand_primary;
+$controls_background: transparent;
+$controls_padding: 6px 9px;
+$controls_line_height: 1.2;
+$controls_height_px: 31px;
+$controls_border_color: $form_control_border_color;
+$controls_border: $form_control_border;
+
+/** Chosen  */
+$chosen_single_color: $controls_placeholder_color;
+$chosen_single_color_value: $controls_color;
+$chosen_border_color: $controls_border_color;
+$chosen_outline_borders_color: $controls_border_focus_color;
+$chosen_results_borders_color: $controls_border_focus_color;
+$chosen_background: $form_control_background;
+$chosen_padding: $controls_padding;
+$chosen_single_padding: $controls_padding;
+$chosen_radius: 0;
+$chosen_arrow_color: $brand_base;
+$chosen_drop_shadow: false;
+$chosen_search_background: transparent;
+$chosen_search_svg_color: $brand_base_svg;
+$chosen_highlight_color: $brand_base;
+$chosen_highlight_background_color: $brand_secondary;
+$methodSelect_wire_card_color: $brand_base_svg;
+$methodSelect_lock_color: $brand_base_svg;
+
+/** Table  */
+$table_th_color: $brand_base;
+$table_border_color: $brand_gray;
+$table_bordered_th_color: $brand_white;
+$table_bordered_border: false;
+$table_bordered_th_background: $brand_primary;
+$tabs_link_color: $brand_base;
+
+/** SVG Icons Inline CSS  */
+$edit_button_svg_icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 832 812"><path fill="#{$brand_primary}" d="M41.08 61.53A136.13 136.13 0 0 0 1 157.98v517.49c0 37.58 15.35 71.71 40.08 96.45A136.13 136.13 0 0 0 137.53 812h517.49c37.58 0 71.72-15.35 96.45-40.08a136.13 136.13 0 0 0 40.08-96.45V227.96l-61.84 61.44v386.07a74.47 74.47 0 0 1-21.96 52.73 74.45 74.45 0 0 1-52.73 21.96H137.53A74.45 74.45 0 0 1 84.8 728.2a74.46 74.46 0 0 1-21.97-52.73V157.98a74.42 74.42 0 0 1 21.97-52.73 74.46 74.46 0 0 1 52.73-21.97h424.88l64.12-61.83h-489a136.14 136.14 0 0 0-96.45 40.08zm726.35 118.84L651.65 64.59 271.71 444.53l115.77 115.78zm53-106.81L758.47 11.6a38.16 38.16 0 0 0-53.81 0l-26.91 26.91 115.77 115.78 26.9-26.91a38.16 38.16 0 0 0 0-53.81zM288.2 599.61l69.47-13.69-55.78-55.78-55.78-55.78-13.69 69.47-13.69 69.47z"/></svg>';
+$edit_button_css_icon: url('data:image/svg+xml; utf8, #{str-replace($edit_button_svg_icon, '#', '%23')}');
+$signup_widget_chosen_search_svg_icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="#{$brand_base}"><path d="M443 126.2h-2.2c0 0 0 0 0 0-171.1 0-310.1 137.6-312.4 308.2 1.8 171.2 140.8 309 311.8 309h3.5c0.2 0 0.3 0 0.5 0 62.5 0 120.8-18.3 169.7-49.8-5.9-0.1-1.2 8.5 5.5 15.4l196 182.4c9.8 8.9 22.9 14.3 37.2 14.3 30.7 0 55.5-24.8 55.5-55.5 0-16.3-7-31-18.3-41.2l-196.2-179.8-4.4-2.7c41.8-51.1 67.2-117.1 67.2-189.1 0-0.2 0-0.5 0-0.7v-2c-1.9-170.8-140.8-308.5-311.8-308.6h-1.7zM443 688.7h-2.8c0 0 0 0 0 0-140.8 0-255.2-113.1-257.2-253.4 1.7-141 116.2-254.4 257.2-254.5h4.4c140.8 0 255.1 113.1 257.2 253.4-1.8 141.2-116.3 254.6-257.2 254.6h-1.6z"/></svg>';
+$signup_widget_chosen_search_css_icon: url('data:image/svg+xml; utf8, #{str-replace($signup_widget_chosen_search_svg_icon, '#', '%23')}');

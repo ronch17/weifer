@@ -1,0 +1,26 @@
+.acfm-title--has-decor {
+    &::after {
+        display: block;
+        width: 8.4rem;
+        height: 0.3rem;
+        margin: 2rem 0 3rem;
+        content: '';
+        background-color: $brand_base;
+
+        .acfm-text-color-white & {
+            background-color: $brand_white;
+        }
+
+        .acfm-text-align-center & {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .acfm-mobile-align & {
+            @media #{$navbar_until_breakpoint} {
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+}

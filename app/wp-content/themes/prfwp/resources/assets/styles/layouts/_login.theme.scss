@@ -1,0 +1,98 @@
+/* stylelint-disable */
+
+.prfwp-loginWidget {
+    &__depositBtn,
+    &__logoutBtn,
+    &__signUpBtn-lg {
+        @include button_sm();
+        margin: 0.7em 0.5em;
+        overflow: hidden;
+        color: $brand_white;
+        white-space: nowrap;
+        background: $brand_primary;
+        transition: 0.8s ease-out;
+
+        &:hover {
+            .open-account-text {
+                z-index: 4;
+                color: $brand_white;
+                transition: 0.8s ease-out;
+            }
+        }
+    }
+
+    &__depositBtn {
+        margin-bottom: 1em;
+    }
+
+    &__loginPopupCtrl,
+    &__logoutBtn {
+        @include button_outline();
+        color: $brand_dark;
+
+        svg.svg-arrow {
+            left: 68%;
+        }
+
+        &:hover {
+            color: $brand_dark;
+            border: 1px solid $brand_dark;
+        }
+    }
+
+    &__signUpBtn-lg,
+    &__depositBtn {
+        @include button-primary();
+
+        &::after {
+            display: none;
+        }
+
+        &:hover {
+            color: $brand_primary;
+            background: $brand_white;
+        }
+    }
+
+    &__forgotPasswordBtn {
+        line-height: 1;
+        color: $brand_secondary;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__signUpBtn-sm {
+        text-decoration: underline;
+    }
+
+    @media #{$navbar_breakpoint} {
+        &__loginPopupCtrl,
+        &__signUpBtn-lg {
+            display: flex;
+        }
+
+        &__depositBtn {
+            margin: 0;
+        }
+
+        &__loginPopup {
+            top: $loginPopup_top_position;
+            min-width: $loginPopup_width;
+        }
+
+        &__depositBtn,
+        &__loginPopupCtrl,
+        &__logoutBtn,
+        &__signUpBtn-lg {
+            @include font-size-xs();
+            padding: 1.5rem 3rem;
+            margin: 0 0 0 $button_second_margin;
+            svg {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@import 'mixins/transition';
+
+.fade {
+    @include twbsTransition($transition-fade);
+
+    &:not(.show) {
+        opacity: 0;
+    }
+}
+
+.collapse {
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    @include twbsTransition($transition-collapse);
+}

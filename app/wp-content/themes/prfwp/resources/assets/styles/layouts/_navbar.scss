@@ -1,0 +1,126 @@
+/* stylelint-disable */
+
+.prfwp-navbar {
+    z-index: 3;
+
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 170rem;
+    }
+
+    &__brand {
+        &-wrapper {
+            display: inherit;
+        }
+    }
+
+    &__navigation {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1em 0;
+        color: $brand_dark;
+        text-align: left;
+        background-color: $header_sticky_background;
+
+        &.show:not(.collapsing) {
+            z-index: 3;
+            max-height: calc(100vh - 4rem);
+            overflow-y: visible;
+        }
+    }
+
+    &__menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        .prfwp-menu-customer {
+            display: none;
+
+            .prfwp-customer & {
+                display: block;
+            }
+        }
+
+        .prfwp-menu-guest {
+            .prfwp-customer & {
+                display: none;
+            }
+        }
+    }
+
+    @media #{$navbar_breakpoint} {
+        &__container {
+            position: relative;
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        &__navigation {
+            position: initial;
+            width: initial;
+            padding: 0;
+            background-color: initial;
+
+            &.collapsing {
+                position: initial;
+                display: flex;
+                height: auto;
+                overflow: initial;
+            }
+
+            &.collapse {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+
+                &::before {
+                    position: absolute;
+                    right: 51%;
+                    bottom: 0;
+                    left: 51%;
+                    z-index: 4;
+                    height: 2px;
+                    content: '';
+                    background: $brand_primary;
+                    transition-timing-function: ease-out;
+                    transition-duration: 0.3s;
+                    transition-property: left, right;
+                }
+
+                a:hover::before {
+                    right: 0;
+                    left: 0;
+                }
+                @media #{$xl} {
+                    width: 100%;
+                }
+                @media #{$xxl} {
+                    flex-direction: row;
+                }
+            }
+
+            &.show:not(.collapsing) {
+                overflow: initial;
+            }
+        }
+
+        &__menu {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+svg#Logo {
+    path.logo-text {
+        fill: $brand_white;
+    }
+}

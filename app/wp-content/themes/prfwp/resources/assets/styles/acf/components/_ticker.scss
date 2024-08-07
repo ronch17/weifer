@@ -1,0 +1,18 @@
+.acfm-ticker {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: em(40);
+    padding-top: em(5);
+    color: $brand_black;
+    background-color: $brand_white;
+    border: 1px solid $brand_gray;
+    @media #{$md} {
+        translate: 0% -500%;
+    }
+
+    iframe {
+        padding: 0;
+        margin: 0;
+    }
+}

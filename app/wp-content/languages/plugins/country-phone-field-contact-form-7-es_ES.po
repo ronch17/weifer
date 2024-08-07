@@ -1,0 +1,217 @@
+# Translation of Plugins - Country &amp; Phone Field Contact Form 7 - Development (trunk) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Country &amp; Phone Field Contact Form 7 - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-11 07:44:26+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Country &amp; Phone Field Contact Form 7 - Development (trunk)\n"
+
+#: country-phone-field-contact-form-7.php:71
+msgid "Get your website on the first page of Google"
+msgstr "Pon tu web en la primera página de Google"
+
+#: includes/settings.php:123
+msgid ""
+"Countries code must two character length and comma separated.\n"
+"\t\t\t\t\t\tWrong Value: "
+msgstr ""
+"El código de los países debe tener una longitud de dos caracteres y estar separado por una coma.\n"
+"\t\t\t\t\t\tValor incorrecto: "
+
+#: includes/phone-text.php:235
+msgid "Number Only"
+msgstr "Solo números"
+
+#: includes/phone-text.php:231 includes/phone-text.php:234
+msgid "Field Validation"
+msgstr "Validación del campo"
+
+#: includes/phone-text.php:127
+msgid "Phone number must be numbers only"
+msgstr "El número de teléfono debe tener solo números"
+
+#: includes/settings.php:259
+msgid "Disable phone number dial code. After checkbox enable. Dial code will not visible"
+msgstr "Desactivar el código de marcación del número de teléfono. Después de activar la casilla de verificación, el código de marcación no será visible."
+
+#: includes/settings.php:270
+msgid "After enable this check box. The phone number dial code will selected base on your computer IP Address. If default country not selected."
+msgstr "Después de activar esta casilla de verificación, el código de marcación del número de teléfono se seleccionará en base a la dirección IP de tu ordenador, si el país por defecto no está seleccionado."
+
+#: includes/settings.php:204
+msgid "After enable this check box. The country dropdown will selected base on your computer IP Address. If default country not selected."
+msgstr "Después de activar esta casilla de verificación, se seleccionará el país en el menú desplegable basado en la dirección IP de tu ordenador, si el país por defecto no está seleccionado."
+
+#: includes/settings.php:253
+msgid "Disable International dial codes"
+msgstr "Desactivar los códigos de marcación internacionales"
+
+#: includes/settings.php:264
+msgid "Enable Auto Dial Code Select"
+msgstr "Activar la selección automática del código de marcación"
+
+#: includes/settings.php:198
+msgid "Enable Auto Country Select"
+msgstr "Activar la selección automática del país"
+
+#: includes/settings.php:324
+msgid "Country dropdown field settings."
+msgstr "Ajustes del campo desplegable de país"
+
+#: includes/settings.php:210
+msgid "Phone Field Settings."
+msgstr "Ajustes del campo de teléfono."
+
+#: includes/settings.php:178 includes/settings.php:233
+msgid "Exclude Countries"
+msgstr "Excluir países"
+
+#: includes/settings.php:155
+msgid "Country Options Settings."
+msgstr "Ajustes de las opciones de país."
+
+#: includes/settings.php:77
+msgid "Documentation"
+msgstr "Documentación"
+
+#: includes/settings.php:75
+msgid "Phone Field Settings"
+msgstr "Ajustes del campo de teléfono"
+
+#: includes/settings.php:74
+msgid "Country Field Settings"
+msgstr "Ajustes del campo de país"
+
+#: includes/settings.php:53
+msgid "Enter Country 2 character ISO code. Countries will display at top the dropdown. Kindly enter comma separted countries code."
+msgstr "Introduce el código ISO de 2 caracteres del país. Los países se mostrarán en la parte superior del campo desplegable. Introduce los códigos de país separados por coma."
+
+#: includes/settings.php:52 includes/settings.php:188 includes/settings.php:243
+msgid "Preferred Countries"
+msgstr "Países preferidos"
+
+#: includes/settings.php:50
+msgid "Enter Country 2 character ISO code. Countries will excluded from the dropdown. Kindly enter comma separted countries code."
+msgstr "Introduce el código ISO de 2 caracteres del país. Los países se excluirán del campo desplegable. Introduce los códigos de país separados por coma."
+
+#: includes/settings.php:49
+msgid "Exclude  Countries"
+msgstr "Excluir países"
+
+#: includes/settings.php:46
+msgid "Enter Country 2 character ISO code. Only selected counries will display in dropdown. Kindly enter comma separted countries code."
+msgstr "Introduce el código ISO de 2 caracteres del país. Solo los países seleccionados se mostrarán en el campo desplegable. Introduce los códigos de país separados por coma."
+
+#: includes/settings.php:45 includes/settings.php:168 includes/settings.php:223
+msgid "Include Countries"
+msgstr "Incluir países"
+
+#: includes/settings.php:42
+msgid "Enter country 2 character ISO code. Default country will selected default country in dropdown."
+msgstr "Introduce el código ISO de 2 caracteres del país. El país por defecto se seleccionará en el menú desplegable."
+
+#: includes/settings.php:41 includes/settings.php:158 includes/settings.php:213
+msgid "Default Country"
+msgstr "País por defecto"
+
+#: includes/settings.php:39
+msgid "Field settings"
+msgstr "Ajustes del campo"
+
+#: includes/settings.php:35
+msgid "Country and phone field settings"
+msgstr "Ajustes de los campos de país y teléfono"
+
+#: includes/settings.php:24
+msgid "CPF Settings"
+msgstr "Ajustes de CPF"
+
+#: includes/settings.php:23
+msgid "Country and Phone field settings"
+msgstr "Ajustes de los campos de país y teléfono"
+
+#: includes/settings.php:340
+msgid "Phone field dropdown settings."
+msgstr "Ajustes del campo desplegable de teléfono."
+
+#: includes/settings.php:63
+msgid "Save Settings"
+msgstr "Guardar los ajustes"
+
+#. Author URI of the plugin
+msgid "http://narindersingh.in"
+msgstr "https://narindersingh.in"
+
+#. Author of the plugin
+msgid "Narinder Singh Bisht"
+msgstr "Narinder Singh Bisht"
+
+#. Description of the plugin
+msgid "Add country drop down with flags and phone number with country phone extensions field in contact form 7."
+msgstr "Añade un menú desplegable de países con banderas y campos de números de teléfono con extensión de país en «Contact Form 7»."
+
+#. Plugin Name of the plugin
+msgid "Country & Phone Field Contact Form 7"
+msgstr "Country & Phone Field Contact Form 7"
+
+#: includes/phone-text.php:188
+msgid "Generate a form-tag for a phone number with flags icon text input field."
+msgstr "Genera una etiqueta de formulario para el número de teléfono con un campo de entrada de texto con un icono de bandera."
+
+#: includes/phone-text.php:180
+msgid "phone number"
+msgstr "número de teléfono"
+
+#: includes/country-text.php:185 includes/phone-text.php:254
+msgid "To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab."
+msgstr "Para usar el valor introducido en este campo en un campo de correo, debes insertar la etiqueta de correo correspondiente (%s) en el campo de la pestaña «Correo»."
+
+#: includes/country-text.php:167 includes/phone-text.php:226
+msgid "Class attribute"
+msgstr "Atributo de clase"
+
+#: includes/country-text.php:162 includes/phone-text.php:221
+msgid "Id attribute"
+msgstr "Atributo de ID"
+
+#: includes/country-text.php:158 includes/phone-text.php:217
+msgid "Use this text as the placeholder of the field"
+msgstr "Usa este texto como marcador de posición del campo"
+
+#: includes/country-text.php:156 includes/phone-text.php:215
+msgid "Default value"
+msgstr "Valor por defecto"
+
+#: includes/country-text.php:151 includes/phone-text.php:210
+msgid "Name"
+msgstr "Nombre"
+
+#: includes/country-text.php:145 includes/phone-text.php:204
+msgid "Required field"
+msgstr "Campo obligatorio"
+
+#: includes/country-text.php:141 includes/country-text.php:144
+#: includes/phone-text.php:200 includes/phone-text.php:203
+msgid "Field type"
+msgstr "Tipo de campo"
+
+#: includes/country-text.php:129
+msgid "Generate a form-tag for a country dorp list with flags icon text input field."
+msgstr "Genera una etiqueta de formulario para una lista desplegable de países con un campo de entrada de texto con un icono de bandera."
+
+#: includes/country-text.php:121
+msgid "country drop-down"
+msgstr "desplegable de país"
+
+#: country-phone-field-contact-form-7.php:40
+msgid "The %1$sCountry & Phone Field Contact Form 7%2$s plugin requires %1$sContact form 7%2$s plugin active to run properly. Please install %1$scontact form 7%2$s and activate"
+msgstr "El plugin %1$sCountry & Phone Field Contact Form 7%2$s, para funcionar correctamente, necesita que esté activo el plugin %1$sContact Form 7%2$s. Por favor, instala %1$sContact Form 7%2$s y actívalo"
+
+#: includes/country-text.php:180 includes/phone-text.php:249
+msgid "Insert Tag"
+msgstr "Insertar una etiqueta"

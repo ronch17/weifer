@@ -1,0 +1,81 @@
+#signupprfw-container {
+    margin: auto;
+}
+
+.signupprfw {
+    display: grid;
+
+    @media #{$md} {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        justify-content: space-between;
+    }
+
+    &__confirmTerms,
+    &__generalConfirmTerms,
+    &__btn-wrapper {
+        @media #{$md} {
+            grid-column: 1 / span 2;
+            text-align: center;
+        }
+    }
+
+    &__control {
+        position: relative;
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .prfw-select select,
+    .prfw-form-control {
+        @include form-control();
+    }
+
+    &__confirmTerms {
+        white-space: nowrap;
+    }
+
+    &__birthday {
+        margin-top: 2em;
+
+        &__inner {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 1em;
+        }
+
+        &__label {
+            position: absolute;
+            top: -2em;
+            left: 0;
+        }
+    }
+
+    &__isAccountReal {
+        flex-basis: 100%;
+        .boolean-field\.component__hiddenModelInput___3i7vX {
+            display: none;
+        }
+    }
+
+    &__btn-wrapper {
+        width: 100%;
+    }
+
+    &__isAccountReal {
+        flex-basis: 100%;
+        .boolean-field\.component__hiddenModelInput___3i7vX {
+            display: none;
+        }
+    }
+
+    @media #{$xl} {
+        &__confirmTerms,
+        &__generalConfirmTerms {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

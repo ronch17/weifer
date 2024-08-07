@@ -1,0 +1,70 @@
+<div
+  ng-if="$ctrl.displayPopup"
+  class="{{ $ctrl.animation === 'fadeIn' ? $ctrl.styles.modalFadeIn : $ctrl.styles.modalFadeOut }}"
+>
+  <div ng-class="$ctrl.styles.backdrop"></div>
+  <div class="{{$ctrl.styles.dialog}} {{$ctrl.padding ? 'padding' : ''}}" ng-style="{'width': $ctrl.dialogWidth}">
+    <div ng-class="$ctrl.styles.content">
+      <div
+        ng-if="$ctrl.titleText"
+        ng-class="$ctrl.styles.title">
+        {{ $ctrl.titleText }}
+      </div>
+      <div ng-if="!$ctrl.titleText" ng-transclude="title"></div>
+
+      <div ng-class="$ctrl.styles.body">
+        <label ng-if="$ctrl.bodyText && $ctrl.checkbox"
+               ng-class="$ctrl.styles.checkbox"
+               class="prfw-checkbox">
+          <input type="checkbox"
+                 ng-model="$ctrl.confirmation"
+          />
+          <span></span>
+          <span>{{ $ctrl.bodyText }}
+           <a
+             ng-if="$ctrl.urlLink"
+             ng-href="{{$ctrl.urlLink}}"
+             target="_blank"
+           >{{$ctrl.urlLabel}}</a>
+          </span>
+
+        </label>
+        <div ng-transclude="body"></div>
+      </div>
+      <div
+        ng-class="$ctrl.styles.footer"
+        ng-if="$ctrl.buttonText"
+      >
+        <a
+          ng-if="$ctrl.cancelBtn"
+          ng-class="$ctrl.styles.cancelBtn"
+          ng-href="/"
+        >{{$ctrl.cancelText}}</a>
+
+        <button
+          ng-if="!$ctrl.closeOnly"
+          ng-class="$ctrl.styles.button"
+          ng-disabled="!$ctrl.confirmation"
+          ng-click="$ctrl.saveAndClose()">
+          {{$ctrl.buttonText}}
+        </button>
+
+        <button
+          ng-if="$ctrl.closeOnly"
+          ng-class="$ctrl.styles.button"
+          ng-disabled="!$ctrl.confirmation"
+          ng-click="$ctrl.withoutSave()">
+          {{$ctrl.buttonText}}
+        </button>
+
+      </div>
+      <div ng-transclude="footer"></div>
+    </div>
+    <button
+      ng-if="$ctrl.closeBtn"
+      ng-click="$ctrl.saveAndClose()"
+      ng-class="$ctrl.styles.closeBtn"
+    >x
+    </button>
+  </div>
+</div>

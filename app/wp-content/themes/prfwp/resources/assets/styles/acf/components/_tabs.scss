@@ -1,0 +1,51 @@
+/* stylelint-disable */
+
+#tabs {
+    //@media #{$until_lg} {
+    //    display: none;
+    //}
+
+    .acfm-tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tabs {
+        display: flex;
+        width: 36rem;
+        list-style: none;
+        border: 1px solid $brand_primary;
+        border-radius: 3rem;
+    }
+
+    .main-tab {
+        @include button();
+        position: relative;
+        right: 4rem;
+        padding: 2.5rem 4rem;
+        font-weight: 600;
+        white-space: nowrap;
+        cursor: pointer;
+        border: none;
+    }
+
+    .main-tab.active {
+        color: $brand_white;
+        background: $brand_primary;
+    }
+
+    .tab-content {
+        display: none;
+        padding: 10px;
+    }
+
+    .tab-content.active {
+        display: block;
+    }
+}
+
+.hide-desktop {
+    @media #{$xl} {
+        display: none;
+    }
+}

@@ -1,0 +1,134 @@
+@import 'resources/assets/styles/calendar/calendar-imports';
+
+:local {
+    .row {
+        display: flex;
+        border-bottom: 1px solid #acacac;
+    }
+
+    .cell {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        height: em(53);
+
+        &:nth-child(2) {
+            min-width: 30%;
+        }
+
+        &:nth-child(4) {
+            min-width: 40%;
+        }
+
+        :global {
+            /* stylelint-disable no-descending-specificity */
+            .cell--impact {
+                display: flex;
+                color: $brand_primary;
+
+                svg {
+                    width: 1.2em;
+                    height: 1.2em;
+                    margin: 0.2em;
+                }
+
+                &--1 svg {
+                    &:nth-child(1) ~ svg {
+                        color: #d3d3d3;
+                    }
+                }
+
+                &--2 svg {
+                    &:nth-child(2) ~ svg {
+                        color: #d3d3d3;
+                    }
+                }
+            }
+        }
+    }
+
+    .cellInner {
+        flex: 1;
+    }
+
+    .btn {
+        position: relative;
+        display: block;
+        width: em(23);
+        height: em(23);
+        margin: 0.5rem;
+        text-indent: -9999px;
+        cursor: pointer;
+        background-color: $brand_primary;
+        border-radius: 50%;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: em(3);
+            content: '';
+            background-color: $brand_white;
+
+            @include transition(transform, 250ms);
+        }
+
+        &::before {
+            left: 35%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            left: 65%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:global(.active) {
+            &::before {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+        background-color: rgba(#fff077, 0.4);
+    }
+
+    .assetsCount,
+    .asset {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 26rem;
+        width: 24%;
+        height: 4.3rem;
+        padding: 0.5%;
+        margin: 0.5%;
+        background-color: $brand_white;
+    }
+
+    .assetsCount {
+        b {
+            margin-right: 0.5em;
+        }
+    }
+}
+
+.cell {
+    &--btn {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

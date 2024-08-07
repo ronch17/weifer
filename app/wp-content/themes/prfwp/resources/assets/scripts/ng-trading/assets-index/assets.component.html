@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="prf-assets-notice" ng-bind-html="($ctrl.localTableNotice$ | async:this)"></div>
+  <prf-assets-tabs
+    active-category="$ctrl.activeCategory$ | async:this"
+    active-category-assets="$ctrl.activeCategoryAssets$ | async:this"
+    on-tab-selected="$ctrl.opSelectTab$.next(tab)"
+  ></prf-assets-tabs>
+</div>

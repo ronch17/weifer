@@ -1,0 +1,29 @@
+<div class=" {{ $ctrl.styles.row }} {{ ($ctrl.localAsset$ | async:this).directionClass }}">
+    <div class="{{ $ctrl.styles.cell }}" ng-repeat="col in $ctrl.tableCols track by $index">
+        <div class="{{ $ctrl.styles.cellInner }} cell--{{ col.name }}" ng-switch="col.name">
+            <span class="{{ $ctrl.styles.cellNameInner }}" ng-switch-when="name">
+                <i class="{{ $ctrl.styles.icon }} asset-icon"
+                   ng-if="($ctrl.localAsset$ | async:this).id < 400"
+                   value="{{ ($ctrl.localAsset$ | async:this).id }}"></i>
+                <span class="{{ $ctrl.styles.name }}">{{ ($ctrl.localAsset$ | async:this).name }}</span>
+                <!--<small>{{ ($ctrl.localAsset$ | async:this).id }}</small>-->
+            </span>
+
+            <span ng-switch-default>{{ ($ctrl.localAsset$ | async:this)[col.name]}}</span>
+        </div>
+    </div>
+    <div class="{{ $ctrl.styles.btns }}">
+        <a class="acfm-btn-trade btn-buy" ng-href="/trading-room">Buy</a>
+        <a class="acfm-btn-trade btn-sell" ng-href="/trading-room">Sell</a>
+    </div>
+</div>
+
+<div class="{{ $ctrl.styles.info }}" ng-if="$ctrl.showInfo">
+    <div class="{{ $ctrl.styles.assetsCount }}">
+        <b>Assets Affected:</b> {{ $ctrl.data.assets.length }}
+    </div>
+    <span class="{{ $ctrl.styles.asset }}" ng-repeat="asset in $ctrl.data.assets track by $index">
+        <i class="asset-icon" ng-if="asset.value < 321" value="{{ asset.value }}"> </i>
+        <span class="{{ $ctrl.styles.assetText }}">{{ asset.label }}</span>
+    </span>
+</div>

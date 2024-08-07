@@ -1,0 +1,55 @@
+@mixin form-controls {
+    textarea {
+        resize: none;
+    }
+
+    select,
+    input[type='number'],
+    input[type='search'],
+    input[type='text'],
+    input[type='password'],
+    .prfw-input-icon-box__control,
+    .prfw-form-control {
+        width: 100%;
+        padding: $controls_padding;
+        font: inherit;
+        line-height: $controls_line_height;
+        color: $controls_color;
+        background-color: transparent;
+        border: thin solid $brand_dark;
+        border-radius: 0.6rem;
+        -webkit-appearance: none;
+
+        &[type='number'] {
+            padding-right: 0;
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $controls_placeholder_color;
+        }
+
+        &::-moz-placeholder {
+            color: $controls_placeholder_color;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: $controls_placeholder_color;
+        }
+
+        &:-moz-placeholder {
+            color: $controls_placeholder_color;
+            opacity: 1;
+        }
+
+        &:focus {
+            border-color: $controls_border_focus_color;
+            outline: none;
+        }
+    }
+}

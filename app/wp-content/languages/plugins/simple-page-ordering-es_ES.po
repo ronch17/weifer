@@ -1,0 +1,108 @@
+# Translation of Plugins - Simple Page Ordering - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Simple Page Ordering - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-04-09 07:05:07+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Simple Page Ordering - Stable (latest release)\n"
+
+#. translators: %s: sibling page/post title
+#: class-simple-page-ordering.php:458
+msgid "Move under %s"
+msgstr "Mover debajo de %s"
+
+#. translators: %s: parent page/post title
+#: class-simple-page-ordering.php:423
+msgid "Move out from under %s"
+msgstr "Sacarlo de debajo de %s"
+
+#: class-simple-page-ordering.php:78 class-simple-page-ordering.php:124
+msgid "You are not allowed to edit this item."
+msgstr "No tienes permiso para editar este elemento."
+
+#. translators: %1$s is replaced with the post type name
+#: class-simple-page-ordering.php:372
+msgid "Reset %1$s order"
+msgstr "Restablecer pedido %1$s"
+
+#: 10up-lib/wp-compat-validation-tool/src/Validator.php:152
+msgid "%s error:"
+msgstr "%s error:"
+
+#: 10up-lib/wp-compat-validation-tool/src/Validator.php:127
+msgid "The maximum PHP version supported is %s"
+msgstr "La versión máxima de PHP compatible es %s"
+
+#: 10up-lib/wp-compat-validation-tool/src/Validator.php:121
+msgid "The minimum PHP version required is %s"
+msgstr "La versión mínima de PHP requerida es %s"
+
+#: class-simple-page-ordering.php:852
+msgid "This post type is not sortable."
+msgstr "Este tipo de contenido no se puede ordenar."
+
+#: class-simple-page-ordering.php:810
+msgid "Array of IDs we want to exclude"
+msgstr "Array de IDs que queremos excluir"
+
+#: class-simple-page-ordering.php:804
+msgid "Index we start with when sorting"
+msgstr "Índice con el que empezamos al ordenar"
+
+#: class-simple-page-ordering.php:798
+msgid "ID of item we want to be next to after sorting"
+msgstr "ID del elemento que queremos que sea el siguiente después de ordenar"
+
+#: class-simple-page-ordering.php:793
+msgid "ID of item we want to be previous to after sorting"
+msgstr "ID del elemento que queremos que sea el anterior después de ordenar"
+
+#: class-simple-page-ordering.php:787
+msgid "ID of item we want to sort"
+msgstr "ID del elemento que queremos ordenar"
+
+#. Author of the plugin
+#: simple-page-ordering.php
+msgid "10up"
+msgstr "10up"
+
+#: class-simple-page-ordering.php:347
+msgid "It looks like you are using a development copy of <strong>Simple Page Ordering</strong>. Please run <code>npm i; npm run build</code> to create assets."
+msgstr "Parece que estás usando una copia de desarrollo de <strong>Simple Page Ordering</strong>. Por favor, ejecuta <code>npm i; npm run build</code> para crear recursos."
+
+#: class-simple-page-ordering.php:557 class-simple-page-ordering.php:872
+msgid "Missing mandatory parameters."
+msgstr "Faltan parámetros obligatorios."
+
+#. Author URI of the plugin
+#: simple-page-ordering.php
+msgid "https://10up.com"
+msgstr "https://10up.com"
+
+#. Plugin URI of the plugin
+#: simple-page-ordering.php
+msgid "http://10up.com/plugins/simple-page-ordering-wordpress/"
+msgstr "http://10up.com/plugins/simple-page-ordering-wordpress/"
+
+#. Plugin Name of the plugin
+#: simple-page-ordering.php class-simple-page-ordering.php:366
+msgid "Simple Page Ordering"
+msgstr "Simple Page Ordering"
+
+#. Description of the plugin
+#: simple-page-ordering.php
+msgid "Order your pages and hierarchical post types using drag and drop on the built in page list. For further instructions, open the \"Help\" tab on the Pages screen."
+msgstr "Ordena tus páginas y tipos de contenido jerárquicos utilizando arrastrar y soltar en la propia lista de la página. Para más instrucciones, abre la pestaña \"Ayuda\" en la pantalla de Páginas."
+
+#: class-simple-page-ordering.php:755
+msgid "Sort by Order"
+msgstr "Ordenar por orden"
+
+#: class-simple-page-ordering.php:369
+msgid "To reposition an item, simply drag and drop the row by \"clicking and holding\" it anywhere (outside of the links and form controls) and moving it to its new position."
+msgstr "Para cambiar la posición de un elemento, basta con arrastrar y soltar en la fila de \"clic y manteniendo\" en cualquier lugar (fuera de los vínculos y formar controles) y moverla a su nueva posición."

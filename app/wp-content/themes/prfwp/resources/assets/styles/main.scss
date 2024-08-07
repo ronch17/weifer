@@ -1,0 +1,133 @@
+/** Import Config sass maps */
+@import 'configs/maps/colors';
+
+/** Import maps related mixins */
+@import 'configs/mixins/define-backround';
+@import 'configs/mixins/define-text-color';
+@import 'configs/mixins/define-account-color';
+@import 'configs/mixins/define-circle';
+@import 'configs/mixins/define-placeholder-color';
+
+$base_font_size_px: 16;
+
+@import 'common/functions';
+@import 'common/fonts';
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/global';
+
+/** Import everything from autoload */
+//@import './autoload/**/*';
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Vendors */
+@import 'vendors/bootstrap/twbs-config';
+
+@import 'vendors/bootstrap/mixins/transition';
+@import 'vendors/bootstrap/mixins/border-radius';
+@import 'vendors/bootstrap/transitions';
+//@import 'vendors/bootstrap-collapse';
+@import '~slick-carousel/slick/slick';
+@import 'vendors/slick-carousel/theme';
+
+/** components */
+@import 'components/brand';
+@import 'components/burger';
+@import 'components/buttons';
+@import 'components/error';
+@import 'components/wp-classes';
+@import 'components/CF7-controls';
+@import 'components/back-to-top';
+@import 'components/trading-widget';
+//@import 'components/polylang';
+
+/** PROFTIT CRM Widgets */
+@import '../styles/proftit-crm-widgets/prfw-crm-main';
+
+/** Layouts */
+@import 'layouts/header';
+@import 'layouts/header-sticky';
+@import 'layouts/hero';
+@import 'layouts/navbar';
+@import 'layouts/navbar-menu';
+@import 'layouts/navbar-sub-menu';
+@import 'layouts/strip';
+@import 'layouts/login';
+@import 'layouts/login.theme';
+@import 'layouts/top-bar';
+@import 'layouts/top-bar.theme';
+@import 'layouts/widget-content';
+@import 'layouts/widget-content.layout';
+@import 'layouts/widget-content.theme';
+@import 'layouts/scroll-bar';
+
+/** ACF List */
+@import 'acf/lists/default';
+@import 'acf/lists/inline';
+@import 'acf/lists/card';
+
+/** ACF Components */
+@import 'acf/components/menu';
+@import 'acf/components/ticker';
+@import 'acf/components/buttons';
+@import 'acf/components/row';
+@import 'acf/components/calendar';
+@import 'acf/components/contact-form';
+@import 'acf/components/account-types';
+@import 'acf/components/signup-widget';
+@import 'acf/components/signup-inline-widget';
+@import 'acf/components/payments';
+@import 'acf/components/upload_svg';
+@import 'acf/components/tabs';
+@import 'acf/components/breadcrumbs';
+@import 'acf/components/login-placeholder';
+@import 'acf/components/login-widget';
+@import 'acf/components/gallery';
+
+/** ACF Components Adjustments */
+@import 'acf/adjustments/slider';
+
+/** ACF Layouts */
+@import 'acf/layouts/hero';
+@import 'acf/layouts/section';
+@import 'acf/layouts/splide_js';
+
+/** ACF Utils */
+@import 'acf/utils/text';
+@import 'acf/utils/columns';
+@import 'acf/utils/padding';
+@import 'acf/utils/margin';
+@import 'acf/utils/decor';
+@import 'acf/utils/image';
+@import 'acf/utils/background';
+@import 'acf/utils/background-image';
+@import 'acf/utils/cols';
+@import 'acf/utils/svg-payments';
+@import 'acf/utils/spacer';
+
+/** ACF Footer Components */
+@import 'acf/footer-components/footer-logo';
+@import 'acf/footer-components/footer-payments';
+@import 'acf/footer-components/footer-main';
+@import 'acf/footer-components/footer-menu';
+@import 'acf/footer-components/footer-title';
+@import 'acf/footer-components/footer-text';
+@import 'acf/footer-components/footer-copyright';
+@import 'acf/footer-components/footer-subscribe';
+@import 'acf/footer-components/footer-address';
+
+/** Specific Pages & Sections */
+@import 'pages/specific-sections';
+@import 'pages/404';
+@import 'pages/single-post';
+@import 'acf/utils/animation';
+
+/** UI */
+@import 'UI/Cards';

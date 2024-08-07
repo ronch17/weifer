@@ -1,0 +1,148 @@
+.internaltransferprfw {
+    &__subtitle {
+        margin-bottom: 15px;
+    }
+
+    &__complete-details-header {
+        font-weight: $font_weight_bold;
+    }
+
+    &__sourceaccount {
+        &__selectbox {
+            width: 50%;
+        }
+    }
+
+    &__amount-value {
+        width: 50%;
+    }
+
+    &__rate-info-line {
+        display: flex;
+        flex-flow: row nowrap;
+
+        &__equal-separator {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            &:before {
+                padding: 0 10px;
+                content: '\003D';
+            }
+        }
+    }
+
+    &__destinationccount {
+        &__selectbox {
+            display: block;
+            width: 50%;
+        }
+    }
+
+    &__target-amount-for-rate {
+        margin-right: 20px;
+    }
+
+    &__target-exchange-rate-box {
+        position: relative;
+        min-width: 200px;
+
+        .prfw-btn-tooltip {
+            position: absolute;
+            right: 0.3em;
+            top: 0.1em;
+            z-index: 1;
+
+            background-color: transparent;
+            border: 0;
+            font-size: 0.9em;
+            width: 2.3em;
+            height: 2.3em;
+            padding: 0.3em;
+        }
+
+        .prfw-tooltip--rate {
+            position: absolute;
+            z-index: 9002;
+            margin-left: 2px;
+            margin-top: -15px;
+            .tooltip-arrow {
+                display: none;
+            }
+            //todo: this is due to bootstrap markup, needs to put custom markup.
+            .tooltip-inner {
+                background-color: #f8f7f7;
+                border-radius: 0;
+                max-width: none;
+                max-height: none;
+                padding: 25px;
+                position: relative;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+                color: #333;
+
+                &:before,
+                &:after {
+                    content: '';
+                    height: 12px;
+                    width: 12px;
+                    bottom: -6px;
+                    transform: rotate(45deg);
+                }
+
+                &:before {
+                    background-color: inherit;
+                    z-index: 2;
+                }
+                &:after {
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+                    z-index: -1;
+                }
+
+                .svg-cvv-info {
+                    display: block;
+                    height: #{(393/50)}em;
+                    width: #{(550.5/50)}em;
+                }
+
+                p {
+                    color: #000;
+                    text-align: left;
+                    white-space: pre-line;
+                }
+            }
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__title {
+        margin: 0 0 35px;
+    }
+
+    &__control {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 10px;
+    }
+
+    &__amount-currency {
+        padding-left: 10px;
+    }
+
+    &__destinationhelpertext {
+        font-size: medium;
+        margin-bottom: 10px;
+    }
+
+    &__btn-wrapper {
+        margin-top: 1.875em;
+    }
+}

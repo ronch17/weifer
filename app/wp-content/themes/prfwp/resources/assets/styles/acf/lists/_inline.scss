@@ -1,0 +1,42 @@
+/* stylelint-disable */
+
+.acfm-list-inline {
+    display: flex;
+    justify-content: center;
+    padding-left: initial;
+    text-align: center;
+    list-style: none;
+    gap: 3rem;
+    @media #{$until_xl} {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        align-content: start;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1.5rem;
+        text-align: left;
+        gap: 3rem;
+        white-space: nowrap;
+
+        svg {
+            & path {
+                fill: $brand_primary;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: $font_weight_medium;
+        color: $brand_dark;
+    }
+
+    &__icon {
+        width: 10%;
+    }
+}

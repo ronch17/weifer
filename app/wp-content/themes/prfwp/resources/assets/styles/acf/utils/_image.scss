@@ -1,0 +1,35 @@
+/* stylelint-disable */
+
+.acfm-image {
+    transition: 0.4s ease-in-out;
+
+    &--sm {
+        @media #{$xl} {
+            display: none;
+        }
+    }
+
+    &--md {
+        display: none;
+        @media #{$xl} {
+            display: block;
+        }
+    }
+}
+
+.acfm-image > .scroll-animate {
+    animation: fadeInRight;
+    animation-timeline: view();
+}
+
+.disable-image-hover {
+    .acfm-image:hover {
+        scale: none;
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        transform: translateX(-300px);
+    }
+}

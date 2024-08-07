@@ -1,0 +1,41 @@
+<div class="{{ $ctrl.styles.row }}">
+  <div class="{{ $ctrl.styles.cell }}" ng-repeat="col in $ctrl.tableCols track by $index">
+    <div class="{{ $ctrl.styles.cellInner }} cell--{{ col.name }}" ng-switch="col.name">
+      <div ng-switch-when="asset">
+        <i class="asset-icon" ng-if="$ctrl.data.assets[0].value < 400" value="{{ $ctrl.data.assets[0].value }}"> </i>
+        <span data-asset-id="{{ $ctrl.data.assets[0].value }}" ng-bind="$ctrl.data.assets[0].label"></span>
+      </div>
+      <div ng-switch-when="impact" class="cell--impact--{{ $ctrl.data[col.name] }}">
+        <svg>
+          <use xlink:href="#impact"></use>
+        </svg>
+        <svg>
+          <use xlink:href="#impact"></use>
+        </svg>
+        <svg>
+          <use xlink:href="#impact"></use>
+        </svg>
+      </div>
+      <div ng-switch-when="" class="cell--btn">
+        <button
+          class="{{ $ctrl.styles.btn }} {{ $ctrl.showInfo ? 'active' : '' }}"
+          title="Show Info"
+          ng-click="$ctrl.showInfo = !$ctrl.showInfo"
+        >
+          show info
+        </button>
+      </div>
+      <div ng-switch-default>
+        {{ $ctrl.data[col.name] }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="{{ $ctrl.styles.info }}" ng-if="$ctrl.showInfo">
+  <div class="{{ $ctrl.styles.assetsCount }}"><b>Assets Affected:</b> {{ $ctrl.data.assets.length }}</div>
+  <span ng-repeat="asset in $ctrl.data.assets track by $index" class="{{ $ctrl.styles.asset }}">
+    <i class="asset-icon" ng-if="asset.value < 400" value="{{ asset.value }}"> </i>
+    <span class="{{ $ctrl.styles.assetText }}" data-asset-id="{{ asset.value }}" ng-bind="asset.label"></span>
+  </span>
+</div>

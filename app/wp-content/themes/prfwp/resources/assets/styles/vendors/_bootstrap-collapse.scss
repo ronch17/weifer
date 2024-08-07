@@ -1,0 +1,26 @@
+// stylelint-disable property-blacklist
+
+.collapse {
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+}
+
+.fade {
+    transition: opacity 0.15s linear;
+
+    &:not(.show) {
+        opacity: 0;
+
+        .prfw-modal-open & {
+            opacity: 1;
+        }
+    }
+}

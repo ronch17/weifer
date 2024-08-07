@@ -1,0 +1,14 @@
+<style>
+  .prf-assets-background__inner {
+    --squareLength: {{ ($ctrl.squareLength$ | async:this) }};
+    --cols: {{ ($ctrl.cols$ | async:this) }};
+    --rows: {{ ($ctrl.rows$ | async:this) }};
+  }
+</style>
+<div id="{{$ctrl.containerId}}" class="container"></div>
+<div class="prf-assets-background__inner">
+  <prf-assets-background-square
+    ng-repeat="square in ($ctrl.squares$ | async:this) track by $index"
+    square="square"
+  ></prf-assets-background-square>
+</div>

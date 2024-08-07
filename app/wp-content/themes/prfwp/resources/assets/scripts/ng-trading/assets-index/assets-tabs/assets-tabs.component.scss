@@ -1,0 +1,63 @@
+$base-font-size-px: 16;
+@import 'resources/assets/styles/common/functions';
+@import 'resources/assets/styles/common/variables';
+@import 'resources/assets/styles/common/mixins';
+
+.prfw-tabs {
+    &__list {
+        display: flex;
+        padding: 0.5em 0;
+        margin: 1em 0;
+        list-style: none;
+
+        .ngt-categories-count-1 & {
+            display: none;
+        }
+
+        li {
+            margin: 0;
+
+            &.prfw-js-active {
+                a {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        /* stylelint-disable no-descending-specificity */
+        a {
+            position: relative;
+            padding: 0.3em 0;
+            text-transform: capitalize;
+
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: em(4);
+                content: '';
+                background-color: $brand_primary;
+                border-radius: em(3);
+
+                @include transition(width, 300ms);
+            }
+        }
+    }
+
+    &__pane {
+        display: none;
+
+        &.prfw-js-active {
+            display: block;
+        }
+    }
+}
+
+:local {
+    .item + .item {
+        margin-left: 1em;
+    }
+}

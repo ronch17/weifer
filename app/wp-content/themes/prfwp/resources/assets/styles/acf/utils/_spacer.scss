@@ -1,0 +1,13 @@
+.acfm-spacer {
+    &.hide-mobile {
+        @media #{$until_lg} {
+            display: none;
+        }
+    }
+
+    &.hide-desktop {
+        @media #{$lg} {
+            display: none;
+        }
+    }
+}

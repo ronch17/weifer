@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none"><symbol  viewBox='0 0 151.8 129.96' id='platform-burger'>
+    <g fill="#aaa"><rect width="151.8" height="25" rx="9" ry="9"></rect><rect y="52.48" width="151.8" height="25" rx="9" ry="9"></rect><rect y="104.96" width="151.8" height="25" rx="9" ry="9"></rect></g>
+  </symbol><symbol  viewBox='0 0 151.65 81.11' id='right-arrow'>
+    <g fill="#787b7f"><path d="M151.66 40.56l-27.07 20.27-27.06 20.28V0l27.06 20.28 27.07 20.28z"></path><path d="M0 28.83h117.82v23.46H0z"></path></g>
+  </symbol><symbol  viewBox='0 0 17.78 18.78' id='search'>
+    <g fill="none" stroke="#4c5054" stroke-miterlimit="10" stroke-width="1.5"><path d="M10.25 11.25l7 7"></path><circle cx="6.75" cy="6.75" r="6"></circle></g>
+  </symbol><symbol  viewBox='0 0 466 478.77' id='user'>
+    <g fill="#787b7f"><path d="M118.7 114.3A114.3 114.3 0 1 1 233 228.61 114.42 114.42 0 0 1 118.7 114.3zM466 382.69v74.88a21.2 21.2 0 0 1-20.23 21.16 9.23 9.23 0 0 1-.93 0H21.16a9.23 9.23 0 0 1-.93 0A21.2 21.2 0 0 1 0 457.57v-74.88c0-63.25 46.72-121 122-150.95l.67-.3a19.29 19.29 0 0 1 2.35-.87h.29c.09 0 .18 0 .27-.06s.43-.11.62-.14a21.45 21.45 0 0 1 17.16 3.31l.15.09a1.26 1.26 0 0 0 .18.12l.15.12a1.06 1.06 0 0 1 .14.09c.24.18.46.36.65.53a141.13 141.13 0 0 0 87.38 29.94h1.85a141.13 141.13 0 0 0 87.38-29.94.39.39 0 0 0 .09-.08l.35-.29a222.5 222.5 0 0 0 .39-.3l.2-.14a1.16 1.16 0 0 0 .17-.12l.14-.08a21.32 21.32 0 0 1 17.12-3.33 7.22 7.22 0 0 1 .77.18h.2a.16.16 0 0 1 .09 0h.08a18.09 18.09 0 0 1 2.32.85c.38.15.65.27.84.36 75.31 30.04 122 87.79 122 151.01z"></path></g>
+  </symbol><symbol  viewBox='0 0 192.68 129.96' id='widgets-burger'>
+    <g fill="#aaa"><rect x="40.88" width="151.8" height="25" rx="9" ry="9"></rect><rect x="40.88" y="52.48" width="151.8" height="25" rx="9" ry="9"></rect><rect x="40.88" y="104.96" width="151.8" height="25" rx="9" ry="9"></rect><rect width="30.82" height="25" rx="9" ry="9"></rect><rect y="52.48" width="30.82" height="25" rx="9" ry="9"></rect><rect y="104.96" width="30.82" height="25" rx="9" ry="9"></rect></g>
+  </symbol></svg>

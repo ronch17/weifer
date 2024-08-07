@@ -1,0 +1,6 @@
+{
+    "require": {
+        "stoutlogic/acf-builder": "^1.11",
+        "johnbillion/extended-cpts": "^4.5"
+    }
+}

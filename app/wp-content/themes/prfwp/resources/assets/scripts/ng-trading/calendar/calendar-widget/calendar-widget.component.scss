@@ -1,0 +1,279 @@
+@import 'resources/assets/styles/calendar/calendar-imports';
+
+// stylelint-disable property-no-unknown
+// stylelint-disable no-descending-specificity
+
+:local {
+    .main {
+        padding-top: 1em;
+        padding-bottom: 4em;
+    }
+
+    .period {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1em;
+    }
+
+    .periodInput {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+    }
+
+    .periodIcon {
+        @include height-ratio(2297.94, 1880.94, 30);
+
+        margin-right: 0.5em;
+        cursor: pointer;
+    }
+
+    .separator {
+        margin: 0 0.4em;
+    }
+
+    .inner {
+        position: relative;
+        display: flex;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        user-select: none;
+    }
+
+    .loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 10rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .btn {
+        position: absolute;
+        top: em(3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.6em;
+        height: calc(100% - #{em(6)});
+        font-weight: bold;
+        color: $brand_white;
+        cursor: pointer;
+        background-color: $brand_secondary;
+    }
+
+    .btnPrev {
+        composes: btn;
+        left: -1.7em;
+    }
+
+    .btnNext {
+        composes: btn;
+        right: -1.7em;
+    }
+}
+
+.acfm-flex-wrapper {
+    min-height: inherit;
+}
+
+.uib-datepicker-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    overflow: hidden;
+    font-size: 1.4rem;
+    list-style: none;
+    background-color: $brand_white;
+    border: 1px solid $brand_secondary;
+    border-radius: 1rem;
+
+    &:focus,
+    *:focus {
+        outline: none;
+    }
+
+    table {
+        margin: 0;
+        border-collapse: collapse;
+    }
+
+    th {
+        color: $brand_white;
+        background-color: $brand_secondary;
+    }
+
+    tr {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    tr:first-child th:nth-child(2),
+    thead tr:nth-child(2) th,
+    td {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    tbody {
+        display: block;
+        padding: 0.2em;
+    }
+}
+
+.uib-right,
+.uib-left,
+.uib-title,
+.uib-year .btn,
+.uib-month .btn,
+.uib-day .btn {
+    width: 100%;
+    cursor: pointer;
+
+    @include transition(background color, 200ms);
+
+    &:hover {
+        &,
+        .text-info {
+            color: #0adfa1;
+        }
+
+        //background-color: $brand_secondary_xlight;
+    }
+}
+
+.uib-right,
+.uib-left,
+.uib-title {
+    border-radius: 0.5rem;
+}
+
+.uib-right,
+.uib-left {
+    position: relative;
+    width: 2em;
+    height: 2em;
+    text-indent: -9999px;
+    display: block;
+
+    &::before,
+    &::after {
+        position: absolute;
+        left: 50%;
+        height: 2px;
+        width: 30%;
+        content: '';
+        background-color: currentColor;
+    }
+}
+
+.uib-right {
+    &::before {
+        top: 40%;
+        transform: translateX(-50%) rotate(35deg);
+    }
+
+    &::after {
+        top: 54%;
+        transform: translateX(-50%) rotate(-35deg);
+    }
+}
+
+.uib-left {
+    &::before {
+        top: 40%;
+        transform: translateX(-50%) rotate(145deg);
+    }
+
+    &::after {
+        top: 54%;
+        transform: translateX(-50%) rotate(-145deg);
+    }
+}
+
+.uib-title {
+    text-transform: uppercase;
+
+    strong {
+        font-weight: initial;
+    }
+}
+
+.uib-year .btn,
+.uib-month .btn,
+.uib-day .btn {
+    .text-info {
+        color: $brand_primary;
+    }
+
+    &.active {
+        &,
+        .text-info {
+            color: $brand_white;
+        }
+
+        background-color: $brand_primary;
+    }
+
+    &:hover {
+        background-color: $brand_highlight;
+        color: $brand_base;
+    }
+}
+
+.uib-year .btn,
+.uib-month .btn {
+    border-radius: 0.8rem;
+    line-height: 1.8;
+}
+
+.uib-year .btn {
+    width: 4em;
+}
+
+.uib-month .btn {
+    width: 6em;
+}
+
+.uib-day .btn {
+    height: 2em;
+    width: 2em;
+    padding: 0;
+    margin: 0.2em;
+    line-height: 2;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.uib-button-bar {
+    padding: 0.1em;
+    color: $brand_white;
+    //border-top: 1px solid $brand_secondary;
+    background-color: $brand_secondary;
+    display: flex;
+    justify-content: space-between;
+}
+
+.uib-datepicker-current,
+.uib-clear,
+.uib-close {
+    width: 4em;
+    margin: 0.1em;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    //background-color: $brand_secondary_light;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #0adfa1;
+    }
+}

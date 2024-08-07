@@ -1,0 +1,407 @@
+/* stylelint-disable */
+.prfwp-contentWidgets {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-height: 100vh;
+        background: $brand_white;
+
+        .dark-theme & {
+            background: $brand_dark;
+        }
+    }
+
+    &__credentials {
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+        font-weight: $font_weight_medium;
+
+        &::before {
+            display: block;
+            width: 7rem;
+            height: 4.1rem;
+            margin-bottom: 0.5rem;
+            content: '';
+            background: no-repeat
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" fill="none"><path fill="%23E33645" d="M41 20.48C41 9.174 31.816 0 20.5 0S0 9.174 0 20.48c0 6.226 2.829 11.838 7.257 15.605.041.041.082.041.082.082.369.287.738.574 1.148.861.205.123.369.285.574.449A20.449 20.449 0 0 0 20.541 41c4.093 0 8.092-1.227 11.48-3.523.205-.123.369-.285.574-.41.369-.285.779-.572 1.148-.859.041-.04.082-.04.082-.082C38.171 32.316 41 26.706 41 20.48ZM20.5 38.42c-3.854 0-7.38-1.23-10.291-3.278.041-.328.123-.653.205-.981.244-.89.603-1.743 1.066-2.54a9.016 9.016 0 0 1 1.64-2.09 11.51 11.51 0 0 1 2.091-1.638 10.347 10.347 0 0 1 2.501-1.025A10.635 10.635 0 0 1 20.5 26.5a10.724 10.724 0 0 1 7.503 2.988c.943.943 1.681 2.05 2.214 3.319.287.738.492 1.517.615 2.334A18.015 18.015 0 0 1 20.5 38.42Zm-6.273-18.963a6.38 6.38 0 0 1-.533-2.624c0-.9.164-1.801.533-2.621a7.265 7.265 0 0 1 1.476-2.17 7.272 7.272 0 0 1 2.173-1.474c.82-.37 1.722-.533 2.624-.533.943 0 1.804.164 2.624.533a7.32 7.32 0 0 1 2.173 1.473 7.298 7.298 0 0 1 1.476 2.17c.369.82.533 1.723.533 2.622 0 .943-.164 1.804-.533 2.622a7.277 7.277 0 0 1-1.476 2.173 7.276 7.276 0 0 1-2.173 1.473 6.957 6.957 0 0 1-5.289 0 7.276 7.276 0 0 1-2.173-1.473 6.463 6.463 0 0 1-1.435-2.17Zm19.024 13.597c0-.082-.041-.123-.041-.205a13.375 13.375 0 0 0-1.763-3.603 12.513 12.513 0 0 0-2.788-2.909 13.345 13.345 0 0 0-2.665-1.558c.43-.283.829-.613 1.189-.981a10.757 10.757 0 0 0 1.599-2.01 9.286 9.286 0 0 0 1.353-4.955 9.506 9.506 0 0 0-.738-3.767 9.735 9.735 0 0 0-2.091-3.072 9.853 9.853 0 0 0-3.075-2.05 9.533 9.533 0 0 0-3.772-.736 9.533 9.533 0 0 0-3.772.738 9.305 9.305 0 0 0-3.075 2.089 9.841 9.841 0 0 0-2.05 3.072 9.506 9.506 0 0 0-.738 3.767c0 .902.123 1.763.369 2.58.246.861.574 1.64 1.025 2.376.41.738.984 1.394 1.599 2.009.369.369.779.694 1.23.981-.949.426-1.843.963-2.665 1.6a14.203 14.203 0 0 0-2.788 2.867 12.81 12.81 0 0 0-1.763 3.603c-.041.082-.041.164-.041.205-3.239-3.278-5.248-7.7-5.248-12.615 0-9.871 8.077-17.94 17.958-17.94 9.881 0 17.958 8.069 17.958 17.94a17.835 17.835 0 0 1-5.207 12.574Z"/></svg>');
+        }
+
+        &__balance__balance {
+            margin-bottom: 1rem;
+        }
+
+        &__user {
+            &__id {
+                margin-left: 0.5rem;
+                color: #717580;
+            }
+        }
+    }
+
+    &__sidebar {
+        display: none;
+    }
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+
+        ul.list {
+            padding-left: 1em;
+            margin: 0;
+            list-style: none;
+            break-after: column;
+
+            > li {
+                position: relative;
+                margin: 0 0 0.5em;
+
+                &::before {
+                    position: absolute;
+                    top: 0.5em;
+                    left: -1em;
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    content: '';
+                    border: solid transparent;
+                    border-width: 5px 7px;
+                    border-left-color: $brand_secondary;
+                }
+            }
+        }
+    }
+
+    &__header {
+        position: relative;
+        padding: 1rem 1rem 0 2rem;
+        color: $brand_base;
+    }
+
+    &__burger {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        margin: 0.5rem;
+        transform: translateY(-50%);
+
+        @include font-size-xs();
+
+        span {
+            background-color: $brand_primary;
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 7em;
+        left: 0;
+        z-index: 3;
+        min-width: 22rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background-color: $brand_white;
+        border-radius: 5rem;
+
+        a {
+            position: relative;
+            display: block;
+            padding: 0;
+            font-size: 1.6rem;
+            color: $brand_base;
+            background-color: $brand_white;
+            border: 1px solid $brand_dark !important;
+            border-radius: 5rem;
+
+            .dark-theme & {
+                background-color: #414141;
+            }
+
+            @media #{$navbar_breakpoint} {
+                font-size: 2rem;
+            }
+
+            @include transition(background-color, 200ms);
+
+            &:hover {
+                background-color: rgba($brand_primary, 0.15);
+            }
+        }
+
+        .active,
+        .current_page_item {
+            position: relative;
+
+            a {
+                font-weight: $font_weight_medium;
+                background-color: rgba($brand_primary, 0.15);
+            }
+        }
+
+        &__mobile {
+            position: absolute;
+            top: 4em;
+            left: 0;
+            z-index: 3;
+            min-width: 20rem;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            list-style: none;
+            background-color: $brand_white;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+
+            a {
+                position: relative;
+                display: block;
+                padding: 1rem;
+                font-size: 1.6rem;
+                color: $brand_base;
+                background-color: $brand_gray;
+
+                @include transition(background-color, 200ms);
+
+                &:hover {
+                    color: $brand_dark;
+                    background-color: rgba($brand_primary, 0.15);
+                }
+            }
+
+            .active,
+            .current_page_item {
+                position: relative;
+
+                a {
+                    font-weight: $font_weight_medium;
+                    color: $brand_primary;
+                    background-color: rgba($brand_primary, 0.15);
+                }
+            }
+        }
+    }
+
+    &__title {
+        padding: 0.5em 1em;
+        font-size: 2.5rem;
+        font-weight: $font_weight_bold;
+        line-height: 1.2;
+        color: $brand_primary;
+
+        small {
+            @include font-size-md();
+            display: block;
+            font-weight: initial;
+            text-transform: initial;
+
+            @media #{$md} {
+                display: inline-block;
+            }
+        }
+    }
+
+    &__addNewAccount {
+        display: flex;
+        font-size: 1.4rem;
+        font-weight: $font_weight_medium;
+        color: $brand_dark;
+
+        span:hover {
+            text-decoration: underline;
+        }
+
+        &::before {
+            margin-right: 1rem;
+            content: '+';
+        }
+    }
+
+    &__main {
+        padding: 0;
+        margin-bottom: 3rem;
+    }
+
+    &__notice {
+        padding-top: 1rem;
+        margin-top: 1em;
+        border-top: 1px solid $brand_gray;
+
+        &__ssl-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 7.5em;
+            min-width: 7.5em;
+            max-width: 7.5em;
+            height: 7.5em;
+            padding: 0;
+            margin-right: 1.5em;
+            margin-bottom: 1em;
+            font-size: em(16);
+        }
+
+        &__text {
+            font-size: 1.3rem;
+        }
+
+        &__credit-cards-icons {
+            margin-top: 1.5em;
+
+            svg {
+                display: inline-block;
+                width: 8em;
+                min-width: 8em;
+                height: 2.5em;
+                padding: 0.6em;
+                background: #f0f0f0;
+                fill: #f0f0f0;
+
+                + svg {
+                    margin-left: em(5);
+                }
+            }
+        }
+    }
+
+    &__beforeWidget {
+        padding-bottom: 1rem;
+        margin-bottom: 1em;
+        font-size: 1.4rem;
+        border-bottom: 1px solid $brand_gray;
+    }
+
+    &__afterWidget {
+        padding-top: 1rem;
+        margin-top: 1em;
+        font-size: 1.3rem;
+        border-top: 1px solid $brand_gray;
+    }
+
+    /* stylelint-disable no-descending-specificity */
+    &__ccx-btn {
+        @include button_primary();
+
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5em 1.5em;
+        margin-top: 1em;
+        font-size: 1.7rem;
+        font-weight: $font_weight_medium;
+        line-height: 1.2;
+        border: 0;
+
+        svg {
+            @include height-ratio(247, 93, 14);
+
+            display: inline-block;
+            margin-right: 0.4em;
+        }
+    }
+
+    @media #{$md} {
+        &__container {
+            position: relative;
+            margin: 3rem 2rem 5em;
+        }
+
+        &__addNewAccount {
+            flex: 0 0 auto;
+            margin-right: 1em;
+            margin-left: auto;
+        }
+
+        &__menu {
+            .active {
+                position: relative;
+            }
+        }
+    }
+
+    @media #{$navbar_breakpoint} {
+        &__container {
+            position: relative;
+            margin: 3rem 2rem 5em;
+        }
+
+        &__header {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 6rem;
+            color: $brand_base;
+        }
+
+        &__sidebar {
+            display: block;
+            flex-basis: 20%;
+            padding: 3rem 4rem;
+            background: $brand_widgets_bg;
+
+            .dark-theme & {
+                background-color: $brand_gray;
+            }
+
+            .prfwp-navbar__brand {
+                margin-bottom: 4rem;
+            }
+        }
+
+        &__burger {
+            display: none;
+        }
+
+        &__title {
+            @include font-size-lg();
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5em 0;
+        }
+
+        &__navigation {
+            width: 100%;
+            border-bottom: 3rem solid transparent;
+        }
+
+        &__beforeWidget {
+            //column-count: 2;
+        }
+
+        &__notice {
+            display: flex;
+            align-items: center;
+
+            &__ssl-icon {
+                margin-bottom: 0;
+            }
+
+            &__credit-cards-icons {
+                margin-top: 0;
+                margin-left: 1em;
+
+                svg {
+                    + svg {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media #{$xxl} {
+        &__container {
+            position: relative;
+            margin: 3rem 18rem 5em 8rem;
+        }
+    }
+}
+
+@media #{$xl} {
+    .template-widget {
+        header {
+            display: none;
+        }
+    }
+}

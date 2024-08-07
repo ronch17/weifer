@@ -1,0 +1,123 @@
+// stylelint-disable
+.acfm-bg-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    order: 1;
+    width: 100%;
+    height: 100%;
+
+    &,
+    &--sm,
+    &--md {
+        background-repeat: no-repeat;
+    }
+
+    &--sm {
+        @media #{$xl} {
+            display: none;
+        }
+    }
+
+    &--md {
+        display: none;
+        height: 100%;
+        background-position: bottom right;
+
+        @media #{$xl} {
+            display: block;
+        }
+    }
+
+    &-hide {
+        &-mobile {
+            @media #{$navbar_until_breakpoint} {
+                display: none;
+            }
+        }
+
+        &-desktop {
+            @media #{$navbar_breakpoint} {
+                display: none;
+            }
+        }
+    }
+
+    .acfm-bg-image--size-cover & {
+        background-size: cover;
+    }
+
+    .acfm-bg-image--size-contain & {
+        background-position: top center;
+        background-size: contain;
+    }
+
+    .acfm-bg-image--align-right-top & {
+        background-position: right top;
+    }
+
+    .acfm-bg-image--align-right-center & {
+        background-position: right center;
+    }
+
+    .acfm-bg-image--align-right-bottom & {
+        background-position: right bottom;
+    }
+
+    .acfm-bg-image--align-left-top & {
+        background-position: left top;
+    }
+
+    .acfm-bg-image--align-left-center & {
+        background-position: left center;
+    }
+
+    .acfm-bg-image--align-left-bottom & {
+        background-position: left bottom;
+    }
+
+    .acfm-bg-image--align-center-top & {
+        background-position: center top;
+    }
+
+    .acfm-bg-image--align-center-center & {
+        background-position: center center;
+    }
+
+    .acfm-bg-image--align-center-bottom & {
+        background-position: center bottom;
+    }
+
+    &__widgets {
+        display: none;
+        background-position: center;
+        background-size: cover;
+
+        @media #{$navbar_breakpoint} {
+            display: block;
+        }
+    }
+}
+
+.custom-bg-position {
+    padding-bottom: 23rem;
+
+    .acfm-bg-image {
+        background-position: 0% -95%;
+    }
+}
+
+.green-bg {
+    z-index: -5;
+
+    margin-top: -23rem;
+    margin-bottom: -26%;
+
+    @media #{$lg} {
+        padding-top: 75rem;
+    }
+    .acfm-bg-image {
+        background-position: center top;
+        background-size: cover;
+    }
+}

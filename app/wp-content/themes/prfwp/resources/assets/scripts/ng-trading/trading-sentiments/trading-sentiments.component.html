@@ -1,0 +1,24 @@
+<div class="{{ $ctrl.styles.main }}">
+  <h4 class="{{ $ctrl.styles.upLabel }}">buy</h4>
+  <h4 class="{{ $ctrl.styles.downLabel }}">sell</h4>
+  <ul class="{{ $ctrl.styles.list }}">
+    <li
+      class="{{ $ctrl.styles.chart }} js-anim"
+      ng-repeat="item in ($ctrl.tradingSentiments$|async:this) track by $index"
+    >
+      <h4 class="{{ $ctrl.styles.chartLabel }}">{{ item.name }}</h4>
+      <div
+        class="{{ $ctrl.styles.chartUp }}"
+        ng-style="{ width: (item.buyRatio) + '%' }"
+      >
+        {{ item.buyRatio }}%
+      </div>
+      <div
+        class="{{ $ctrl.styles.chartDown }}"
+        ng-style="{width: (item.sellRatio) + '%'}"
+      >
+        {{ item.sellRatio }}%
+      </div>
+    </li>
+  </ul>
+</div>

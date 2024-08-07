@@ -1,0 +1,73 @@
+.prfwp-contentWidgets {
+    &__menu {
+        a {
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                .svg-icon {
+                    background-color: rgba($brand_primary, 0.6);
+                }
+            }
+        }
+
+        .svg-icon {
+            width: 6rem;
+            height: 6rem;
+            padding: 0.6em;
+            margin-right: 0.9rem;
+            border-radius: 30px;
+            @include transition(background-color);
+        }
+
+        .active,
+        .current_page_item {
+            .svg-icon {
+                color: $brand_white;
+                background-color: $brand_primary;
+            }
+        }
+    }
+
+    @media #{$md} {
+        &__container {
+            .forgot-password &,
+            .reset-password & {
+                display: block;
+            }
+        }
+
+        &__navigation {
+            position: initial;
+        }
+
+        &__main {
+            grid-area: main;
+        }
+
+        &__menu {
+            &,
+            &.collapse:not(.show) {
+                position: initial;
+                display: block;
+            }
+
+            width: initial;
+            max-height: initial;
+            overflow: initial;
+            background: transparent;
+            box-shadow: initial;
+
+            li {
+                margin-bottom: em(12, 60);
+            }
+
+            a {
+                min-width: 18rem;
+                padding: 1.3rem 2rem;
+                margin-bottom: 2rem;
+                border: 0;
+            }
+        }
+    }
+}

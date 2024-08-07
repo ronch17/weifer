@@ -1,0 +1,23 @@
+.acfm-columns {
+    &-2 {
+        column-count: 2;
+    }
+
+    &-3 {
+        column-count: 3;
+    }
+
+    &-hide {
+        &-mobile {
+            @media #{$navbar_until_breakpoint} {
+                display: none;
+            }
+        }
+
+        &-desktop {
+            @media #{$navbar_breakpoint} {
+                display: none;
+            }
+        }
+    }
+}

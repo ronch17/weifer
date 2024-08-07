@@ -1,0 +1,51 @@
+/* stylelint-disable */
+.acfm-footer-payments {
+    position: relative;
+    padding: 1em 0;
+    font-size: 80%;
+    border-top: 1px solid #efefef;
+
+    @media #{$md} {
+        @include font-size-md();
+    }
+
+    .acfm-footer-main & {
+        padding: 0 0 2em;
+        margin: 0 0 2em;
+    }
+
+    .acf-row__col & {
+        margin-bottom: 2em;
+    }
+
+    &__container {
+        max-width: 120rem;
+    }
+
+    &__icon {
+        &.monochrome {
+            -webkit-filter: grayscale(100%) contrast(120%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+            filter: grayscale(100%) contrast(120%);
+            filter: gray; /* IE6-9 */
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+
+        li {
+            margin: 0.5em 2em;
+
+            svg {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}

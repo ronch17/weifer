@@ -1,0 +1,96 @@
+$table: (
+    th--text-color: $table_bordered_th_color,
+    th--background: $table_bordered_th_background,
+    table-border--color: $table_bordered_border,
+    document-table-border--color: $table_border_color,
+);
+
+.liveAccounts {
+    background: $brand_widgets_bg;
+    border-radius: 2rem;
+    padding: 2rem 0;
+    margin-bottom: 4rem;
+}
+
+.#{prfw}-table {
+    //custom extending table
+    table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse;
+
+        tbody {
+            border: solid $brand_primary;
+            border-width: 2px 0;
+        }
+
+        tr + tr {
+            border-top: 2px $brand_primary;
+        }
+
+        // Cells align and borders
+        th,
+        td {
+            vertical-align: middle;
+        }
+
+        //table cells
+        th {
+            padding: em(5) em(10);
+            font-size: 110%;
+            font-weight: bold;
+            color: $table_th_color;
+            text-align: left;
+            text-transform: capitalize;
+        }
+
+        td {
+            padding: em(5) em(10);
+            border: 2px solid $brand_primary;
+        }
+    }
+}
+
+.#{prfw}-table-bordered {
+    //custom extending table
+    table {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        font-size: em(13, 14);
+        border-collapse: collapse;
+        border-top: 1px solid map-get($table, table-border--color);
+
+        tr {
+            vertical-align: middle;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        th,
+        td {
+            padding: em(20);
+            border-left: 1px solid map-get($table, table-border--color);
+
+            &:last-of-type {
+                border-right: 1px solid map-get($table, table-border--color);
+            }
+        }
+
+        //table cells
+        th {
+            font-weight: $font_weight_medium;
+            font-size: 1.4rem;
+            color: $brand_white;
+            text-align: left;
+            text-transform: capitalize;
+            white-space: nowrap;
+            background: $brand_primary;
+        }
+    }
+}
+
+//th.header,
+//td {
+//    position: relative;
+//    left: 3rem;
+//}

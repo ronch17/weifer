@@ -1,0 +1,110 @@
+$base_font_size_px: 14;
+
+@import 'common/functions';
+@import 'common/variables';
+@import 'common/mixins';
+
+.glossary-atoz {
+    &__menu {
+        &-wrapper {
+            //background-color: $brand_light;
+            padding: 1em 0;
+        }
+
+        @include font-size-lg();
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-weight: $font_weight_light;
+
+        color: $brand_white;
+        list-style: none;
+
+        @media #{$xl} {
+            justify-content: space-between;
+        }
+
+        a {
+            display: block;
+            min-width: 0.7em;
+            font-weight: $font_weight_bold;
+            line-height: 1em;
+            text-align: center;
+            text-decoration: none;
+
+            &.active {
+                border-bottom: 5px solid $brand_primary;
+            }
+
+            &:hover {
+                color: $brand_primary_active;
+            }
+        }
+    }
+
+    &__title {
+        @include font-size-xl();
+
+        position: relative;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        font-weight: $font_weight_bold;
+
+        span {
+            color: $brand_secondary;
+        }
+    }
+
+    &__list {
+        &__item {
+            @include transition(opacity);
+
+            &:not(.show) {
+                display: none;
+                opacity: 0;
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    &__group {
+        padding: 0 0 8em;
+        margin-bottom: 0;
+        list-style: none;
+
+        @media #{$xl} {
+            column-count: 3;
+            column-gap: 3em;
+        }
+    }
+
+    &__item {
+        @include font-size-sm();
+        position: relative;
+        padding-left: 2.5em;
+        margin-bottom: 3rem;
+        line-height: (22 / 16);
+
+        break-inside: avoid-column;
+
+        &__title {
+            @include font-size-md();
+
+            margin-bottom: 0.2em;
+            font-weight: $font_weight_bold;
+        }
+
+        &::before {
+            position: absolute;
+            display: inline-block;
+            width: 2.3rem;
+            height: 2.3rem;
+            margin-left: -2.4em;
+            content: '';
+            background-repeat: no-repeat;
+        }
+    }
+}

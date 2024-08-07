@@ -1,0 +1,267 @@
+// stylelint-disable
+
+@mixin top-svg() {
+    position: absolute;
+    top: -3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(90deg, #2ab6fe, #3c72f4);
+    border-radius: 5rem;
+}
+
+@mixin transition($prop: all, $duration: 400ms, $easing: $easing) {
+    @if (length($prop) == 1) {
+        transition: $prop $duration $easing;
+
+        @if ($prop != all) {
+            will-change: $prop;
+        }
+    } @else {
+        $result: ();
+
+        @each $item in $prop {
+            $result: append($result, $item, comma);
+        }
+
+        transition-timing-function: $easing;
+        transition-duration: $duration;
+        transition-property: $result;
+        will-change: $result;
+    }
+}
+
+@mixin responsive-font($pixelSize: 21, $minimum: 4) {
+    $rem: #{$pixelSize / 10}rem;
+    $threeQuarter: ceil($pixelSize - ($pixelSize / 4));
+
+    @if ($minimum != 4) {
+        $threeQuarter: $minimum;
+
+        font-size: rem($minimum);
+    } @else {
+        font-size: rem($threeQuarter);
+    }
+
+    // https://css-tricks.com/snippets/css/fluid-typography/
+    // calc( [minimum size]
+    // + ([maximum size] - [minimum size])
+    // * ((100vw - [minimum viewport width])
+    // / ([maximum viewport width] - [minimum viewport width])));
+    @media #{$xs} {
+        font-size: calc(#{$threeQuarter}px + (#{$pixelSize} - #{$threeQuarter}) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    @media #{$xl} {
+        font-size: rem($pixelSize);
+    }
+}
+
+@mixin secondary-font() {
+    @if ($font_secondary) {
+        font-family: $font_secondary;
+    }
+}
+
+@mixin letter-spacing() {
+    @if ($letter_spacing) {
+        letter-spacing: $letter_spacing;
+    }
+}
+
+@mixin height-ratio($width, $height, $newHeight: 10) {
+    // Aspect ratio formula src:https://eikhart.com/blog/aspect-ratio-calculator
+    $aspectRatio: $width / $height;
+    $newWidth: ($newHeight * $aspectRatio);
+    //newHeight = ( newWidth / aspectRatio )
+
+    width: em($newWidth);
+    height: em($newHeight);
+}
+
+@mixin vw-ratio($width, $height, $newWidth: 10) {
+    // Aspect ratio formula src:https://eikhart.com/blog/aspect-ratio-calculator
+    $aspectRatio: $width / $height;
+    //$newWidth: ($newHeight * $aspectRatio);
+    $newHeight: ($newWidth / $aspectRatio);
+
+    width: #{$newWidth}vw;
+    height: #{$newHeight}vw;
+}
+
+@mixin max-vmin-ratio($width, $height, $newMaxWidth: 30) {
+    // Aspect ratio formula src:https://eikhart.com/blog/aspect-ratio-calculator
+    $aspectRatio: $width / $height;
+    $newHeight: ($newMaxWidth / $aspectRatio);
+    max-width: $newMaxWidth * 1vw;
+
+    max-height: $newHeight * 1vw;
+}
+
+@mixin logo-dimensions($width, $height, $newHeight, $newMaxWidth) {
+    @include height-ratio($width, $height, $newHeight);
+    //@include max-vmin-ratio($width, $height, $newMaxWidth);
+}
+
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+@mixin fadein-animation($from: 1, $to: 10, $time: 100) {
+    opacity: 0;
+    transform: translateY(3rem);
+
+    @for $i from $from through $to {
+        &:nth-child(#{$i}) {
+            animation: listItem 1s $easing forwards $i * $time + 50ms;
+        }
+    }
+
+    @keyframes listItem {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@mixin form-control {
+    width: 100%;
+    height: $form_control_height;
+    padding: 1.3rem 1rem;
+    line-height: 2.2rem;
+    color: $form_control_placeholder;
+    background: $form_control_background;
+    border: 1px solid $brand_gray_border;
+    border-radius: 3rem;
+}
+
+@mixin brand-shadow {
+    overflow: hidden;
+    //background-color: $brand_white;
+    border-radius: $brand_border_radius;
+    box-shadow: $brand_shadow;
+}
+
+@mixin font-size-xs {
+    @include responsive-font(14);
+}
+
+@mixin font-size-sm {
+    @include responsive-font(18);
+}
+
+@mixin font-size-md {
+    @include responsive-font(20);
+}
+
+@mixin font-size-lg {
+    @include responsive-font(45);
+    @include letter-spacing();
+    line-height: 1.2;
+}
+
+@mixin font-size-xl {
+    @include responsive-font(70);
+    @include letter-spacing();
+    line-height: 1.2;
+}
+
+@mixin cards {
+    background: $brand_white;
+    border-radius: 1rem;
+    box-shadow: $brand_shadow;
+}
+
+@mixin animate-pop {
+    animation: animate-pop ease 1s;
+}
+
+@mixin fade-in-up {
+    animation: fadeInUp ease-in-out 1s;
+    animation-fill-mode: both;
+}
+
+@mixin fade-in-bottom {
+    animation: fadeInBottom ease-in-out 1s;
+    animation-fill-mode: both;
+}
+
+@mixin fade {
+    animation: Fade ease-in-out 1s;
+    animation-fill-mode: both;
+}
+
+
+@mixin fadeIn-right-onScroll {
+    animation: fadeInRight;
+    animation-timeline: scroll();
+}
+
+@mixin fadeIn-left-onScroll {
+    animation: fadeInLeft;
+    animation-timeline: scroll();
+}
+
+@keyframes animate-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes Fade {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+
+@keyframes fadeInBottom {
+    from {
+        opacity: 0%;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0%;
+        transform: translateY(0%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        transform: translate(calc(50% - 0.5rem));
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        transform: translateX(300px);
+    }
+}

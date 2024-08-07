@@ -1,0 +1,14 @@
+@mixin error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 2px 4px;
+    margin-top: 2px;
+    font-size: 11px; // stylelint-disable-line property-blacklist
+    line-height: 1;
+    color: $brand_white;
+    background: rgba($brand_danger, 0.85);
+
+    @include border-radius();
+}

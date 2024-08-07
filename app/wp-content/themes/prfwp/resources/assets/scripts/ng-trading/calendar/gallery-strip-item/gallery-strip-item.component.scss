@@ -1,0 +1,53 @@
+@import 'resources/assets/styles/calendar/calendar-imports';
+
+:local {
+    .main {
+        @include responsive-font(20, 10);
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: em(10) em(5);
+        padding-left: em(10);
+        line-height: 1;
+        cursor: pointer;
+        border: em(3) solid $brand_light;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: em(5);
+            height: 100%;
+            content: '';
+            background-color: $brand_primary;
+
+            @include transition(width, 300ms);
+        }
+
+        &:global(.active) {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    .title {
+        b {
+            margin-right: em(3);
+            margin-bottom: em(3);
+        }
+    }
+
+    .text {
+        font-size: 85%;
+        display: block;
+    }
+}
+
+prf-gallery-strip-item {
+    height: 100%;
+}

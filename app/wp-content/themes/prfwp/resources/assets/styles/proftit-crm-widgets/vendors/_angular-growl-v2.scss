@@ -1,0 +1,96 @@
+@mixin cfd-button-close($color: $cfd_icon_color, $color_hover: $cfd_icon_color_active) {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    padding: 0;
+    margin-left: 0.4em;
+    color: $color;
+    text-indent: -9999px;
+    vertical-align: middle;
+    background: none;
+    border: 1px solid;
+    border-radius: 4px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 7px;
+        left: 3px;
+        width: 9px;
+        height: 1px;
+        content: '';
+        background: currentColor;
+        transform-origin: 50% 50%;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:hover {
+        color: $color_hover;
+    }
+}
+
+// AngularJS Growl 2
+//Original src: https://github.com/JanStevens/angular-growl-2/blob/master/src/growl.css
+.prfw-growl {
+    .growl-container {
+        //
+    }
+
+    .growl-item {
+        position: relative;
+        width: 98%;
+        padding: $growl_padding;
+        padding-right: $growl_padding + 1em;
+        margin: 1%;
+        cursor: pointer;
+        background-color: $brand_white;
+        border-top: 0.4rem solid;
+        border-radius: 0.2em;
+        box-shadow: $growl_shadow;
+
+        &.ng-enter,
+        &.ng-leave {
+            transition: 0.5s linear all;
+        }
+
+        &.ng-enter,
+        &.ng-leave.ng-leave-active {
+            opacity: 0;
+        }
+
+        &.ng-leave,
+        &.ng-enter.ng-enter-active {
+            opacity: 1;
+        }
+    }
+
+    .alert-danger {
+        color: $brand_danger;
+        background-color: $brand_danger_light;
+    }
+
+    .alert-info {
+        color: $brand_info;
+        background-color: $brand_info_light;
+    }
+
+    .alert-success {
+        color: $brand_success;
+        background-color: $brand_success_light;
+    }
+
+    .close {
+        @include cfd-button-close(inherit, inherit);
+
+        position: absolute;
+        top: $growl_padding;
+        right: calc(#{$growl_padding} - 0.2em);
+    }
+}

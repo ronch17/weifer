@@ -1,0 +1,71 @@
+//noinspection SassScssResolvedByNameOnly
+.prfw-phone-country-control {
+    &,
+    &__country,
+    &__phone {
+        height: calc(#{dropdown-var(single--height)} - 0.2rem);
+        line-height: calc(#{dropdown-var(single--height)} - 0.2rem);
+    }
+    width: 100%;
+    position: relative;
+    &__country {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        .prf-dropdown {
+            &__single {
+                position: relative;
+                min-width: #{dropdown-var(country-min-width)};
+                width: #{dropdown-var(country-width)};
+                &::after {
+                    content: '';
+                    height: 60%;
+                    width: 1px;
+                    background-color: #{dropdown-var(border-color)};
+                    position: absolute;
+                    top: 20%;
+                    right: 0;
+                }
+            }
+            &__label--countries {
+                font-size: em(13);
+                width: (#{dropdown-var(country-min-width)} - 36px);
+                display: flex;
+                align-items: center;
+                text-align: initial;
+            }
+        }
+    }
+    &__phone {
+        font-size: dropdown-var(font-size);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100% - (#{dropdown-var(country-min-width)} + 1px));
+        max-width: calc(100% - #{dropdown-var(country-width)} - 1px);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0.5em;
+        border: 0;
+        background-color: dropdown-var(transparent);
+        .prfw-form-control {
+            .signupprfw & {
+                padding-left: 0;
+                background-color: initial;
+                border: initial;
+            }
+        }
+        &::placeholder {
+            color: dropdown-var(placeholder--color);
+            opacity: 1;
+        }
+    }
+    &:focus-within {
+        &,
+        .prf-dropdown {
+            --dropdown--border-color: #{dropdown-var(focus--border-color)};
+        }
+    }
+}

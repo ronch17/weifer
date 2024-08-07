@@ -1,0 +1,1 @@
+<div id="forex"></div>

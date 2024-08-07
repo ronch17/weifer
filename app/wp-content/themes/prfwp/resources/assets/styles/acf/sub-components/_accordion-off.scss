@@ -1,0 +1,47 @@
+.acfm-accordionOff {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 5rem 2rem;
+
+    &__title {
+        @include font-size-md();
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+        font-weight: $font_weight_medium;
+        line-height: 1.2;
+
+        &::before {
+            @include responsive-font(35);
+            position: absolute;
+            top: 0.8rem;
+            left: -0.8em;
+            padding-right: 0.5em;
+            line-height: 0;
+            color: $brand_primary;
+            content: '•';
+        }
+    }
+
+    &__text {
+        max-width: 100%;
+        line-height: (18 / 14);
+        text-align: left;
+
+        p {
+            span {
+                font-family: $font_base;
+            }
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media #{$md} {
+        &:last-child {
+            margin-bottom: 4rem;
+        }
+    }
+}

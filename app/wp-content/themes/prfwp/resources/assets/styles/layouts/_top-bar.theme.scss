@@ -1,0 +1,56 @@
+/* stylelint-disable */
+.prfwp-customerTopBar {
+    z-index: 2;
+    margin-bottom: 1rem;
+    letter-spacing: initial;
+    background-color: $customerTopBar_background;
+
+    &__container {
+        margin: 0 -7.4rem;
+        color: $customerTopBar_color;
+
+        @if not($customerTopBar_fullWidth) {
+            padding: 0 0.2rem;
+        }
+    }
+
+    .svg-user {
+        width: 1.6em;
+        height: 1.6em;
+        margin-right: 0.4em;
+        vertical-align: -0.4em;
+        stroke: $customerTopBar_color;
+        stroke-width: 0;
+    }
+
+    &__detail {
+        &.loginprfw__account-switcher {
+            select {
+                min-width: 17rem;
+                padding: 0.2em 0.6em;
+                line-height: 1;
+                text-shadow: none;
+                cursor: pointer;
+                background: $customerTopBar_chosen_background no-repeat right 0.5rem top 0.6rem / 1.2rem;
+                background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.3 8.4" width="100%" height="100%"><path d="M11.3 0L5.6 2.9 0 0l5.6 8.4L11.3 0z"></path></svg>');
+                border: 1px solid $customerTopBar_chosen_background;
+
+                &:focus {
+                    border-color: $customerTopBar_color;
+                }
+            }
+
+            option {
+                background-color: $customerTopBar_chosen_background;
+            }
+        }
+    }
+
+    @media #{$xl} {
+        background-color: initial;
+
+        &__container {
+            background-color: $customerTopBar_background;
+        }
+    }
+}

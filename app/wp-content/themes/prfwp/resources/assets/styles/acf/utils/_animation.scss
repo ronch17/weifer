@@ -1,0 +1,24 @@
+/* stylelint-disable */
+.js-anim {
+    opacity: 0;
+    animation: opacity 1s $easing both;
+
+    &.js-anim-paused {
+        animation-play-state: paused;
+    }
+
+    // stylelint-disable declaration-no-important
+    * {
+        &,
+        &::before,
+        &::after {
+            animation-play-state: inherit !important;
+        }
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+}

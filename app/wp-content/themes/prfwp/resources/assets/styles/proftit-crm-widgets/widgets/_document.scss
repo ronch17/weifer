@@ -1,0 +1,21 @@
+.documentprfw {
+    &__doc-upload {
+        &__label {
+            display: block;
+        }
+
+        &__btn {
+            display: inline-block;
+        }
+    }
+
+    &__doc-types-select {
+        @media #{$md} {
+            width: 49%;
+        }
+    }
+
+    &__table__controls {
+        white-space: nowrap;
+    }
+}

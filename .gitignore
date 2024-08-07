@@ -1,0 +1,28 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+.idea
+.cache-loader
+node_modules
+npm-debug.log
+yarn-error.log
+resources/assets/config-local.json
+db
+akismet/
+hello.php
+twen*/
+app/wp-content/uploads/cache/
+app/wp-content/updraft/log*
+!/backup/
+backup/**
+!backup/wp-tradelly-test.sql.gz
+!backup/wp-tradelly-com.sql.gz
+!backup/wp-tradelly-io.sql.gz
+!backup/wp-tradelly-exchange.sql.gz
+!backup/wp-tradelly-co.sql.gz
+!backup/wp-tradelly-stage.sql.gz
+*.hot-update.json
+#dist/
+#plugins/
+#uploads/
+#vendor/
+/scripts/variables_local.sh

@@ -1,0 +1,36 @@
+{
+    "entry": {
+        "main": [
+            "./scripts/main.js",
+            "./styles/main.scss"
+        ],
+        "customizer": [
+            "./scripts/customizer.js"
+        ],
+        "cpt-tax-tabs": [
+            "./scripts/cpt-tax-tabs.js",
+            "./styles/cpt-tax-tabs.scss"
+        ],
+        "cfd-popup": [
+            "./scripts/cfd-popup.js",
+            "./styles/cfd-popup.scss"
+        ],
+        "admin": [
+            "./scripts/admin.js",
+            "./styles/admin.scss"
+        ],
+        "contact-form-7": [
+            "./scripts/vendors/contact-form-7.js"
+        ]
+    },
+    "publicPath": "/wp-content/themes/prfwp",
+    "devUrl": "http://weifer.test",
+    "proxyUrl": "http://localhost:3108",
+    "cacheBusting": "[name]_[hash:8]",
+    "_cacheBusting": "[name]",
+    "watch": [
+        "app/**/*.php",
+        "config/**/*.php",
+        "resources/views/**/*.php"
+    ]
+}

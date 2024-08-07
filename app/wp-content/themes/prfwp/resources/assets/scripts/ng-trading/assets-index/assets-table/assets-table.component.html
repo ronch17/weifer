@@ -1,0 +1,28 @@
+<div class="{{ $ctrl.styles.table }}">
+  <!--<div class="{{ $ctrl.styles.head }}">-->
+    <!--<div-->
+      <!--class="{{ $ctrl.styles.headCell }}"-->
+      <!--ng-repeat="col in $ctrl.tableCols track by $index"-->
+    <!--&gt;-->
+      <!--<span class="cell&#45;&#45;{{ col.name }}">-->
+        <!--<span ng-cloak ng-if="col.name !== 'name'">Indicative</span>-->
+        <!--{{ col.name }}</span>-->
+    <!--</div>-->
+  <!--</div>-->
+
+    <div class="ngt-labels-k-H">
+        <span>Symbol</span>
+        <span>Bid</span>
+        <span>Ask</span>
+    </div>
+
+  <div class="{{ $ctrl.styles.body }}">
+    <div class="{{ $ctrl.styles.row }}"
+         ng-repeat="asset in $ctrl.assets track by $index" >
+      <prf-assets-table-row
+        asset="asset"
+        table-cols="$ctrl.tableCols"
+      ></prf-assets-table-row>
+    </div>
+  </div>
+</div>

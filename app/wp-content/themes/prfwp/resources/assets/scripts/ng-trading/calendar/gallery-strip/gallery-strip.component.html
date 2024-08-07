@@ -1,0 +1,9 @@
+<ul class="{{$ctrl.styles.main}}">
+  <li class="{{$ctrl.styles.item}}" ng-repeat="item in $ctrl.items track by $index">
+    <prf-gallery-strip-item
+      data="item"
+      is-selected="$ctrl.selectedKey === item.key"
+      on-select="$ctrl.onSelect({ item: item })"
+    ></prf-gallery-strip-item>
+  </li>
+</ul>

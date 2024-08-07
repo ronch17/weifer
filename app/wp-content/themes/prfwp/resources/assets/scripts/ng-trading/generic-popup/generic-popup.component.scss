@@ -1,0 +1,124 @@
+$base-font-size-px: 16;
+@import 'resources/assets/styles/common/functions';
+@import 'resources/assets/styles/common/variables';
+@import 'resources/assets/styles/common/mixins';
+
+:local {
+    .modal {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2147483640;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(#000, 0.8);
+        transition: opacity 500ms;
+        opacity: 0;
+    }
+
+    .modalFadeIn {
+        composes: modal;
+        opacity: 1;
+    }
+
+    .modalFadeOut {
+        composes: modal;
+        transition-delay: 400ms;
+        opacity: 0;
+    }
+
+    .dialog {
+        position: relative;
+        min-width: 35rem;
+        background-color: $brand_white;
+        line-height: 1.2;
+
+        &:global(.padding) {
+            padding: 3rem;
+        }
+    }
+
+    .title {
+        margin-bottom: 0.4em;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .body {
+        color: #555;
+        text-align: left;
+
+        :global(img) {
+            max-width: calc(100vw - 36px);
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1em;
+        align-items: baseline;
+    }
+
+    .button {
+        display: inline-block;
+        font-size: 1.8rem;
+        font-weight: $font_weight_bold;
+        background-color: #41bc76;
+        color: #fff;
+        border-radius: 4px;
+        min-width: 150px;
+        padding: 6px 12px;
+        text-transform: uppercase;
+        transition: background-color 800ms;
+        user-select: none;
+
+        &:hover:not([disabled]) {
+            background-color: darken(#41bc76, 10%);
+        }
+
+        &:active:not([disabled]) {
+            background-color: darken(#41bc76, 20%);
+        }
+
+        &[disabled] {
+            background-color: #555;
+            opacity: 0.5;
+        }
+    }
+
+    .cancelBtn {
+        text-decoration: underline;
+        font-weight: $font_weight_medium;
+    }
+
+    /*stylelint-disable declaration-no-important*/
+    .checkbox {
+        align-items: baseline !important;
+        input + span {
+            width: 2.5em !important;
+        }
+    }
+
+    .closeBtn {
+        position: absolute;
+        top: -#{em(10, 20)};
+        right: -#{em(10, 20)};
+        height: em(35, 20);
+        width: em(35, 20);
+        line-height: em(35, 20);
+        text-transform: uppercase;
+        text-align: center;
+        background-color: $brand_primary;
+        color: $brand_white;
+        box-shadow: 0 0 0 2px $brand_white;
+        z-index: 5;
+        padding: 0;
+        border-radius: 50%;
+        font-size: em(20);
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,201 @@
+$search_svg_icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="#{$brand_primary}"><path d="M443 126.2h-2.2c0 0 0 0 0 0-171.1 0-310.1 137.6-312.4 308.2 1.8 171.2 140.8 309 311.8 309h3.5c0.2 0 0.3 0 0.5 0 62.5 0 120.8-18.3 169.7-49.8-5.9-0.1-1.2 8.5 5.5 15.4l196 182.4c9.8 8.9 22.9 14.3 37.2 14.3 30.7 0 55.5-24.8 55.5-55.5 0-16.3-7-31-18.3-41.2l-196.2-179.8-4.4-2.7c41.8-51.1 67.2-117.1 67.2-189.1 0-0.2 0-0.5 0-0.7v-2c-1.9-170.8-140.8-308.5-311.8-308.6h-1.7zM443 688.7h-2.8c0 0 0 0 0 0-140.8 0-255.2-113.1-257.2-253.4 1.7-141 116.2-254.4 257.2-254.5h4.4c140.8 0 255.1 113.1 257.2 253.4-1.8 141.2-116.3 254.6-257.2 254.6h-1.6z"/></svg>' !default;
+
+@function svg-fill($new_fill, $icon: $search_svg_icon, $fill: $brand_primary) {
+    $new_icon: str-replace($icon, '#{$fill}', '#{$new_fill}');
+    @return url('data:image/svg+xml; utf8, #{str-replace($new_icon, '#', '%23')}');
+}
+
+@function dropdown-var($var) {
+    @return map-get($dropdown, $var);
+}
+
+$dropdown: (
+    background-color: var(--dropdown--background-color),
+    background-color--drop: var(--dropdown--background-color-drop),
+    font-size: var(--dropdown--font-size),
+    color: var(--dropdown--color),
+    placeholder--color: var(--dropdown--placeholder--color),
+    border: var(--dropdown--border-width) solid var(--dropdown--border-color),
+    border-width: var(--dropdown--border-width),
+    border-color: var(--dropdown--border-color),
+    focus--border-color: var(--dropdown--focus--border-color),
+    border-radius: var(--dropdown--border-radius),
+    padding-x: var(--dropdown--padding-x),
+    single--height: var(--dropdown--single--height),
+    single--padding: var(--dropdown--single--padding),
+    scroll-width: var(--dropdown--scroll-width),
+    scroll-track--bg-color: var(--dropdown--scroll-track--bg-color),
+    scroll-thumb--bg-color: var(--dropdown--scroll-thumb--bg-color),
+    scroll-thumb-hover--bg-color: var(--dropdown--scroll-thumb-hover--bg-color),
+    drop--font-size: var(--dropdown--drop--font-size),
+    item--height: var(--dropdown--item--height),
+    item--padding: calc((var(--dropdown--item--height) - 1.2em) / 2) var(--dropdown--padding-x),
+    active--background-color: var(--dropdown--active--background-color),
+    active--color: var(--dropdown--active--color),
+    search-icon: var(--dropdown-search-icon),
+    country-min-width: var(--country-code--min-width),
+    country-width: var(--country-code--width),
+);
+
+//noinspection ALL
+:root {
+    --dropdown--background-color: #{$controls_background};
+    --dropdown--background-color-drop: #{$form_control_background};
+    --dropdown--color: #{$controls_color};
+    --dropdown--placeholder--color: #{$controls_placeholder_color};
+    --dropdown--border-width: 1px;
+    --dropdown--border-color: #{$controls_border_color};
+    --dropdown--focus--border-color: #{$controls_border_focus_color};
+    --dropdown--border-radius: #{$controls_radius};
+    --dropdown--padding-x: calc(0.5em + 0.5%);
+    --dropdown--single--height: #{$controls_height_px};
+    --dropdown--drop--color: #{dropdown-var(color)};
+    --dropdown--drop--font-size: 13px;
+    --dropdown--font-size: 14px;
+    --dropdown--scroll-width: 10px;
+    --dropdown--scroll-track--bg-color: #{rgba($brand_secondary, 0.5)};
+    --dropdown--scroll-thumb--bg-color: #{$brand_primary};
+    --dropdown--scroll-thumb-hover--bg-color: #{darken($brand_primary, 10%)};
+    --dropdown--item--height: #{$controls_height_px};
+    --dropdown--active--background-color: #{$brand_primary};
+    --dropdown--active--color: #{$brand_white};
+    --dropdown-search-icon: #{svg-fill($brand_base)};
+    --country-code--min-width: 110px;
+    --country-code--width: 30%;
+}
+
+@import 'dropdown-mixins';
+@import 'dropdown';
+@import 'chosen';
+@import 'flags';
+@import 'phone-country-control';
+@import 'sms-code-control';
+
+/* ### Theme variations */
+//noinspection ALL
+.prfwp-loginWidget__loginPopup,
+.acfm-signup-widget__form,
+.acfm-inline-signup-widget__form {
+    .prfw-phone-country-control {
+        .flag {
+            &-wrapper {
+                display: flex;
+                align-items: center;
+            }
+
+            &-icon {
+                height: calc(#{dropdown-var(item--height)} - 8px);
+                width: calc(#{dropdown-var(item--height)} - 8px);
+                min-width: calc(#{dropdown-var(item--height)} - 8px);
+                background-size: cover;
+                background-position: center;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 3px;
+            }
+
+            &-country-code {
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &::before {
+                    content: '+';
+                }
+            }
+        }
+        &__phone {
+            .prfw-form-control {
+                padding-left: 0;
+                background-color: initial;
+                border: initial;
+            }
+        }
+    }
+}
+.prfwp-loginWidget__loginPopup {
+    .prf-dropdown {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+
+        &__single {
+            background-color: dropdown-var(background-color);
+            border-radius: dropdown-var(border-radius);
+            border: dropdown-var(border);
+            height: calc(#{dropdown-var(single--height)} - 0.2rem);
+            line-height: calc(#{dropdown-var(single--height)} - 0.2rem);
+
+            &::after {
+                content: normal;
+            }
+        }
+
+        &__caret {
+            background-color: dropdown-var(border-color);
+            width: calc(#{dropdown-var(single--height)} + 1.6em);
+            height: calc(#{dropdown-var(single--height)} - 0.7em);
+            margin-right: 0.3em;
+            border-radius: dropdown-var(border-radius);
+            color: dropdown-var(background-color);
+        }
+    }
+}
+
+.prfwp-loginWidget__loginPopup {
+    --dropdown--single--height: 34px;
+    --dropdown--border-radius: #{$form_control_radius};
+    --dropdown--border-color: #{$brand_gray};
+    --dropdown--focus--border-color: #{$brand_primary};
+}
+
+//noinspection ALL
+.acfm-signup-widget__form {
+    --dropdown--padding-x: 1.8rem;
+    --dropdown--single--height: 5rem;
+    --dropdown--color: #{#1d1d1d};
+
+    .prfw-btn-send-sms {
+        margin: 1em 0 0.5em;
+        @include button-primary();
+    }
+}
+
+//noinspection ALL
+.acfm-inline-signup-widget__form {
+    --dropdown--single--height: #{$form_control_height};
+    --dropdown--padding-x: 1.8rem;
+    --country-code--min-width: 90px;
+}
+
+.loginprfw__account-switcher {
+    min-width: 15em;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    --dropdown--single--height: 28px;
+    --dropdown--item--height: 23px;
+}
+
+.loginprfw__phone-auth {
+    &__title {
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.8em 0 1em;
+    }
+
+    &__submit-btn {
+        @include button_primary();
+
+        width: 50%;
+    }
+
+    &__resend-code-btn {
+        @include button_outline();
+
+        width: 35%;
+    }
+}

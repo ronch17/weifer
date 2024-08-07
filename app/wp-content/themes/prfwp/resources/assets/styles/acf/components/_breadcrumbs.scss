@@ -1,0 +1,31 @@
+/* stylelint-disable */
+
+.acfm-breadcrumbs {
+    @media #{$md} {
+        padding-top: 10rem;
+    }
+
+    .acfm {
+        &__list {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+            color: $brand_white;
+            list-style-type: none;
+
+            @media #{$md} {
+                justify-content: start;
+                padding-left: -4;
+            }
+
+            & a:hover {
+                color: $brand_primary;
+            }
+
+            .bracket {
+                padding: 0 1rem;
+            }
+        }
+    }
+}

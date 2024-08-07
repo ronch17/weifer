@@ -1,0 +1,63 @@
+/* stylelint-disable */
+.acfm-payments {
+    position: relative;
+    padding: 1em 0;
+    font-size: 80%;
+
+    @media #{$md} {
+        @include font-size-md();
+    }
+
+    .acfm-footer-main & {
+        padding: 0 0 2em;
+        margin: 0 0 2em;
+    }
+
+    .acf-row__col & {
+        margin-bottom: 2em;
+    }
+
+    &__icon {
+        &.monochrome {
+            -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+            filter: grayscale(100%);
+            filter: gray; /* IE6-9 */
+
+            &:hover {
+                -webkit-filter: none; /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+                filter: none;
+                filter: none; /* IE6-9 */
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+
+        li {
+            flex-basis: 25%;
+            margin-bottom: 1rem;
+            @media #{$sm} {
+                flex-basis: auto;
+            }
+
+            svg {
+                display: block;
+                margin: 0 auto;
+                opacity: 0.4;
+                @include transition();
+
+                &:hover {
+                    @include transition();
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+/* stylelint-disable */
+.prfwp-customerTopBar {
+    &__myAccount {
+        padding: 0.2em 0.5em 0.1em;
+        text-align: center;
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .svg-user {
+            display: inline-block;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+    }
+
+    &__detail {
+        flex-grow: 1;
+        margin-right: 2rem;
+        text-align: center;
+
+        &.loginprfw__account-switcher {
+            max-width: 40%;
+            & .chosen-container {
+                background: $form_control_background;
+            }
+        }
+
+        &__value {
+            font-weight: $font_weight_bold;
+        }
+    }
+
+    @media #{$navbar_breakpoint} {
+        position: absolute;
+        top: calc(100% + 0.5em);
+        left: 50%;
+        width: 80%;
+        box-shadow: none;
+        transform: translateX(-50%);
+
+        .template-widget & {
+            top: 6rem;
+        }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .template-widget & {
+                max-width: 100%;
+            }
+        }
+
+        &__detail {
+            &.loginprfw__account-switcher {
+                max-width: none;
+                margin-right: 1rem;
+            }
+        }
+    }
+}

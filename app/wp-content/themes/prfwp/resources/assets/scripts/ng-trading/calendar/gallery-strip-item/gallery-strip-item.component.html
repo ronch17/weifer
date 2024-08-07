@@ -1,0 +1,10 @@
+<div
+  class="{{ $ctrl.styles.main }} {{ $ctrl.isSelected ? 'active' : '' }}"
+  ng-click="$ctrl.onSelect()"
+>
+  <span class="{{ $ctrl.styles.title }}">
+    <b ng-bind="$ctrl.data.title"></b>
+    <span ng-bind="$ctrl.data.subtitle"></span>
+  </span>
+  <p class="{{ $ctrl.styles.text }}"><span ng-bind="$ctrl.data.text"></span></p>
+</div>

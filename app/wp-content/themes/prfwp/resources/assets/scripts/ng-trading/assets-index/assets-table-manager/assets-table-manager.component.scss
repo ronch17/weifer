@@ -1,0 +1,10 @@
+$base-font-size-px: 16;
+@import 'resources/assets/styles/common/functions';
+@import 'resources/assets/styles/common/variables';
+@import 'resources/assets/styles/common/mixins';
+
+.prf-assets-notice {
+    color: $brand_gray;
+    padding: 0 0 2rem;
+    text-align: center;
+}

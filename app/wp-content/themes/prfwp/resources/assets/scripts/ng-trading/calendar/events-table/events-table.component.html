@@ -1,0 +1,13 @@
+<div class="{{ $ctrl.styles.table }}">
+  <div class="{{ $ctrl.styles.head }}">
+    <div class="{{ $ctrl.styles.headCell }}" ng-repeat="col in $ctrl.tableCols track by $index">
+      <span class="cell--{{col.name}}">{{ col.name }}</span>
+    </div>
+  </div>
+
+  <div class="{{ $ctrl.styles.body }}">
+    <div ng-repeat="event in $ctrl.events track by $index">
+      <prf-events-table-row data="event" table-cols="$ctrl.tableCols"></prf-events-table-row>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+// stylelint-disable  property-blacklist
+
+@function burger($key) {
+    @if map-has-key($burger_params, $key) {
+        @return map-get($burger_params, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $burger_params.";
+
+    @return null;
+}
+
+$burger_params: (
+    button_color: $brand_white,
+    span_background: currentColor,
+    span_height: 6.5%,
+    span_width: 80%,
+    span_space: 0.75em,
+);
+
+.prfwp-burger {
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    overflow: hidden;
+    color: $brand_primary;
+    @media #{$sm} {
+        // @todo
+        color: $brand_primary;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &__span {
+        position: absolute;
+        top: calc(50% - #{burger(span_height)} / 2);
+        left: ((100% - burger(span_width)) / 2);
+        width: burger(span_width);
+        height: burger(span_height);
+        background-color: burger(span_background);
+        @include border-radius();
+
+        &--first {
+            transition: top 180ms cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                transform 250ms cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+            transform: rotate(45deg);
+        }
+
+        &--middle {
+            opacity: 0;
+            transition: opacity 0s linear 230ms;
+        }
+
+        &--last {
+            transition: top 180ms cubic-bezier(0.33333, 0, 0.66667, 0.33333),
+                transform 250ms cubic-bezier(0.215, 0.61, 0.355, 1) 200ms;
+            transform: rotate(-45deg);
+        }
+
+        .collapsed & {
+            &--first {
+                top: 15%;
+                transition: top 180ms cubic-bezier(0.33333, 0.66667, 0.66667, 1) 260ms,
+                    transform 250ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                transform: rotate(0deg);
+            }
+
+            &--middle {
+                top: calc(50% - #{burger(span_height)} / 2);
+                opacity: 1;
+                transition: opacity 0s linear 280ms;
+            }
+
+            &--last {
+                top: calc(85% - #{burger(span_height)});
+                transition: top 180ms cubic-bezier(0.33333, 0.66667, 0.66667, 1) 260ms,
+                    transform 250ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+                transform: rotate(0deg);
+            }
+        }
+    }
+}

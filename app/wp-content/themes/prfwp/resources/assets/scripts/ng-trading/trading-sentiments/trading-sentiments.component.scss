@@ -1,0 +1,76 @@
+$base-font-size-px: 16;
+@import 'resources/assets/styles/common/functions';
+@import 'resources/assets/styles/common/variables';
+@import 'resources/assets/styles/common/mixins';
+
+:local {
+    .main {
+        @include responsive-font(18, 14);
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 0 0 5em;
+    }
+
+    .upLabel,
+    .downLabel {
+        font-weight: $font_weight_bold;
+        text-transform: uppercase;
+    }
+
+    .upLabel {
+        color: $brand_success;
+    }
+
+    .downLabel {
+        color: $brand_danger;
+    }
+
+    .list {
+        min-width: 100%;
+        padding: 0;
+        list-style: none;
+    }
+
+    .chart {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.4em 0 0.9em;
+    }
+
+    .chartLabel {
+        font-size: 90%;
+        line-height: 1.1;
+        position: absolute;
+        top: 50%;
+        left: -5.5em;
+        width: 5em;
+        //text-overflow: brake-word;
+        transform: translateY(-50%);
+    }
+
+    .chartUp,
+    .chartDown {
+        flex-shrink: 1;
+        min-width: min-content;
+        padding: 0 0.4em;
+        overflow: hidden;
+        font-size: 87%;
+        line-height: em(33, 20);
+        color: $brand_white;
+        white-space: nowrap;
+        border-radius: 0.3em;
+        animation: width both 1s ease 600ms;
+    }
+
+    .chartUp {
+        background-color: $brand_success;
+    }
+
+    .chartDown {
+        margin-left: 1%;
+        background-color: $brand_danger;
+    }
+}

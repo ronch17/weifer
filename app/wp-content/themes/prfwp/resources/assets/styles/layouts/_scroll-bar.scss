@@ -1,0 +1,21 @@
+/* stylelint-disable */
+
+body {
+    --sb-track-color: #2f363d;
+    --sb-thumb-color: $brand_primary;
+    --sb-size: 12px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $brand_primary;
+    border: 1px solid $brand_dark;
+    border-radius: 1rem;
+}

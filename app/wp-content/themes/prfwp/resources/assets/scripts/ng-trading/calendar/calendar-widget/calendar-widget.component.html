@@ -1,0 +1,70 @@
+<div class="{{ $ctrl.styles.main }}">
+  <div
+    class="{{ $ctrl.styles.loader }}"
+    ng-if="($ctrl.isLoading$ | async:this)"
+  >
+    loading...
+  </div>
+  <div
+    class="{{ $ctrl.styles.period }}"
+    ng-if="!($ctrl.isLoading$ | async:this)"
+  >
+    <input
+      uib-datepicker-popup
+      ng-model="$ctrl.selectedDate"
+      is-open="$ctrl.datePickerOpen"
+      datepicker-options="{showWeeks: false}"
+      class="{{ $ctrl.styles.periodInput }}"
+    />
+    <i
+      class="{{ $ctrl.styles.periodIcon }}"
+      ng-click="$ctrl.datePickerOpen = true"
+    >
+      <svg>
+        <use xlink:href="#date"></use>
+      </svg>
+    </i>
+    <span
+      class="{{ $ctrl.styles.startDate }}"
+      >{{ ($ctrl.startDate$ | async:this) | date:'dd.MM.yyyy' }}</span
+    >
+    <i class="{{ $ctrl.styles.separator }}">-</i>
+    <span
+      class="{{ $ctrl.styles.endDate }}"
+      >{{ ($ctrl.endDate$ | async:this) | date:'dd.MM.yyyy'}}</span
+    >
+  </div>
+  <div
+    class="{{ $ctrl.styles.container }}"
+    ng-if="!($ctrl.isLoading$ | async:this)"
+  >
+    <div class="{{ $ctrl.styles.inner }}">
+      <div
+        class="{{ $ctrl.styles.btnPrev }}"
+        ng-click="$ctrl.opMovePrevPage$.next()"
+      >
+        <
+      </div>
+      <prf-gallery-strip
+        items="$ctrl.currentSliceDays$ | async:this"
+        on-select="$ctrl.selectedDate$.next(item.date)"
+        selected-key="$ctrl.selectedKey$ | async:this"
+      ></prf-gallery-strip>
+      <div
+        class="{{ $ctrl.styles.btnNext }}"
+        ng-click="$ctrl.opMoveNextPage$.next()"
+      >
+        >
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div ng-if="($ctrl.dayEvents$ | async:this).length === 0">No Events</div>
+    <prf-events-table
+      ng-if="($ctrl.dayEvents$ | async:this).length > 0"
+      events="$ctrl.dayEvents$ | async:this"
+    >
+    </prf-events-table>
+  </div>
+</div>

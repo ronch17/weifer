@@ -1,0 +1,7 @@
+/* stylelint-disable */
+.acfm-trading-widget {
+    .tradingview-widget-container {
+        @include brand-shadow();
+        margin: 0 auto;
+    }
+}

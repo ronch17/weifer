@@ -1,0 +1,48 @@
+.acfm-normal-padding {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    @media #{$xl} {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.acfm-large-padding {
+    padding-top: 16rem;
+    padding-bottom: 12rem;
+}
+
+.acfm-small-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.acfm-smaller-padding {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.acfm-no-padding-top {
+    padding-top: 0;
+    padding-bottom: 11.5rem;
+}
+
+.acfm-no-padding-bottom {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    @media #{$md} {
+        padding-bottom: 0;
+    }
+}
+
+.acfm-no-padding {
+    padding: 0;
+}
+
+.row-padding {
+    .acfm-row {
+        padding: 5rem 0;
+    }
+}

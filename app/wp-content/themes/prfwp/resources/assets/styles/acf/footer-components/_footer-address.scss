@@ -1,0 +1,39 @@
+.acfm-footer-address {
+    &__address,
+    &__phone,
+    &__email {
+        display: flex;
+        margin-bottom: 0.5em;
+
+        @media #{$until_md} {
+            .acfm-mobile-align & {
+                justify-content: center;
+            }
+        }
+
+        @media #{$xl} {
+            flex-basis: em(200, 20);
+            min-width: em(200, 20);
+        }
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        width: em(27);
+        height: em(27);
+        margin-right: 1.3rem;
+    }
+
+    &__text {
+        p {
+            line-height: (22 / 15);
+        }
+    }
+
+    a {
+        &:hover,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+}

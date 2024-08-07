@@ -1,0 +1,98 @@
+.svg-icon {
+    &-Binance svg {
+        @include height-ratio(2500.01, 2500, 35);
+    }
+
+    &-Bitcoin svg {
+        @include height-ratio(306.4, 64, 18);
+    }
+
+    &-CashU svg {
+        @include height-ratio(619, 129.2, 12);
+    }
+
+    &-Coinbase svg {
+        @include height-ratio(1024, 1024, 35);
+    }
+
+    &-Entropay svg {
+        @include height-ratio(303, 69);
+    }
+
+    &-Ethereum svg {
+        @include height-ratio(2550, 829, 40);
+    }
+
+    &-Litecoin svg {
+        @include height-ratio(475.5, 111.4);
+    }
+
+    &-Maestro svg,
+    &-MasterCard svg {
+        @include height-ratio(116.5, 90.6, 24);
+    }
+
+    &-MasterCardSecureCode svg {
+        @include height-ratio(210.94, 75);
+    }
+
+    &-Neteller svg {
+        @include height-ratio(266.68, 45, 22);
+    }
+
+    &-PayPal svg {
+        @include height-ratio(127.77, 31.5, 20);
+    }
+
+    &-PciDSS svg {
+        @include height-ratio(551, 212, 25);
+    }
+
+    &-Sepa svg {
+        @include height-ratio(193, 53, 25);
+    }
+
+    &-Skrill svg {
+        @include height-ratio(227, 78, 18);
+    }
+
+    &-VerifiedByVisa svg {
+        @include height-ratio(200.44, 100);
+    }
+
+    &-Visa svg {
+        @include height-ratio(216, 137.21, 20);
+    }
+
+    &-VLoad svg {
+        @include height-ratio(346.9, 150, 35);
+    }
+
+    &-WebMoney svg {
+        @include height-ratio(859, 205.9, 33);
+    }
+
+    &-WestrenUnion svg {
+        @include height-ratio(1663.4, 492, 45);
+    }
+
+    &-WireTransfer svg {
+        @include height-ratio(513, 319, 40);
+    }
+
+    &-BankTransfer svg {
+        @include height-ratio(76.937, 24, 20);
+    }
+
+    &-Sofort svg {
+        @include height-ratio(110.305, 20, 20);
+    }
+
+    &-GiroPay svg {
+        @include height-ratio(55.834, 24, 20);
+    }
+
+    &-Traustly svg {
+        @include height-ratio(77.675, 24, 20);
+    }
+}

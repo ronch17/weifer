@@ -1,0 +1,32 @@
+$input-height: dropdown-var(single--height);
+
+.prfw-sms-code {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0;
+
+    &-control {
+        width: $input-height;
+        height: $input-height;
+        line-height: $input-height;
+        font-size: 13px;
+        margin: 0;
+        display: block;
+        background-color: dropdown-var(background-color);
+        box-shadow: inset 0 0 0 2em dropdown-var(background-color);
+        border: dropdown-var(border);
+        text-align: center;
+
+        &,
+        &:focus {
+            font-family: inherit;
+            border-radius: dropdown-var(border-radius);
+            outline: 0;
+        }
+
+        &:focus {
+            border-color: dropdown-var(border-color--focuse);
+        }
+    }
+}

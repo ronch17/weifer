@@ -1,0 +1,55 @@
+/**
+ * WordPress Generated Classes
+ * @see http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+
+/** Media alignment */
+.alignnone {
+    max-width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.aligncenter {
+    display: block;
+    height: auto;
+    margin: ($spacer / 2) auto;
+}
+
+.alignleft,
+.alignright {
+    height: auto;
+    margin-bottom: ($spacer / 2);
+}
+
+@media (min-width: 30rem) {
+    .alignleft {
+        float: left;
+        margin-right: ($spacer / 2);
+    }
+
+    .alignright {
+        float: right;
+        margin-left: ($spacer / 2);
+    }
+}
+
+/** Text meant only for screen readers */
+.screen-reader-text {
+    @include sr-only();
+}
+
+/** Post Edit button for admins in _cpt-taxonomies-tabs module */
+.post-edit-link {
+    padding: 0.2em 1em;
+    font-size: 1.2rem; // stylelint-disable-line property-blacklist
+    color: $brand_white;
+    text-decoration: none;
+    background-color: $brand_primary;
+
+    &:hover,
+    &:active {
+        background-color: darken($brand_primary, 10%);
+    }
+}

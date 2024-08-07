@@ -1,0 +1,120 @@
+$slick-arrow-color: $brand_dark;
+$slick-dot-color: $brand_primary;
+$slick-dot-color-active: $brand_primary;
+$slick-dot-border: 2px solid $brand_white;
+$slick-dot-size: 1em !default;
+$slick-opacity-default: 0.9 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.2 !default;
+
+.slick-slider {
+    padding: 0;
+    margin: 0;
+}
+
+/* Arrows */
+.slick-prev {
+    left: 1%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.slick-next {
+    right: 1%;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+@media #{$xl} {
+    .slick-prev {
+        //left: calc(50vw - 65rem);
+        left: 3.5rem;
+    }
+
+    .slick-next {
+        //right: calc(50vw - 65rem);
+        right: 3.5rem;
+    }
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    background: transparent url('../images/arrow.svg') no-repeat center / contain;
+    outline: none;
+    opacity: $slick-opacity-default;
+
+    @include transition(opacity);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        opacity: $slick-opacity-on-hover;
+    }
+
+    &.slick-disabled {
+        opacity: $slick-opacity-not-active;
+    }
+
+    @media #{$xl} {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+/* Dots */
+.slick-dots {
+    position: absolute;
+    top: 5vh;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: $slick-dot-size;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+
+    li {
+        position: relative;
+        display: inline-block;
+        padding: 0.5rem;
+        margin: 0 0.4em;
+        cursor: pointer;
+        border-radius: 1rem;
+
+        button {
+            display: contents;
+            width: $slick-dot-size;
+            height: $slick-dot-size;
+            padding: 0;
+            color: $brand_white;
+            cursor: pointer;
+            // stylelint-disable-next-line property-blacklist
+            border: $slick-dot-border;
+            border-radius: 50%;
+            outline: none;
+
+            &:hover,
+            &:focus {
+                font-weight: $font_weight_bold;
+                color: $brand_dark;
+                outline: none;
+            }
+
+            &:active {
+                color: $brand_dark;
+            }
+        }
+
+        &.slick-active button {
+            background-color: $slick-dot-color-active;
+        }
+    }
+}

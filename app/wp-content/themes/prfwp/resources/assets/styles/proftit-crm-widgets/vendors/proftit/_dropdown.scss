@@ -1,0 +1,59 @@
+// noinspection ALL
+.prf-dropdown {
+    @include dropdown-container();
+    border: 1px solid $brand_gray_border;
+
+    &--opened {
+        @include dropdown-container-active();
+    }
+
+    &__single {
+        @include dropdown-single();
+    }
+
+    &__caret {
+        @include dropdown-caret();
+
+        &--closed {
+            @include dropdown-caret-closed();
+        }
+
+        &--opened {
+            @include dropdown-caret-opened();
+        }
+    }
+
+    &__drop {
+        @include dropdown-drop();
+
+        .prf-dropdown--opened & {
+            @include dropdown-drop-active();
+        }
+    }
+
+    &__prepend {
+        @include dropdown-search();
+    }
+
+    &__results {
+        @include dropdown-results();
+    }
+
+    prf-transclude,
+    prepend-item {
+        display: flex;
+        width: 100%;
+    }
+
+    &__item {
+        @include dropdown-option();
+
+        &:hover {
+            @include dropdown-option-active();
+        }
+
+        &:nth-last-child(2) {
+            border-bottom: 0;
+        }
+    }
+}

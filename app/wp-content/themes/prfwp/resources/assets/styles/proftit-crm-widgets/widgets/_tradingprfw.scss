@@ -1,0 +1,114 @@
+.tradingprfw {
+    background: $brand_widgets_bg;
+    padding: 4rem 0;
+    border-radius: 2rem;
+
+    [data-title-text='Edit'] {
+        white-space: nowrap;
+    }
+
+    [data-title-text='Account Nick Name'] span {
+        position: relative;
+        display: block;
+    }
+
+    &__export-button {
+        @include button_lg();
+        @include button_primary();
+        @include responsive-font(16);
+        margin: 0 0 1em;
+        margin-left: 4rem;
+
+        .svg-export-btn {
+            @include height-ratio(150, 199, 50);
+            margin-right: 0.5em;
+        }
+    }
+
+    .prfw-btn-cancel-withdrawal {
+        position: relative;
+        display: inline-block;
+        padding: 0.3em 1em;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid $brand_primary;
+
+        &--sm {
+            display: none;
+        }
+
+        @media #{$md} {
+            display: none;
+
+            &--sm {
+                display: block;
+            }
+        }
+    }
+
+    .prfw-tooltip--cancel-withdrawal {
+        position: absolute;
+        z-index: 9002;
+        margin-top: -8px;
+        top: -13px;
+        left: -57px;
+
+        &.fade:not(.show) {
+            opacity: 1;
+        }
+
+        .tooltip-arrow {
+            display: none;
+        }
+
+        .tooltip-inner {
+            background-color: $brand_white;
+            border-radius: 0;
+            max-width: none;
+            max-height: none;
+            padding: 3px 5px;
+            position: relative;
+            box-shadow: 0 1px 2px rgba($brand_black, 0.3);
+            color: #333;
+            white-space: nowrap;
+
+            &::before,
+            &::after {
+                content: '';
+                height: 8px;
+                width: 8px;
+                bottom: -4px;
+                position: absolute;
+                left: 50%;
+                margin-left: -4px;
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                background-color: inherit;
+                z-index: 2;
+            }
+
+            &::after {
+                box-shadow: 0 1px 2px rgba($brand_black, 0.3);
+                z-index: -1;
+            }
+
+            p {
+                color: $brand_black;
+                text-align: left;
+                padding-left: 10px;
+                display: none;
+            }
+        }
+    }
+}
+
+form.prf-id-deposit-form,
+.customer-profileprfw,
+.withdrawalprfw,
+.prfwp-contentWidgets__main {
+    background: $brand_widgets_bg;
+    padding: 4rem;
+    border-radius: 2rem;
+}

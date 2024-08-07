@@ -1,0 +1,8 @@
+.acfm-calendar {
+    @include brand-shadow();
+
+    &__item {
+        height: 55.5rem;
+        overflow: hidden;
+    }
+}

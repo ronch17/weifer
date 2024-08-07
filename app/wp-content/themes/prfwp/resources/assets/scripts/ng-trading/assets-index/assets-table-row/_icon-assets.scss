@@ -1,0 +1,60 @@
+$NUMBER_OF_ASSETS: 400;
+$LOGO_WIDTH: 73;
+$LOGO_HEIGHT: 30.9;
+$LOGOS_PER_LINE: 10;
+
+@mixin addAssetsBackground($assetId) {
+    $vertical: -1 * ceil($assetId/$LOGOS_PER_LINE) * $LOGO_HEIGHT + $LOGO_HEIGHT - 3;
+    $horizontal: -1 * $LOGO_WIDTH * if($assetId % $LOGOS_PER_LINE == 0, 10, $assetId % $LOGOS_PER_LINE) + $LOGO_WIDTH -
+        5;
+
+    background-position-x: ($horizontal * 1px);
+    background-position-y: ($vertical * 1px);
+}
+
+.asset-icon {
+    display: inline-block;
+    width: 66px;
+    height: 31px;
+    vertical-align: middle;
+    background: url(https://tc-platform.fxg.market/bundle/latest/img/bundle/assets/sprite-assets.png) no-repeat;
+    position: relative;
+    margin-bottom: 1em;
+
+    .acfm-assets-table & {
+        margin: 0;
+    }
+
+    .acfm-assets-column & {
+        height: 28px;
+        margin: 0;
+    }
+
+    &:before {
+        border-radius: 50%;
+        background-color: $brand_light;
+        height: 60px;
+        width: 60px;
+        z-index: -1;
+        display: block;
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        margin: -15px auto;
+
+        .acfm-assets-table & {
+            display: none;
+        }
+
+        .acfm-assets-column & {
+            display: none;
+        }
+    }
+
+    @for $assetId from 1 through $NUMBER_OF_ASSETS {
+        &[value='#{$assetId}'] {
+            @include addAssetsBackground($assetId);
+        }
+    }
+}

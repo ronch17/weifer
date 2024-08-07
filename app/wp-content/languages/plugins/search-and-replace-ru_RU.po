@@ -1,0 +1,406 @@
+# Translation of Plugins - Search &amp; Replace - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Search &amp; Replace - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-05-16 10:10:21+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Search &amp; Replace - Stable (latest release)\n"
+
+#: inc/FileDownloader.php:351
+msgid "The file you are looking for doesn't exists."
+msgstr "Файл, который вы ищете, не существует."
+
+#: inc/FileDownloader.php:158
+msgid "Row"
+msgstr "Строка"
+
+#: inc/FileDownloader.php:149
+msgid "Columns Changes:"
+msgstr "Изменения в столбцах:"
+
+#: inc/templates/replace-domain.php:86
+msgid "Underscore suffix \"_\" can be omitted"
+msgstr "Суффикс подчеркивания \"_\", можно опустить."
+
+#: inc/templates/replace-domain.php:83
+msgid "E.g new_"
+msgstr "Напр. new_"
+
+#: inc/templates/replace-domain.php:13
+msgid "If you want to migrate your site to another domain, enter the new URL in the field \"Replace with\" and click \"Do Replace Domain/Url\". You can then download a database backup containing the new URL."
+msgstr "Если вы хотите перенести свой сайт на другой домен, введите новый URL-адрес в поле «Заменить на» и нажмите «Заменить домен/URL». Затем вы можете загрузить резервную копию базы данных, содержащую новый URL-адрес."
+
+#: inc/templates/search-replace.php:47
+msgid "Using comma delimited( , ). For example to replace cat with dog: cat,dog"
+msgstr "Используя разделитель запятую ( , ). Например, чтобы заменить слово \"кот\" на \"собака\": кот, собака."
+
+#: inc/templates/search-replace.php:42
+msgid "search value, replace value (one per line)"
+msgstr "значение для поиска, значение для замены (по одному на строку)"
+
+#: inc/templates/search-replace.php:38
+msgid "CSV Format Search/Replace:"
+msgstr "Поиск/замена в формате CSV:"
+
+#: inc/Database/Exporter.php:636
+msgid "Cannot Process the file - Search &amp; Replace"
+msgstr "Не могу обработать файл - Поиск и Замена."
+
+#: inc/Database/Exporter.php:635
+msgid "Seems was not possible to create the file for some reason."
+msgstr "Похоже, по какой-то причине не удалось создать файл."
+
+#. Translators: %s print the error message.
+#: inc/Page/SqlImport.php:155
+msgid "Upload Error: %s"
+msgstr "Ошибка при загрузке: %s"
+
+#: inc/Page/SqlImport.php:119
+msgid "There is no error, the file uploaded with success"
+msgstr "Ошибок нет, файл загружен успешно."
+
+#: inc/Page/SearchReplace.php:160
+msgid "No Tables were selected. You must select at least one table to perform the action."
+msgstr "Не выбрано ни одной таблицы. Для выполнения действия необходимо выбрать хотя бы одну таблицу."
+
+#: inc/Page/SearchReplace.php:125
+msgid "You must provide at least a search string or a csv data"
+msgstr "Вы должны предоставить как минимум строку поиска или данные в формате csv"
+
+#: inc/Page/SearchReplace.php:61
+msgid "Your search contains your current site url. Replacing your site url can cause your site to break. Are you sure you wish to proceed?"
+msgstr "Ваш поиск содержит URL вашего текущего сайта. Замена URL вашего сайта может привести к его неработоспособности. Вы уверены, что хотите продолжить?"
+
+#. Description of the plugin
+#: inpsyde-search-replace.php
+msgid "Search & Replace data in your whole WordPress setup, backup and import your database, change table prefix or migrate your domain to another domain."
+msgstr "Поиск и замена данных во всём WordPress, резервные копии и импорт БД, замена префикса таблиц или миграция на другой домен."
+
+#. Plugin URI of the plugin
+#: inpsyde-search-replace.php
+msgid "https://wordpress.org/plugins/search-and-replace/"
+msgstr "https://wordpress.org/plugins/search-and-replace/"
+
+#: inpsyde-search-replace.php:56
+msgid "back"
+msgstr "назад"
+
+#. translators: %1$s will replace with the PHP version of the client.
+#: inpsyde-search-replace.php:49
+msgid "This plugin can not be activated because it requires at least PHP version %1$s. "
+msgstr "Плагин не может быть активирован, так как требуется версия PHP не ниже %1$s."
+
+#: inc/templates/sql-import.php:28
+msgid "Maximum file size: "
+msgstr "Максимальный размер файла:"
+
+#: inc/templates/sql-import.php:19
+msgid "Select SQL file to upload. "
+msgstr "Выберите SQL файл для загрузки."
+
+#: inc/templates/search-replace.php:99
+msgid "Use GZ compression"
+msgstr "Использовать GZ сжатие"
+
+#: inc/templates/search-replace.php:91
+msgid "Save changes to Database"
+msgstr "Сохранить изменения в базе данных"
+
+#: inc/templates/search-replace.php:85
+msgid "Export SQL file with changes"
+msgstr "Экспорт SQL файла с изменениями"
+
+#: inc/templates/search-replace.php:79
+msgid "Export SQL file or write changes to DB?"
+msgstr "Экспортировать как SQL файл или внести изменения в БД?"
+
+#: inc/templates/search-replace.php:70
+msgid "Dry Run"
+msgstr "Пробный запуск"
+
+#: inc/templates/search-replace.php:61
+msgid "Select all tables"
+msgstr "Выбрать все таблицы"
+
+#: inc/templates/search-replace.php:55
+msgid "Select tables"
+msgstr "Выберите таблицы"
+
+#: inc/templates/replace-domain.php:74
+msgid "New prefix: "
+msgstr "Новый префикс:"
+
+#: inc/templates/replace-domain.php:63
+msgid "Current prefix: "
+msgstr "Текущий префикс:"
+
+#: inc/templates/replace-domain.php:54
+msgid "Change database prefix"
+msgstr "Изменить префикс БД"
+
+#: inc/templates/replace-domain.php:46
+msgid "New URL"
+msgstr "Новый адрес URL"
+
+#: inc/templates/replace-domain.php:38 inc/templates/search-replace.php:28
+msgid "Replace with: "
+msgstr "Заменить на:"
+
+#: inc/templates/replace-domain.php:27 inc/templates/search-replace.php:18
+msgid "Search for: "
+msgstr "Найти:"
+
+#: inc/templates/db-backup.php:14
+msgid "Create a backup of your database by clicking \"Create SQL File\"."
+msgstr "Создать резервную копию БД, нажав \"Создать SQL файл\""
+
+#: inc/templates/credits.php:38
+msgid "You can contribute the Plugin go to the repository on <a href=\"%s\">github</a> making changes, creating issues, or submitting changes."
+msgstr "Вы можете внести свой вклад в плагин, перейдя в репозиторий на <a href=\"%s\">github</a>, внося изменения, создавая проблемы или предлагая изменения."
+
+#: inc/templates/credits.php:34
+msgid "You rock! contribute the plugin."
+msgstr "Ты крут! Внеси свой вклад в плагин."
+
+#: inc/templates/credits.php:13
+msgid "Hey nice to have you here!"
+msgstr "Приятно видеть вас здесь!"
+
+#: inc/Page/SqlImport.php:146
+msgid "A PHP extension stopped the file upload."
+msgstr "Расширение PHP остановило загрузку файла."
+
+#: inc/Page/SqlImport.php:143
+msgid "Failed to write file to disk."
+msgstr "Ошибка записи на диск."
+
+#: inc/Page/SqlImport.php:139
+msgid "Missing a temporary folder."
+msgstr "Отсутствует временная папка."
+
+#: inc/Page/SqlImport.php:135
+msgid "No file was uploaded."
+msgstr "Нет файла для загрузки."
+
+#: inc/Page/SqlImport.php:131
+msgid "The uploaded file was only partially uploaded"
+msgstr "Загруженный файл был загружен не полностью"
+
+#: inc/Page/SqlImport.php:127
+msgid "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form"
+msgstr "Загруженный файл превосходит значение MAX_FILE_SIZE, которое было установлено в HTML-форме"
+
+#: inc/Page/SqlImport.php:123
+msgid "The uploaded file exceeds the upload_max_filesize directive in php.ini"
+msgstr "Загруженный файл превосходит значение upload_max_filesize из php.ini"
+
+#. Translators: %s print the sql source.
+#: inc/Page/SqlImport.php:108
+msgid "The SQL file was successfully imported. %s SQL queries were performed."
+msgstr "SQL-файл был успешно импортирован. Было выполнено %s SQL-запросов."
+
+#: inc/Page/SqlImport.php:98
+msgid "The file does not seem to be a valid SQL file. Import not possible."
+msgstr "Файл, кажется, не является допустимым SQL-файлом. Импорт невозможен."
+
+#: inc/Page/SqlImport.php:86
+msgid "The file has neither '.gz' nor '.sql' Extension. Import not possible."
+msgstr "Файл не имеет расширения '.gz' или '.sql'. Импорт невозможен."
+
+#: inc/Page/SqlImport.php:60
+msgid "Import SQL file"
+msgstr "Импортировать SQL-файл"
+
+#: inc/Page/SqlImport.php:34
+msgid "SQL Import"
+msgstr "Импорт SQL"
+
+#: inc/Page/SearchReplace.php:174
+msgid "Search field is empty."
+msgstr "Поле поиска пусто."
+
+#: inc/Page/SearchReplace.php:206
+msgid "The following changes were made to the database: "
+msgstr "Следующие изменения были внесены в базу данных: "
+
+#: inc/Page/SearchReplace.php:198
+msgid "Dry run is selected. No changes were made to the database and no SQL file was written ."
+msgstr "Выбрана пробная работа. Изменений в базе данных не было внесено, и SQL-файл не был создан."
+
+#: inc/Page/SearchReplace.php:275
+msgid "Do Search & Replace"
+msgstr "Выполнить поиск и заменить"
+
+#: inc/Page/ReplaceDomain.php:100
+msgid "Replace Domain URL"
+msgstr "Заменить URL домена"
+
+#: inc/Page/ReplaceDomain.php:92
+msgid "Do Replace Domain/Url"
+msgstr "Сделать замену домена/URL"
+
+#: inc/Page/ReplaceDomain.php:56
+msgid "Replace Field should not be empty."
+msgstr "Поле для замены не должно быть пустым."
+
+#: inc/Page/Credits.php:24
+msgid "Credits"
+msgstr "Credits"
+
+#: inc/Page/BackupDatabase.php:67
+msgid "Create SQL File"
+msgstr "Создать SQL файл"
+
+#: inc/Page/BackupDatabase.php:41
+msgid "Backup Database"
+msgstr "Резервирование БД"
+
+#: inc/Page/AbstractPage.php:88
+msgid "Submit"
+msgstr "Добавить"
+
+#: inc/Page/AbstractPage.php:55
+msgid "Errors:"
+msgstr "Ошибки:"
+
+#. Plugin Name of the plugin
+#: inpsyde-search-replace.php inc/Page/AbstractPage.php:26
+#: inc/Page/Manager.php:104 inc/Page/SearchReplace.php:85
+msgid "Search & Replace"
+msgstr "Search & Replace"
+
+#: inc/FileDownloader.php:167
+msgid "New value"
+msgstr "Новое значение"
+
+#: inc/FileDownloader.php:164
+msgid "Old value"
+msgstr "Старое значение"
+
+#: inc/FileDownloader.php:161
+msgid "Column"
+msgstr "Столбец"
+
+#: inc/FileDownloader.php:146
+msgid "Table:"
+msgstr "Таблица:"
+
+#: inc/FileDownloader.php:127
+msgid "View details"
+msgstr "Смотреть подробнее"
+
+#. translators: %s is the count of selected cells after search in tables.
+#: inc/FileDownloader.php:237
+msgid "%s cell needs to be updated."
+msgid_plural "%s cells need to be updated."
+msgstr[0] "%s ячейка нуждается в обновлении."
+msgstr[1] "%s ячейки нуждаются в обновлении."
+msgstr[2] "%s ячеек нуждаются в обновлении."
+
+#. translators: %s is the count of tables.
+#: inc/FileDownloader.php:226
+msgid "%s table was processed. "
+msgid_plural "%s tables were processed. "
+msgstr[0] "Обработана таблица %s."
+msgstr[1] "Обработано таблицы %s."
+msgstr[2] "Обработано таблиц %s."
+
+#: inc/FileDownloader.php:84
+msgid "Download SQL File"
+msgstr "Скачать SQL файл"
+
+#: inc/FileDownloader.php:78
+msgid "Your SQL file was created!"
+msgstr "Ваш SQL файл создан!"
+
+#: inc/FileDownloader.php:69 inc/Page/SearchReplace.php:225
+msgid "Search pattern not found."
+msgstr "Паттерн поиска не найден."
+
+#. translators: $1 is the number of rows found in database
+#: inc/Database/Replace.php:270
+msgid "Error updating row: %d."
+msgstr "Ошибка обновления строки: %d."
+
+#: inc/Database/Replace.php:78
+msgid "Search and replace pattern can't be the same!"
+msgstr "Слово для поиска и слово для замены не могут совпадать!"
+
+#. Translators: %s is the value of the size in kByte.
+#: inc/Database/Manager.php:77
+msgid "(%s KB)"
+msgstr "(%s КБ)"
+
+#: inc/Database/Exporter.php:238
+msgid "There was an error writing a line to the backup script: %s"
+msgstr "Произошла ошибка при записи строки в резервный скрипт: %s"
+
+#. translators: $1 is the name of the table
+#: inc/Database/Exporter.php:553
+msgid "End of data contents of table %s"
+msgstr "Достигнут конец таблицы %s"
+
+#. translators: $1 is the name of the new table
+#: inc/Database/Exporter.php:389
+msgid "Data contents of table %s"
+msgstr "Данные таблицы %s"
+
+#. translators: $1 is the name of the table
+#: inc/Database/Exporter.php:379
+msgid "Error getting table structure of %s"
+msgstr "Ошибка получения структуры таблицы %s"
+
+#. translators: $1 is the name of the table
+#: inc/Database/Exporter.php:364
+msgid "Error with SHOW CREATE TABLE for %s."
+msgstr "Ошибка создания таблицы %s."
+
+#: inc/Database/Exporter.php:352
+msgid "Table structure of table %s"
+msgstr "Структура таблицы %s"
+
+#: inc/Database/Exporter.php:338
+msgid "Delete any existing table %s"
+msgstr "Удалить все  таблицы %s"
+
+#: inc/Database/Exporter.php:329
+msgid "Error getting table details"
+msgstr "Ошибка получения сведений о таблице"
+
+#: inc/Database/Exporter.php:323
+msgid "Table: %s"
+msgstr "Таблица: %s"
+
+#. translators: $1 and $2 are the name of the database.
+#: inc/Database/Exporter.php:152
+msgid "Changed table prefix: From %1$s to %2$s "
+msgstr "Изменен префикс таблицы: с %1$s на %2$s "
+
+#: inc/Database/Exporter.php:146
+msgid "Database: %s"
+msgstr "База данных: %s"
+
+#: inc/Database/Exporter.php:145
+msgid "Hostname: %s"
+msgstr "Сервер: %s"
+
+#: inc/Database/Exporter.php:144
+msgid "Generated: %s"
+msgstr "Сгенерировано: %s"
+
+#: inc/Database/Exporter.php:142
+msgid "WordPress MySQL database backup"
+msgstr "Резервное копирование БД MySQL WordPress"
+
+#: inc/Database/Exporter.php:123
+msgid "The backup directory is not writable!"
+msgstr "Каталог резервных копий не доступна для записи!"
+
+#: inc/Database/Exporter.php:133
+msgid "Could not open the backup file for writing!"
+msgstr "Не удалось открыть файл архива для записи!"

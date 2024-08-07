@@ -1,0 +1,25 @@
+.withdrawalprfw {
+    &__amount {
+        display: flex;
+    }
+
+    &__amount-value {
+        flex: 8;
+    }
+
+    &__amount-currency {
+        flex: 5;
+        padding-left: em(10);
+        font-weight: $font_weight_bold;
+        line-height: em($controls_height_px);
+    }
+
+    textarea {
+        height: 5em;
+        resize: none;
+    }
+
+    &__btn-wrapper {
+        margin-top: em(30);
+    }
+}

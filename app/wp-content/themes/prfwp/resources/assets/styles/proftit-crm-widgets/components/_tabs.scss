@@ -1,0 +1,42 @@
+.#{prfw}-tabs {
+    &__list {
+        display: flex;
+        padding-left: 4.5rem;
+        margin: 0 0 1.8em;
+        list-style: none;
+
+        li {
+            + li {
+                margin-left: 1.8em;
+            }
+
+            uib-tab-heading {
+                /* stylelint-disable-line */
+                position: relative;
+                padding-bottom: em(5);
+                font-weight: $font_weight_medium;
+                color: $tabs_link_color;
+
+                &::after {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    height: em(5);
+                    content: '';
+                    border-radius: em(3);
+                }
+            }
+
+            //active state
+            &.#{prfw}-js-active {
+                uib-tab-heading {
+                    /* stylelint-disable-line */
+                    &::after {
+                        background-color: $brand_primary;
+                    }
+                }
+            }
+        }
+    }
+}

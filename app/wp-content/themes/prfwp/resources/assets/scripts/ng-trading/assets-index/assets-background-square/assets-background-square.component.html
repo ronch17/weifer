@@ -1,0 +1,8 @@
+<div class="prf-assets-background__square {{ $ctrl.square.titleClass }} {{ $ctrl.square.isAfterTitle ? 'after-title' : '' }}" ng-style="$ctrl.style">
+  {{ $ctrl.square.text }}
+  <i ng-if="$ctrl.square.icon">
+    <svg>
+      <use xlink:href="{{ $ctrl.square.icon }}"></use>
+    </svg>
+  </i>
+</div>

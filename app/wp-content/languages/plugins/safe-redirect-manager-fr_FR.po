@@ -1,0 +1,117 @@
+# Translation of Plugins - Safe Redirect Manager - Stable (latest release) in French (France)
+# This file is distributed under the same license as the Plugins - Safe Redirect Manager - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-03-01 12:30:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/4.0.0-alpha.11\n"
+"Language: fr\n"
+"Project-Id-Version: Plugins - Safe Redirect Manager - Stable (latest release)\n"
+
+#: inc/classes/class-srm-post-type.php:276
+msgid "Safe Redirect Manager Error: You have reached the maximum allowable number of redirects"
+msgstr "Erreur de Safe Redirect Manager: Vous avez atteint le nombre maximal autorisé de redirections."
+
+#: inc/classes/class-srm-post-type.php:337
+msgid "Custom field updated."
+msgstr "Champ personnalisé mis à jour."
+
+#: inc/classes/class-srm-post-type.php:338
+msgid "Custom field deleted."
+msgstr "Champ personnalisé supprimé."
+
+#: inc/classes/class-srm-post-type.php:356
+msgid "M j, Y @ G:i"
+msgstr "j M Y @ G:i"
+
+#: inc/classes/class-srm-post-type.php:413
+msgid "Redirect To"
+msgstr "Redirection vers"
+
+#: inc/classes/class-srm-post-type.php:414
+msgid "HTTP Status Code"
+msgstr "Code de statut HTTP"
+
+#: inc/classes/class-srm-post-type.php:418
+msgid "Redirect From"
+msgstr "Redirection à partir de"
+
+#: inc/classes/class-srm-post-type.php:422
+msgid "Date"
+msgstr "Date"
+
+#: inc/classes/class-srm-post-type.php:547
+msgctxt "post type general name"
+msgid "Safe Redirect Manager"
+msgstr "Safe Redirect Manager"
+
+#: inc/classes/class-srm-post-type.php:548
+msgctxt "post type singular name"
+msgid "Redirect"
+msgstr "Redirection"
+
+#: inc/classes/class-srm-post-type.php:551
+msgid "Edit Redirect Rule"
+msgstr "Modifier la règle de redirection"
+
+#: inc/classes/class-srm-post-type.php:552
+msgid "New Redirect Rule"
+msgstr "Nouvelle règle de redirection"
+
+#: inc/classes/class-srm-post-type.php:554
+msgid "View Redirect Rule"
+msgstr "Voir la règle de redirection"
+
+#: inc/classes/class-srm-post-type.php:555
+msgid "Search Redirects"
+msgstr "Rechercher une redirection"
+
+#: inc/classes/class-srm-post-type.php:556
+msgid "No redirect rules found."
+msgstr "Aucune règle de redirection trouvée."
+
+#: inc/classes/class-srm-post-type.php:557
+msgid "No redirect rules found in trash."
+msgstr "Aucune règle de redirection trouvée dans la corbeille."
+
+#: inc/classes/class-srm-post-type.php:602
+msgid "Redirect Settings"
+msgstr "Paramètres de redirection"
+
+#: inc/classes/class-srm-post-type.php:655
+msgid "This can be a URL or a path relative to the root of your website (not your WordPress installation). Ending with a (*) wildcard character will append the request match to the redirect."
+msgstr "Ceci peut être une URL ou un chemin relatif à la racine du site web (et non pas votre installation WordPress). Terminer avec le caractère de remplacement (*) vous permettra d'ajouter la requête à la redirection."
+
+#: inc/classes/class-srm-post-type.php:664
+msgid "If you don't know what this is, leave it as is."
+msgstr "Si vous ne savez pas ce que c'est, ne changez pas la valeur."
+
+#. Description of the plugin
+msgid "Easily and safely manage HTTP redirects."
+msgstr "Gérez simplement et sans risque les redirections HTTP."
+
+#: inc/functions.php:310
+msgid "An error occurred creating the redirect."
+msgstr "Une erreur est survenue en créant la redirection."
+
+#: inc/classes/class-srm-post-type.php:646
+msgid "Enable Regular Expressions (advanced)"
+msgstr "Activer les expressions régulières (avancé)"
+
+#: inc/functions.php:252
+msgid "Redirect from and/or redirect to arguments are invalid."
+msgstr "Les arguments pour Redirection à partir de et/ou Redirection vers sont non valides."
+
+#: inc/functions.php:256
+msgid "Invalid status code."
+msgstr "Code d’état non valide."
+
+#. Plugin Name of the plugin
+#: inc/classes/class-srm-post-type.php:550
+#: inc/classes/class-srm-post-type.php:553
+#: inc/classes/class-srm-post-type.php:559
+msgid "Safe Redirect Manager"
+msgstr "Safe Redirect Manager"

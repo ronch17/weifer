@@ -1,0 +1,185 @@
+/* stylelint-disable */
+
+@media #{$lg} {
+    .gray-bg.homepage {
+        .container {
+            top: 20rem;
+        }
+    }
+}
+
+.gray-bg {
+    margin: 2rem;
+    background: $brand_gray;
+    border-radius: 5rem;
+
+    @media #{$md} {
+        padding-top: 0;
+        margin: 0 3rem 15rem;
+    }
+
+    @media #{$xl} {
+        bottom: 5rem;
+        margin: 0 15rem;
+    }
+
+    .container {
+        padding: 6rem 2rem 0;
+
+        @media #{$md} {
+            top: 13rem;
+            padding: 0;
+        }
+    }
+
+    .acfm-title {
+        text-align: center;
+    }
+
+    .acfm-list-card {
+        &__item {
+            @media #{$lg} {
+                flex-basis: 22%;
+            }
+        }
+    }
+}
+
+.acfm-list-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    list-style: none;
+    gap: 2rem;
+
+    @media #{$md} {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 5rem 0;
+        column-gap: 2.5rem;
+    }
+
+    @media #{$navbar_breakpoint} {
+        justify-content: center;
+    }
+
+    &__number,
+    &__icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65px;
+        height: 65px;
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1.4em;
+        color: $brand_dark;
+        text-align: center;
+    }
+
+    &__text {
+        color: $brand_dark;
+    }
+
+    &__item {
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        font-size: 18px;
+        text-align: center;
+        background: $brand_white;
+        border-radius: 3rem;
+        box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.03);
+        transition: 1.2s ease-out;
+
+        //&::before {
+        //    position: absolute;
+        //    z-index: 1;
+        //    width: 32.7%;
+        //    height: 0%;
+        //    margin-top: 7rem;
+        //    content: '';
+        //    background: $brand_dark;
+        //    transition: all 0.4s ease;
+        //    transform: translate(0, -50%);
+        //}
+
+        &:hover {
+            transition: 1.2s ease-out;
+            @media #{$md} {
+                &::before {
+                    width: 32%;
+                    height: 47%;
+                    border-radius: 3rem;
+                }
+                //
+                //background: $brand_dark;
+                //
+                .acfm-list-card {
+                    &__title,
+                    &__text,
+                    &__icon {
+                        position: relative;
+                        z-index: 2;
+                        //color: $brand_white;
+                    }
+                }
+
+                svg {
+                    & path {
+                        fill: $brand_primary;
+                    }
+                }
+            }
+        }
+
+        @media #{$sm} {
+            flex-basis: 24%;
+        }
+
+        @media #{$md} {
+            flex-basis: 15%;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        color: $brand_primary;
+
+        svg {
+            fill: currentColor;
+
+            & path {
+                &:hover {
+                    fill: $brand_primary;
+                }
+            }
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: -3rem;
+    }
+}
+
+.no_icon_bg {
+    .acfm-list-card__icon {
+        background: transparent;
+    }
+}
+
+.crypto-portfolio {
+    .acfm-list-card__item::before {
+        margin-top: 10rem;
+    }
+}

@@ -1,0 +1,78 @@
+/* stylelint-disable */
+@import 'configs/maps/colors';
+
+$tabsLeftWidth: 60px;
+
+.acf-tab-wrap.-left .acf-tab-group {
+    width: $tabsLeftWidth;
+}
+
+.acf-fields.-sidebar {
+    &::before {
+        width: $tabsLeftWidth;
+    }
+
+    position: relative;
+
+    padding: 0 0 0 $tabsLeftWidth !important;
+}
+
+.radio_colors {
+    ul.acf-radio-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            min-width: 4em;
+            max-width: 5em;
+            margin: 2px 5px;
+            font-size: 10px;
+        }
+    }
+
+    .radio_color_box {
+        position: relative;
+        height: 1em;
+        padding: 0 0.15em;
+        color: #fff;
+        border: #f8f8f8 solid 2px;
+        border-radius: 3px;
+        box-shadow: 0 0 0 1px #ccc;
+
+        &.light {
+            color: inherit;
+        }
+
+        &::before {
+            position: absolute;
+            bottom: -1.4em;
+            left: 50%;
+            content: '';
+            border: 8px solid transparent;
+            border-top-width: 0;
+            transform: translateX(-50%);
+        }
+
+        /* For each key in the map, created an own class */
+        @each $name, $value in $map_admin_colors {
+            &.#{$name} {
+                background-color: $value;
+            }
+        }
+    }
+
+    input {
+        display: none;
+
+        &:checked + .radio_color_box {
+            color: #1e8cbe;
+            text-shadow: 0 0 3px #fff;
+            box-shadow: 0 0 0 2px #1e8cbe;
+
+            + span {
+                font-weight: bold;
+                color: #1e8cbe;
+            }
+        }
+    }
+}

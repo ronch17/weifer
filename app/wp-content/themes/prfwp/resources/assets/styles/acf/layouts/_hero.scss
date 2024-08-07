@@ -1,0 +1,157 @@
+/* stylelint-disable */
+
+.home-hero {
+    margin-bottom: 0 !important;
+    @media #{$xl} {
+        height: 996px !important;
+
+        .acfm-hero__container {
+            max-width: 166rem;
+            min-height: 65em !important;
+            padding: 0;
+        }
+
+        .acfm-title {
+            font-weight: 800;
+            text-transform: none;
+        }
+    }
+
+    .acfm-hero__container {
+        z-index: 99;
+    }
+}
+
+.contact-hero {
+    .acfm-hero__container {
+        @media #{$xl} {
+            padding: 10em 0 5em;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.acfm-hero {
+    position: relative;
+    height: auto;
+    margin-bottom: 20rem;
+    overflow: hidden;
+
+    &.acfm-z-index--minus {
+        z-index: -1;
+    }
+
+    &__wrapper {
+        position: relative;
+        padding: 1em 0;
+    }
+
+    i {
+        font-style: normal;
+        color: $brand_primary;
+    }
+
+    p {
+        @media #{$lg} {
+            padding: 0 20rem;
+        }
+    }
+
+    &__container {
+        position: relative;
+        z-index: 3;
+        //z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        @media #{$xl} {
+            padding: 25rem 0 5rem;
+        }
+    }
+    .acfm-bg-video-bg {
+        z-index: 99;
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.hero-img {
+    position: absolute;
+    left: 48%;
+    width: 87%;
+    object-fit: cover;
+}
+
+.acfm-bg-video {
+    position: relative;
+
+    video {
+        position: absolute;
+        right: 0;
+        display: none;
+        width: 100%;
+        overflow: hidden;
+
+        @media #{$lg} {
+            display: block;
+        }
+    }
+
+    &-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        opacity: 0.6;
+    }
+}
+
+.border-bottom {
+    border-bottom: 4px solid $brand_primary;
+}
+
+@media #{$xl} {
+    .right-position {
+        position: relative;
+        right: 10rem;
+        white-space: nowrap;
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes header-image-animation {
+    25% {
+        opacity: 1;
+    }
+    85%,
+    100% {
+        opacity: 0;
+        scale: 1.5;
+    }
+}
+
+.about-us {
+    @media #{$lg} {
+        border-radius: 0 0 30rem;
+    }
+
+    .acfm-hero__container {
+        padding-bottom: 10rem;
+    }
+
+    .acfm-row {
+        padding: 10rem 0;
+    }
+}
+.acfm-col-lg-12 {
+    p {
+        padding: 0;
+    }
+}

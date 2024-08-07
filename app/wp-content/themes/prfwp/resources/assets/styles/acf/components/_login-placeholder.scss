@@ -1,0 +1,33 @@
+.acfm-login-placeholder {
+    @include font-size-md();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: $brand_dark;
+
+    &__title {
+        @include font-size-xl();
+        margin-bottom: 1rem;
+        font-weight: $font_weight_bold;
+        color: $brand_primary;
+    }
+
+    &__subtitle {
+        margin-bottom: 1rem;
+    }
+
+    &__wrapper {
+        position: absolute;
+    }
+
+    &__button {
+        @include button-primary();
+        padding: 2.5rem 3rem;
+        margin-top: 2rem;
+        &:hover {
+            color: $brand_primary;
+        }
+    }
+}

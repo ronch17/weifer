@@ -1,0 +1,30 @@
+// stylelint-disable selector-class-pattern
+.acfm-post-single {
+    &__container {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+
+        @media #{$lg} {
+            justify-content: center;
+            padding-top: 16rem;
+            padding-bottom: 12rem;
+        }
+    }
+
+    &__title {
+        @include font-size-lg();
+        margin-bottom: 2rem;
+        font-weight: $font_weight_bold;
+    }
+
+    &__content {
+        b,
+        strong {
+            font-weight: $font_weight_bold;
+        }
+    }
+}

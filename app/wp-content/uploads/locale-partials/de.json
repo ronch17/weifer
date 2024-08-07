@@ -1,0 +1,477 @@
+{
+  "accountCreate": {
+    "ACCOUNT": "Konto",
+    "APPROVAL_TEXT": "Trading-Konto erfolgreich erstellt",
+    "APPROVAL_TITLE": "Erfolg",
+    "CREATE": "Erstellen",
+    "DEMO": "Demo",
+    "GROUP": "Gruppe",
+    "NAME": "Konto Benutzername",
+    "PASSWORD": "Passwort",
+    "PASSWORD_CONFIRM": "Passwort wiederholen",
+    "PLATFORM": "Plattform",
+    "REAL": "Echt",
+    "SUBMIT": "Abschicken",
+    "SUB_TITLE": "Kontodaten eingeben",
+    "TITLE": "Trading-Konto erstellen",
+    "TYPE": "Kontotyp"
+  },
+  "blockUi": {
+    "LOADER_MESSAGE": "Lade..."
+  },
+  "bonus": {
+    "binary": {
+      "TURNOVER": "Umsatz",
+      "TURNOVER_GOAL": "Umsatzziel"
+    },
+    "forex": {
+      "TURNOVER": "Volumen",
+      "TURNOVER_GOAL": "Volumenziel"
+    },
+    "statuses": {
+      "APPROVED": "Genehmigt",
+      "CANCELED": "Abgebrochen",
+      "NEGATIVE": "Negativ",
+      "WAIVED": "Verzichtet"
+    }
+  },
+  "common": {
+    "ACTION": "Aktion",
+    "ADDRESS": "Adresse",
+    "AMOUNT": "Betrag",
+    "BACK": "Zurück",
+    "CITY": "Stadt",
+    "COPY_LINK": "Link kopieren",
+    "COUNTRY": "Land",
+    "CURRENCY": "Währung",
+    "DATE_OF_BIRTH": "Geburtsdatum",
+    "DAY": "Tag",
+    "EMAIL": "E-MAIL",
+    "EXPORT_AS_CSV": "Als CSV exportieren",
+    "FEMALE": "Frau",
+    "FIRST_DEPOSIT": "Erste einzahlung",
+    "FIRST_NAME": "Vorname",
+    "FRIEND_REWARD": "Freund belohnen",
+    "IBAN": "IBAN",
+    "LANGUAGE": "Sprache",
+    "LAST_NAME": "Nachname",
+    "LOADING": "Lade  ",
+    "MALE": "Mann",
+    "MONTH": "Monat",
+    "NEXT": "Weiter",
+    "NO": "Nein",
+    "PASSWORD": "Passwort",
+    "PASSWORD_RETYPE": "Passwort erneut eingeben",
+    "PHONE": "Telefon",
+    "PLEASE_SELECT": "Bitte wählen",
+    "REFEREE": "Schiedsrichter",
+    "REFERRER": "Verweiser",
+    "Rewards": "Belohnung",
+    "SELECT_COUNTRY": "Land wählen",
+    "SELECT_CURRENCY": "Währung wählen",
+    "SELECT_LANGUAGE": "Sprache wählen",
+    "SELECT_MONTH": "Monat wählen",
+    "SELECT_STATE": "Bundesstaat wählen",
+    "SELECT_YEAR": "Jahr wählen",
+    "SKIP": "Überspringen",
+    "SOCIAL_SHARE": "Soziales teilen",
+    "STATE": "Bundesstaat   ",
+    "SUBMIT": "Abschicken",
+    "SWIFT": "SWIFT",
+    "TRANSFER_NOTE": "Transaktionshinweis",
+    "YEAR": "Jahr   ",
+    "YES": "Ja",
+    "YOUR_REWARD": "deine Belohnung",
+    "ZIP_CODE": "Postleitzahl"
+  },
+  "complianceDocTypes": {
+    "CC_BACK": "Kreditkarte - Rückseite",
+    "CC_FRONT": "Kreditkarte - Vorderseite",
+    "IDENTITY_DOC": "Ausweis / Pass / Führerschein",
+    "UTILITY_BILL": "Rechnungen - Wasser / Strom / Steuern"
+  },
+  "customerProfile": {
+    "APPROVAL_TEXT": "Ihr Konto wurde aktualisiert",
+    "APPROVAL_TITLE": "Sehr gut!",
+    "CHANGE_PASSWORD?": "Passwort ändern?",
+    "SUB_TITLE": "Bitte Ihre Daten bearbeiten",
+    "TITLE": "Kundenprofil",
+    "errors": {}
+  },
+  "deposit": {
+    "CHOOSE_METHOD": "Wählen Sie Ihre Zahlungsmethode",
+    "HOLDER_DETAILS": "Karteninhaberdaten",
+    "LOADER_TEXT": "Einzahlung wird getätigt...",
+    "MAKE_DEPOSIT": "Einzahlung tätigen",
+    "MAKE_SURE_MOBILE_MONEY_REGISTERED": "Stellen Sie bitte sicher, dass Ihr registriertes Mobilgerät in Verbindung zu einem Mobile-Money-Konto steht.",
+    "MIN_DEPOSIT_IS": "Der Mindesteinzahlungsbetrag ist:",
+    "NEW_CARD": "Neue Karte",
+    "PREFERRED_METHOD": "Bevorzugte Methode",
+    "SELECT_AMOUNT": "Betrag wählen",
+    "SELECT_CREDIT_CARD": "Bitte Kreditkarte wählen oder neue hinzufügen",
+    "SUBMIT": "Einzahlung",
+    "SUB_TITLE": "Betrag",
+    "TITLE": "Ihr Konto finanzieren",
+    "complete": {
+      "AMOUNT": "Betrag",
+      "BTN": "Jetzt das Trading starten",
+      "DATE": "Datum",
+      "DETAILS": "Einzahlungsdaten",
+      "ID": "Transaktions-ID",
+      "TYPE": "Typ",
+      "card_deposit": {
+        "FOOTER": "",
+        "SUBTITLE": "Sie haben Ihr Konto erfolgreich finanziert",
+        "TITLE": "Glückwunsch"
+      },
+      "mobile_money_deposit": {
+        "FOOTER": "",
+        "SUBTITLE": "Sie haben Ihr Konto erfolgreich finanziert",
+        "TITLE": "Glückwunsch"
+      },
+      "oobit": {
+        "TEXT": "Das mit dem OOBIT-Link eingeleitete Einzahlungsverfahren wurde in einem neuen Tab geöffnet. <br><br>Die Geldmittel werden Ihrem Kontostand gutgeschrieben werden, nachdem die Einzahlung genehmigt wurde. <br><br> Sie können Ihren Einzahlungsstatus im Tab für Transaktionen überprüfen. <br><br>"
+      },
+      "wire_deposit": {
+        "FOOTER": "Ihr Konto-Manager wird Sie in Kürze kontaktieren.",
+        "SUBTITLE": "Ihr Einzahlungsantrag wurde abgeschickt",
+        "TITLE": "Vielen Dank"
+      }
+    },
+    "credit_card": {
+      "CVV": "CVV",
+      "CVV_INFO": "Kartensicherheitscode",
+      "CVV_X_DIGIT": "{{number}} Ziffern",
+      "EXP_MONTH": "Ablaufmonat",
+      "EXP_YEAR": "Ablaufjahr",
+      "MONTH": "Monat",
+      "NUMBER": "Kreditkartennummer",
+      "SELECT_TYPE": "Typ wählen",
+      "TYPE": "Kreditkartentyp",
+      "YEAR": "Jahr"
+    },
+    "error": {
+      "GENERAL": "Einzahlung fehlgeschlagen",
+      "REJECTED": "Die Einzahlung wurde von der Kreditkarten-Clearinggesellschaft abgelehnt.",
+      "TIMEOUT": "Keine Antwort von der Clearinggesellschaft erhalten, bitte später erneut versuchen."
+    },
+    "methods": {
+      "CARD_DEPOSIT": "Kreditkarte",
+      "EXTERNAL_CARD_DEPOSIT": "Manuelle Einzahlung",
+      "MOBILE_MONEY_DEPOSIT": "Mobile Money",
+      "WIRE_DEPOSIT": "Banküberweisung"
+    },
+    "statuses": {
+      "APPROVED": "Genehmigt",
+      "CANCELED": "Abgebrochen",
+      "CLOSED": "Geschlossen",
+      "DECLINED": "Abgelehnt",
+      "PENDING": "Wird bearbeitet",
+      "REJECTED": "Zurückgewiesen",
+      "REQUESTED": "Beantragt"
+    },
+    "table": {
+      "DELETE": "Löschen",
+      "HOLDER": "Karteninhaber ",
+      "NUMBER": "Nummer",
+      "TYPE": "Typ"
+    },
+    "wire": {
+      "ACCOUNT_NAME": "Name des Kontoinhabers",
+      "BANK_ADDRESS": "Adresse der Bank",
+      "BANK_COUNTRY": "Land der Bank",
+      "BANK_NAME": "Name der Bank",
+      "NOTE_ON_TRANSFER": "Transaktionshinweis"
+    }
+  },
+  "document": {
+    "CHOOSE_FILE": "Datei wählen",
+    "DELETE": "Löschen",
+    "FILE": "Datei   ",
+    "FILE_NAME": "Dateiname",
+    "SUBMIT": "Abschicken",
+    "TITLE": "Hochladen",
+    "TYPE": "Typ",
+    "VIEW": "Ansicht"
+  },
+  "error": {
+    "ERROR_ACCESS_FORBIDDEN": "Zugang verboten",
+    "ERROR_AUTH_BEARER_SIGNATURE": "Der Kunden-Token ist nicht mehr gültig. Bitte loggen sich sich aus und erneut ein.",
+    "ERROR_AUTH_BEARER_STRUCTURE": "Der Kunden-Token ist nicht mehr gültig. Bitte loggen sich sich aus und erneut ein.",
+    "ERROR_AUTH_NOTLOGIN": "Nutzererkennung fehlgeschlagen",
+    "ERROR_AUTH_PSWDRESET": "Das Passwort muss vor dem Login zurückgesetzt werden",
+    "ERROR_AUTH_SRV": "Der Kunden-Token ist nicht mehr gültig. Bitte loggen sich sich aus und erneut ein.",
+    "ERROR_AUTH_SRV_BLACKLIST": "Der Kunden-Token ist nicht mehr gültig. Bitte loggen sich sich aus und erneut ein.",
+    "ERROR_AUTH_SRV_CONTEXT": "Der Kunden-Token ist nicht mehr gültig. Bitte loggen sich sich aus und erneut ein.",
+    "ERROR_AUTH_SRV_CONTEXT_EXPIRED": "Der Kunden-Token ist nicht mehr gültig. Bitte loggen sich sich aus und erneut ein.",
+    "ERROR_INVALID": "Ein oder mehr Felder sind fehlerhaft. Bitte Felder überprüfen und erneut versuchen.",
+    "ERROR_INVALID_ARG": "Ein oder mehr Felder sind fehlerhaft. Bitte Felder überprüfen und erneut versuchen.",
+    "ERROR_INVALID_RECCONTEXT_RECDUP": "Eintrag existiert bereits",
+    "ERROR_INVALID_RECORD_CONTEXT_DUPLICATE_RECORD": "Eintrag existiert bereits",
+    "ERROR_INVALID_REQUEST_DATA": "Ein oder mehr Felder sind fehlerhaft. Bitte Felder überprüfen und erneut versuchen.",
+    "ERROR_PROVIDER_PLATFORM_CONNECTION": "Ein Kommunikationsproblem mit der Trading-Plattform ist aufgetreten. Wir werden dies so bald wie möglich beheben. Bitte versuchen Sie es in ein paar Minuten erneut.",
+    "NETWORK_ERROR": "Ein Netzwerkfehler ist aufgetreten. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+    "SERVER_DOWN": "Wartungsarbeiten an unserem Web-Server werden durchgeführt. Bitte versuchen Sie es in ein paar Minuten erneut",
+    "SERVER_GENERAL": "Sorry, ein Fehler ist aufgetreten, versuchen Sie es später erneut",
+    "SERVER_TIMEOUT": "Unser Web-Server antwortet nicht. Bitte versuchen Sie es bald erneut",
+    "UNKNOWN_COM_ERROR": "Ein unbekannter Kommunikationsfehler ist aufgetreten. Bitte versuchen Sie es später erneut",
+    "XERROR_MODEL_RECORD_NOT_FOUND__RUNTIME_MODEL_NOT_FOUND": "Eintrag nicht gefunden."
+  },
+  "forgotPassword": {
+    "APPROVAL_TEXT": "Ihr Passwort wurde an Ihre E-Mail gesendet",
+    "APPROVAL_TITLE": "Sehr gut!",
+    "ERROR": "Fehler. Bitte stellen Sie sicher, dass Sie Ihre E-Mail korrekt eingegeben haben",
+    "SUBMIT": "Abschicken",
+    "SUB_TITLE": "Bitte E-Mail eingeben, um fortzufahren",
+    "TITLE": "Passwort vergessen",
+    "errors": {
+      "ERROR_INVALID_REQUEST_DATA": "Bitte stellen Sie sicher, dass Sie Ihre E-Mail korrekt eingegeben haben",
+      "SERVER_GENERAL": "Sorry, ein Fehler ist aufgetreten, versuchen Sie es später erneut",
+      "XERROR_MODEL_RECORD_NOT_FOUND__RUNTIME_MODEL_NOT_FOUND": "Bitte stellen Sie sicher, dass Sie Ihre E-Mail korrekt eingegeben haben"
+    }
+  },
+  "idle": {
+    "LOGOUT": "Logout",
+    "PROMPT": "Wählen Sie den Bleiben-Button oder das System wird Sie in {{seconds}} Sekunden abmelden",
+    "STAY": "Bleiben",
+    "SUB_TITLE": "Sind Sie noch hier?",
+    "TITLE": "Auto Log-out"
+  },
+  "internalTransfer": {
+    "errors": {
+      "ERROR_INVALID_REQUEST_DATA_INSUFFICIENT_BALANCE": "Ungenügender Kontostand für interne Überweisung",
+      "SERVER_GENERAL": "Ihre interne Überweisung ist fehlgeschlagen. Für weitere Informationen kontaktieren Sie bitte unseren Kundendienst: support@proftit.com"
+    },
+    "statuses": {
+      "APPROVED": "Genehmigt"
+    }
+  },
+  "internalTransferComplete": {
+    "AMOUNT": "Betrag",
+    "DATE": "Datum",
+    "MESSAGE": "IHRE INTERNE ÜBERWEISUNG WURDE GENEHMIGT",
+    "SOURCE_ACCOUNT": "Ausgangskonto",
+    "STATUS": "Status",
+    "TITLE": "INTERNE ÜBERWEISUNG",
+    "TRANSACTION_ID": "Überweisungs-ID",
+    "TRANSFER_ACCOUNT": "Überweisungskonto",
+    "TRANSFER_DETAILS_HEADER": "Angaben beantragen:"
+  },
+  "internalTransferForm": {
+    "AMOUNT": "Betrag",
+    "DESTINATION_ACCOUNT_SELECT_HELPER_TEXT": "Wählen Sie das Trading-Konto für die Geldmittelüberweisung aus",
+    "DESTIONATION_ACCOUNT_SELECT_HEADER": "Trading-Konto ID | Nickname | Währung",
+    "EXCHANGE_PRICE": "Umtauschkosten",
+    "FOOT_NOTE": "Interne Überweisungen ermöglichen Ihnen, Geldmittel zwischen Ihren verschiedenen Kontotypen zu bewegen. Der Wechselkurs wird zum Einsendezeitpunkt der Überweisung bestimmt.",
+    "REASON": "Grund für interne Überweisung",
+    "SOURCE_TRADING_ACCOUNT_SELECT": "Trading-Konto ID | Nickname | Währung",
+    "SUBMIT": "Einsenden",
+    "TITLE": "INTERNE ÜBERWEISUNG",
+    "TOOLTIP_RATE_CONTENT": "Der Kurs ist korrekt für \n die letzten 30 Minuten.\n Live-Kurse werden \n während der Überweisungseinsendung\n bestimmt."
+  },
+  "login": {
+    "FORGOT_PASSWORD": "Passwort vergessen",
+    "GREETING": "Hallo",
+    "LOGIN": "Login",
+    "LOGIN_LOADER": "Anmeldung wird durchgeführt",
+    "LOGIN_REQUEST": "Bitte einloggen, um fortzufahren",
+    "LOGIN_REQUIRED": "Login benötigt",
+    "LOGOUT": "Log-out",
+    "MESSAGE_EXPIRE": "Ihre Session ist abgelaufen",
+    "errors": {
+      "ERROR_AUTH_WRONG_CREDENTIALS": "Login nicht möglich: E-Mail oder Passwort sind falsch",
+      "ERROR_INVALID_REQUEST_DATA": "Bitte füllen Sie das E-Mail und Passwort Feld korrekt aus",
+      "ERROR_PROVIDER_PLATFORM_CONNECTION": "Login nicht möglich: Ein Kommunikationsproblem mit der Trading-Plattform ist aufgetreten. Wir arbeiten an der Lösung. Bitte versuchen Sie es in ein paar Minuten erneut.",
+      "LOGIN_FAILED": "Login nicht möglich",
+      "MIGRATION_ONGOING": "Ein Plattform-Upgrade wird durchgeführt, Login-Probleme können auftreten. Wir werden Sie per E-Mail informieren, wenn das Upgrade abgeschlossen wurde und Sie sich erneut problemlos einloggen können. ",
+      "MIGRATION_STARTING": "Ihr Konto wird gegenwärtig migriert. Wir werden Sie per E-Mail informieren, wenn der Vorgang abgeschlossen wurde und Sie sich erneut problemlos einloggen können.",
+      "NO_TRADING_ACCOUNT": "Sorry, wir sind nicht in der Lage, den Login in Ihr Trading-Konto durchzuführen. Bitte kontaktieren Sie Ihren Broker",
+      "PASSWORD_RESET_NEEDED": "Ein Plattform-Upgrade wird durchgeführt, Sie müssen Ihr Passwort zurücksetzen. Eine Passwortrücksetzungs-E-Mail wurde an Sie gesendet.",
+      "SESSION_ERROR": "Ein Session-Fehler ist aufgetreten: Bitte versuchen Sie sich, erneut einzuloggen",
+      "TRADING_ACCOUNT_BLOCKED": "Sehr geehrter Trader, Ihr Konto wurde vorübergehend gesperrt. Bitte kontaktieren Sie unseren Kundendienst, um es zu reaktivieren.",
+      "TRADING_ACCOUNT_BLOCKED_TITLE": "Konto gesperrt",
+      "WRONG_CREDENTIALS": "Login nicht möglich: E-Mail oder Passwort sind falsch"
+    }
+  },
+  "platform_loader": {
+    "errors": {
+      "SERVER_GENERAL": "Laden der Trading-Plattform nicht möglich: Ein Serverfehler ist aufgetreten, bitte später erneut versuchen",
+      "UNABLE_TO_LOAD": "Laden der Trading-Plattform nicht möglich",
+      "XERROR_MODEL_RECORD_NOT_FOUND__RUNTIME_MODEL_NOT_FOUND": "Keine Trading-Plattform ist für diesen Brand konfiguriert."
+    }
+  },
+  "questionnaire": {
+    "CONFIRM_ALL": "Bitte alle Einträge bestätigen",
+    "PAGE": "Seite",
+    "SELECT_ONE": "Bitte mindestens eine Option wählen",
+    "SELECT_OPTION": "Bitte Option wählen",
+    "TITLE": "Fragebogen",
+    "errors": {
+      "NO_ACTIVE_FORMS": "Es gibt keine aktiven Fragebogenformulare für diesen Brand"
+    }
+  },
+  "referAFriendWidget": {
+    "HEADER": "Empfehlen Sie einen Freund",
+    "REWARD_CONTENT": "Wir legen Wert auf Freundschaft.\nTeilen Sie den unten stehenden Link mit Ihren Freunden, Sie sollten beide belohnt werden.\nWährend Ihre Freunde die folgenden Aktionen ausführen, wird jeder von Ihnen entsprechend belohnt."
+  },
+  "refereeLandingWidget": {
+    "JOIN_YOUR_FRIEND": "Schließen Sie sich Ihrem Freund an {{brandName}}"
+  },
+  "registration": {
+    "SUBMIT": "Abschicken",
+    "SUCCESS": "Registrierung erfolgreich",
+    "errors": {
+      "ERROR_INVALID_RECORD_CONTEXT_DUPLICATE_RECORD": "Ein Kunde mit dieser E-Mail existiert bereits",
+      "INVALID_FORM": "Das beantragte Formular existiert nicht",
+      "REGISTRATION_FAILED": "Registrierung fehlgeschlagen. Bitte überprüfen Sie, ob alle Felder korrekt sind",
+      "UNABLE_TO_LOAD_FORM": "Laden des Registrierungsformulars nicht möglich: Ein Serverfehler ist aufgetreten, bitte später erneut versuchen"
+    }
+  },
+  "resetPassword": {
+    "APPROVAL_TEXT": "Ihr neues Passwort wurde versendet",
+    "APPROVAL_TITLE": "Sehr gut!",
+    "MUST_HAVE_TOKEN": "Sie müssen ein gültiges Token haben, um Ihr Passwort zurückzusetzen. Bitte verwenden Sie hierfür den Link zur Passwortrücksetzung in der E-Mail, die Sie von uns erhalten haben",
+    "PASSWORD": "Passwort",
+    "REPEAT_PASSWORD": "Passwort wiederholen",
+    "RESET": "Zurücksetzen",
+    "SUB_TITLE": "Bitte neues Passwort wählen",
+    "TITLE": "Passwort zurückgesetzt",
+    "errors": {
+      "ERROR_AUTH_SRV_BLACKLIST": "Passwortrücksetzungs-Token ist ungültig. Bitte das Passwortrücksetzungsverfahren erneut starten, indem Sie zurück zu der 'Passwort vergessen' Seite gehen.",
+      "ERROR_AUTH_SRV_CONTEXT_EXPIRED": "Passwortrücksetzungs-Token ist abgelaufen. Bitte das Passwortrücksetzungsverfahren erneut starten, indem Sie zurück zu der 'Passwort vergessen' Seite gehen."
+    }
+  },
+  "topBar": {
+    "BALANCE": "Kontostand",
+    "DARK_THEME": "Dunkles Farbschema",
+    "DEPOSIT": "Einzahlen",
+    "EQUITY": "Eigenkapital",
+    "FREE_MARGIN": "Bereitstehende Margin",
+    "LIGHT_THEME Light Theme": "Helles Farbschema",
+    "LOGIN": "Log-in",
+    "LOGOUT": "Log-out",
+    "MARGIN_LEVEL": "Margin-Ebene",
+    "MID_THEME": "Blaues Farbschema",
+    "MY_ACCOUNT": "Mein Konto",
+    "OPEN_PL": "P&L öffnen"
+  },
+  "tradingAccountsSummary": {
+    "ACCOUNT_ID": "Konto-ID",
+    "ACCOUNT_NICK_NAME": "Konto Benutzername",
+    "ACCOUNT_SUMMARY": "Kontenüberblick",
+    "ACCOUNT_SUMMARY_BINARY": "Kontoüberblick - Binäre",
+    "ACCOUNT_SUMMARY_FOREX": "Kontoüberblick - Forex",
+    "BALANCE": "Saldo",
+    "CANCEL": "Abbrechen",
+    "CURRENCY": "Währung",
+    "DEMO_ACCOUNTS": "Demokonten",
+    "EDIT": "Bearbeiten",
+    "EQUITY": "Eigenkapital",
+    "GROUP": "Gruppe",
+    "LIVE_ACCOUNTS": "Live-Konten",
+    "MARGIN": "Margin",
+    "NO_ACCOUNTS": "Keine Konten für diesen Bereich gefunden",
+    "SAVE": "Speichern",
+    "TRADING_ACCOUNT_TYPE": {
+      "GOLD": "Gold",
+      "REGULAR": "Regulär",
+      "SILVER": "Silber",
+      "VIP": "Vip"
+    },
+    "TYPE": "Typ",
+    "errors": {
+      "SERVER_GENERAL": "Sorry, wir sind derzeit nicht in der Lage, Ihre Trading-Konten zu laden. Bitte später erneut versuchen"
+    },
+    "errorsEdit": {
+      "SERVER_GENERAL": "Sorry, wir sind nicht in der Lage, Ihr Konto zu aktualisieren"
+    }
+  },
+  "tradingaccount": {
+    "AMOUNT": "Betrag",
+    "BONUSES": "Boni",
+    "CREDITS": "Credits",
+    "DATE": "Datum",
+    "DEPOSITS": "Einzahlungen",
+    "FEES": "Gebühren",
+    "FEES_TYPES": {
+      "COMMISSION": "Provision",
+      "ROLLOVER": "Rollover"
+    },
+    "POSITION": "Position",
+    "STATUS": "Status",
+    "TITLE": "Transaktionen",
+    "TYPE": "Typ",
+    "WITHDRAWALS": "Abhebungen",
+    "errors": {
+      "SERVER_GENERAL": "Sorry, wir sind derzeit nicht in der Lage, Ihr Trading-Konto zu laden. Bitte später erneut versuchen"
+    }
+  },
+  "validation": {
+    "AMOUNT_POSITIVE": "Muss ein positiver Betrag sein",
+    "EMAIL": "Ungültiges E-Mail-Format",
+    "INPUT_ERROR": "Ungültiger Eintrag",
+    "INVALID_CC": "Kreditkartennummer ungültig",
+    "INVALID_PHONE": "Telefonnummer ungültig",
+    "MAX_LENGTH": "Wert ist zu lang",
+    "MIN_LENGTH": "Wert ist zu kurz",
+    "NOT_MATCH": "Werte stimmen nicht überein",
+    "NUMBER": "Wert muss eine Zahl sein",
+    "PASSWORD_ERROR": "Passwort stimmt nicht überein",
+    "REQUIRED": "* Dies ist ein Pflichtfeld",
+    "TOO_HIGH": "Wert ist zu hoch",
+    "TOO_LOW": "Wert ist zu niedrig",
+    "URL": "Url ungültig"
+  },
+  "withdrawal": {
+    "FOOT_NOTE": "Falls Sie dies noch nicht getan haben, legen Sie bitte einen Kontoauszug mit gut sichtbarem Namen des Begünstigten, IBAN / Kontonummer und SWIFT-Code bei. Bitte senden Sie die Erklärung per E-Mail an den Kundensupport.",
+    "PREFERRED_METHOD": "Bevorzugte Methode",
+    "REASON": "Abhebungsgrund",
+    "SUBMIT": "Abschicken",
+    "TITLE": "Abhebungsantrag",
+    "complete": {
+      "AMOUNT": "Betrag",
+      "BTN": "Lassen Sie uns wissen",
+      "DATE": "Datum",
+      "DETAILS": "Weitere Angaben anfragen",
+      "GREETINGS": "Vielen Dank",
+      "MESSAGE": "Ihr Abhebungsantrag wurde abgeschickt.",
+      "PROCEED": "Ihr Konto-Manager wird Sie in Kürze kontaktieren.",
+      "STATUS": "Status"
+    },
+    "errors": {
+      "ERROR_INVALID_ARG": "Abschicken des Abhebungsantrags nicht möglich: Eins der Felder ist ungültig",
+      "SERVER_GENERAL": "Abhebungsantrag kann nicht abgeschickt werden"
+    },
+    "methods": {
+      "CARD_WITHDRAWAL": "Kreditkarte",
+      "MOBILE_MONEY_WITHDRAWAL": "Mobile Money",
+      "WIRE_WITHDRAWAL": "Banküberweisung"
+    },
+    "statuses": {
+      "APPROVED": "Genehmigt",
+      "CANCELED": "Abgebrochen",
+      "CLOSED": "Geschlossen",
+      "DECLINED": "Abgelehnt",
+      "PARTIAL": "Partiell",
+      "PENDING": "Wird bearbeitet",
+      "REJECTED": "Zurückgewiesen",
+      "REQUESTED": "Beantragt"
+    },
+    "wire": {
+      "ACCOUNT_FIRST_NAME": "Vorname des Kontos",
+      "ACCOUNT_LAST_NAME": "Nachname des Kontos",
+      "ACCOUNT_NUMBER": "Accountnummer",
+      "BANK_ACCOUNT": "Bankkonto:",
+      "BANK_ADDRESS": "Bankadresse",
+      "BANK_CITY": "Bankenstadt",
+      "BANK_COUNTRY": "Land der Bank",
+      "BANK_NAME": "Bank Name",
+      "CUSTOM_FIELD": "Benutzerdefinierte Feld",
+      "IBAN": "IBAN",
+      "SWIFT_CODE": "SWIFT-Code"
+    }
+  },
+  "withdrawalAlreadyRequestedError": {
+    "MESSAGE": "Sie haben bereits eine offene Auszahlungsanfrage, um Ihre Anfrage zu aktualisieren, stornieren Sie bitte die bestehende Auszahlungsanfrage auf der Registerkarte Transaktionen und öffnen Sie eine neue."
+  }
+}

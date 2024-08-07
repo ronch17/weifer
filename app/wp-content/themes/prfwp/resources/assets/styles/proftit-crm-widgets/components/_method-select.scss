@@ -1,0 +1,63 @@
+//CHOSEN EXTENDER for method select
+.prfw-method-select {
+    .chosen-container-single .chosen-single {
+        &[data-value*='CARD'],
+        &[data-value*='WIRE'],
+        &[data-value*='E-WALLET'] {
+            position: relative;
+            //defining the padding space for the pseudo element image
+            padding-left: 45px;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            display: inline-block;
+            content: '';
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transform: translateY(-50%);
+        }
+
+        &[data-value*='CARD'] {
+            &::before {
+                left: 6px;
+                width: 2.45em;
+                height: 1.5em;
+                overflow: hidden;
+                // @todo general theme
+                background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.5 15" fill="#{$methodSelect_wire_card_color}"><path d="M0,0V15H24.5V0ZM14.52,11a3.59,3.59,0,0,1-2.3-.84,3.58,3.58,0,1,1,0-5.53,3.51,3.51,0,0,1,2.3-.84,3.61,3.61,0,1,1,0,7.21Z"/><path d="M14.52,4.58a2.77,2.77,0,0,0-1.76.62,3.57,3.57,0,0,1,0,4.43,2.87,2.87,0,0,0,1.76.61,2.83,2.83,0,1,0,0-5.66Z"/></svg>');
+            }
+        }
+
+        &[data-value*='WIRE'] {
+            &::before {
+                left: 6px;
+                width: 2.45em;
+                height: 1.5em;
+                // @todo general theme
+                background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 19" fill="#{$methodSelect_wire_card_color}"><path d="M11.52.08L0 5.88v1.65h23V5.88zm8.63 10.73H21V9.16h-5v1.65h.82v5.79h-3.7v-5.79H14V9.16H9.05v1.65h.82v5.79H6.18v-5.79H7V9.16H2.07v1.65h.82v5.79H.84v2.47H22.2v-2.46h-2.06v-5.8z"/></svg>');
+            }
+        }
+
+        &[data-value*='E-WALLET'] {
+            &::before {
+                left: 6px;
+                width: 2.45em;
+                height: 1.5em;
+                // @todo general theme
+                background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31.3"><g fill="none" stroke="#{$brand_primary_svg}" stroke-miterlimit="10" stroke-width="2"><path d="M9.4.8h12l8.8 8.8v12l-8.9 8.9H9.8l-9-8.9v-12L9.4.8z"/><path d="M1 21.4L21.3 1M9.4 30.1L30 9.4M7.2 15.5H24M9.7 1.1l20.4 20.2M1 9.6l20.4 20.3" opacity=".4"/></g></svg>');
+            }
+        }
+
+        &::after {
+            right: 35px;
+            width: 1em;
+            height: 1.4em;
+            // @todo general theme
+            background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.09 29.56" fill="#{$methodSelect_lock_color}"><path d="M20.8,11V7.94C20.8,3.56,16.87,0,12,0S3.28,3.56,3.28,7.94V11A4,4,0,0,0,0,14.91V25.6a4,4,0,0,0,4,4H20.13a4,4,0,0,0,4-4V14.91A4,4,0,0,0,20.8,11ZM4.38,7.94c0-3.78,3.44-6.85,7.66-6.85s7.67,3.07,7.67,6.85v3H4.38ZM14.23,20.8a2.19,2.19,0,1,1-4.38,0V17.52a2.19,2.19,0,0,1,4.38,0Z"/></svg>');
+        }
+    }
+}

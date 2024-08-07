@@ -1,0 +1,124 @@
+/* stylelint-disable */
+.prfwp-loginWidget {
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__loginPopup {
+        @include brand-shadow();
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+        margin: 1em;
+        color: $brand_base;
+        text-align: center;
+        border: 1px solid $brand_primary;
+        border-radius: 4rem;
+        transition-delay: initial;
+        transition-timing-function: ease;
+
+        @media #{$md} {
+            max-width: 35em;
+            margin: 0.5em auto 1em;
+        }
+
+        &:focus-within,
+        &.show {
+            display: block;
+            opacity: 1;
+        }
+
+        &__icon {
+            margin: 1em auto;
+        }
+
+        input {
+            @include form-control();
+            padding: 0.25em 3em;
+            border: 1px solid #d0d0d0;
+            // stylelint-disable property-no-vendor-prefix
+            &:-webkit-autofill,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:hover {
+                -webkit-box-shadow: 0 0 0 50px $brand_white inset; /* Change the color to your own background color */
+                -webkit-text-fill-color: $brand_dark;
+            }
+
+            &::placeholder {
+                color: $brand_dark;
+            }
+        }
+
+        &__loginContent {
+            width: 100%;
+            padding: 3rem 4rem;
+            background: $brand_white;
+        }
+
+        &__loginTitle {
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            text-align: center;
+            text-transform: capitalize;
+
+            a {
+                color: $brand_primary;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__footer {
+        @include font-size-md();
+        color: $brand_primary;
+        text-decoration: underline;
+    }
+
+    @media #{$navbar_breakpoint} {
+        position: relative;
+
+        &-wrapper {
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__loginPopup {
+            top: 100%;
+            right: -6em;
+            left: initial;
+            margin: 0;
+
+            &:focus-within,
+            &.show {
+                z-index: -1;
+                opacity: 1;
+            }
+
+            input {
+                @include font-size-xs();
+                border-radius: 3rem;
+            }
+
+            &__loginTitle {
+                @include font-size-xs();
+                width: 65%;
+                margin: 0 auto 1em;
+            }
+        }
+        &__footer {
+            @include font-size-xs();
+        }
+    }
+}
+
+@media #{$until_xl} {
+    .prfwp-loginWidget,
+    prf-content-restrict.ng-isolate-scope {
+        width: min-content;
+    }
+}

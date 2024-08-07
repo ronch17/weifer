@@ -1,0 +1,31 @@
+.acfm-login-widget {
+    max-width: 33rem;
+    margin: 0 auto;
+    input {
+        @include form-control();
+        padding: 0.25em 3em;
+
+        // stylelint-disable property-no-vendor-prefix
+        &:-webkit-autofill,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:hover {
+            -webkit-box-shadow: 0 0 0 50px $brand_dark inset; /* Change the color to your own background color */
+            -webkit-text-fill-color: $brand_white;
+        }
+
+        &::placeholder {
+            color: $brand_dark;
+        }
+    }
+
+    &__footer {
+        text-decoration: underline;
+    }
+
+    .loginprfw {
+        &__login-btn {
+            @include button_primary();
+            padding: 2.5rem 3rem;
+        }
+    }
+}

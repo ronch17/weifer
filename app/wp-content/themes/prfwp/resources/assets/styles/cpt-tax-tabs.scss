@@ -1,0 +1,11 @@
+$base_font_size_px: 16;
+
+@import 'common/functions';
+@import 'common/variables';
+@import 'common/mixins';
+//@import "common/global";
+
+/** CPT Tax Tabs module and his Sub Components */
+@import '../styles/acf/layouts/cpt-tax-tabs';
+@import '../styles/acf/sub-components/accordion-on';
+@import '../styles/acf/sub-components/accordion-off';

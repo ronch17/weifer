@@ -1,0 +1,332 @@
+$base-font-size-px: 16;
+@import 'resources/assets/styles/common/functions';
+@import 'resources/assets/styles/common/variables';
+@import 'resources/assets/styles/common/mixins';
+@import 'icon-assets';
+
+:local {
+    .row {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: space-around;
+        min-width: 12em;
+        height: 8em;
+        width: 18em;
+        padding: 1em;
+        margin: 1em;
+        align-items: center;
+        border-radius: 12px;
+        box-shadow: $brand_shadow;
+
+        .acfm-assets-table & {
+            flex-direction: row;
+            width: 100%;
+            height: auto;
+            padding: 0.5rem;
+            margin: 0 0 2rem 0;
+            box-shadow: none;
+            border-radius: 0;
+
+            @media #{$sm} {
+                flex-wrap: nowrap;
+                margin: 0;
+            }
+        }
+
+        .acfm-assets-column & {
+            flex-direction: row;
+            max-width: 28em;
+            width: 100%;
+            height: auto;
+            padding: 1.8rem 1rem;
+            margin: 1em auto;
+            @media #{$sm} {
+                flex-wrap: nowrap;
+                padding: 1.8rem 4.5rem;
+            }
+        }
+
+        @media #{$md} {
+            margin: 2em 1em;
+        }
+    }
+
+    .btns {
+        display: none;
+    }
+
+    .labels {
+        display: none;
+
+        .acfm-assets-table & {
+            @media #{$sm} {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding: 0.5rem;
+                margin-bottom: 2.5rem;
+                span {
+                    flex: auto;
+                    margin: 0 0.5rem;
+                    text-align: center;
+
+                    &:first-child {
+                        flex-basis: 14%;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        position: relative;
+        display: block;
+        width: em(23);
+        height: em(23);
+        margin: 0.5rem;
+        text-indent: -9999px;
+        cursor: pointer;
+        background-color: $brand_primary;
+        border-radius: 50%;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: em(3);
+            content: '';
+            background-color: $brand_white;
+
+            @include transition(transform, 250ms);
+        }
+
+        &::before {
+            left: 35%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+            left: 65%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:global(.active) {
+            &::before {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
+        background-color: rgba(#fff077, 0.4);
+    }
+
+    .assetsCount,
+    .asset {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 17.3rem;
+        height: 4.3rem;
+        padding: 0.4rem;
+        margin: 0.4rem;
+        background-color: $brand_white;
+    }
+
+    .assetsCount {
+        b {
+            margin-right: 0.5em;
+        }
+    }
+
+    .cellNameInner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .acfm-assets-table & {
+            flex-direction: row;
+            justify-content: center;
+            font-weight: $font_weight_medium;
+        }
+
+        .acfm-assets-column & {
+            margin-bottom: 1rem;
+            @media #{$sm} {
+                align-items: flex-start;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .label {
+        @include responsive-font(16, 11);
+    }
+
+    .cell {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        flex: 0 0 100%;
+        margin-bottom: 0.7em;
+        font-weight: $font_weight_medium;
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            display: inline-block;
+            width: 40%;
+            text-align: center;
+            justify-content: center;
+            flex: 0 0 10%;
+            margin: 0 0 1rem 0;
+        }
+
+        .acfm-assets-table & {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex: auto;
+            height: 5.3rem;
+            background: $brand_light;
+            margin: 0 0.5rem;
+
+            &:first-child {
+                flex-basis: 100%;
+                margin-bottom: 1rem;
+                @media #{$sm} {
+                    flex-basis: 55%;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .acfm-assets-column & {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex: auto;
+            margin: 0;
+
+            &:first-child {
+                flex-basis: 100%;
+                @media #{$sm} {
+                    flex-basis: 50%;
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    content: 'Buy';
+                }
+            }
+
+            &:nth-child(3) {
+                &::before {
+                    content: 'Sell';
+                }
+            }
+        }
+    }
+
+    .counters {
+        display: inline-block;
+        justify-content: space-around;
+    }
+}
+
+// stylelint-disable no-descending-specificity
+.cell {
+    &--bid,
+    &--ask {
+        position: relative;
+        color: #1c2f36;
+
+        &::before,
+        &::after {
+            @include responsive-font(12);
+            display: inline-block;
+            position: absolute;
+            top: 15%;
+
+            .acfm-assets-table & {
+                top: 15%;
+                @media #{$sm} {
+                    top: 8%;
+                }
+            }
+
+            .acfm-assets-column & {
+                top: 15%;
+                @media #{$lg} {
+                    top: 8%;
+                }
+            }
+        }
+
+        &::before {
+            left: -1rem;
+
+            .acfm-assets-table & {
+                left: -1.5rem;
+            }
+
+            .acfm-assets-column & {
+                left: -1.5rem;
+            }
+        }
+
+        &::after {
+            right: -1rem;
+
+            .acfm-assets-table & {
+                right: -1.5rem;
+            }
+
+            .acfm-assets-column & {
+                right: -1.5rem;
+            }
+        }
+
+        .cfd-js-down & {
+            color: $brand_danger;
+
+            &::after,
+            &::before {
+                content: '▼';
+            }
+        }
+
+        .cfd-js-up & {
+            color: $brand_success;
+
+            &::after,
+            &::before {
+                content: '▲';
+            }
+        }
+    }
+}
+
+.acfm-assets-table {
+    @include brand-shadow();
+    padding: 2rem 1rem 0;
+    @media #{$sm} {
+        padding: 4rem 2rem 2rem;
+    }
+}

@@ -1,0 +1,260 @@
+// stylelint-disable
+.acfm-contact-form {
+    padding: 2rem;
+    margin: 3rem 0;
+    transition: 0.4s ease-in-out;
+    @media #{$xl} {
+        padding: 4rem;
+    }
+
+    &__title {
+        @include font-size-xs();
+        padding-bottom: 1.5rem;
+
+        margin-bottom: 0.2em;
+        font-weight: $font_weight_regular;
+        text-align: center;
+    }
+
+    &__subtitle {
+        @include font-size-sm();
+        margin-bottom: 2em;
+    }
+
+    &__form {
+        form {
+            @media #{$sm} {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    .wrapper {
+        display: grid;
+        padding-bottom: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        @media #{$lg} {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__row {
+        text-align: center;
+        @media #{$md} {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__control {
+        @include form-control();
+        background: $brand_white;
+        border: 1px solid $brand_gray_border;
+        border-radius: 2.6rem;
+
+        &::placeholder {
+            opacity: 0;
+        }
+
+        &-wrap {
+            position: relative;
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            @media #{$sm} {
+                margin-bottom: 0;
+            }
+
+            .acfm-contact-form__row & {
+                @media #{$md} {
+                    width: 48%;
+                }
+            }
+
+            .your-phone {
+                span.acfm-contact-form {
+                    &__placeholder {
+                        padding-left: 8rem;
+                        &:focus {
+                            position: absolute;
+                            top: -3rem;
+                            left: -6rem;
+                        }
+                    }
+                }
+            }
+
+            .intl-tel-input.allow-dropdown input[type='text'] {
+                &:focus {
+                    z-index: 9;
+                    span.acfm-contact-form__placeholder {
+                        position: absolute;
+                        top: -3rem;
+                        left: -6rem;
+                    }
+                }
+            }
+        }
+
+        &:focus,
+        &:not(:placeholder-shown) {
+            + .#{acfm-contact-form}__placeholder {
+                left: 1rem;
+                padding-left: 0.4rem;
+                color: $form_control_placeholder;
+                transform: translateY(-2em) scale(0.75);
+            }
+        }
+    }
+
+    .selected-flag {
+        z-index: 10;
+    }
+
+    &__placeholder {
+        position: absolute;
+        top: 0.3em;
+        left: 1px;
+        z-index: 1;
+        padding: 1.3rem 1.8rem;
+        font-size: 16px;
+        line-height: 22px;
+        color: $form_control_placeholder;
+        pointer-events: none;
+        background-color: transparent;
+        border-radius: 6px;
+        transform: translateY(0) scale(1);
+        transform-origin: top left;
+
+        @include transition(transform color padding, 250ms);
+    }
+
+    .wpcf7-response-output {
+        position: absolute;
+        right: 6rem;
+        bottom: 6rem;
+        display: block;
+        width: 30rem;
+
+        @media #{$until_xl} {
+            position: relative;
+            right: 0;
+            bottom: 1rem;
+        }
+    }
+
+    //.your-message {
+    //    grid-column-start: 1;
+    //    grid-column-end: 3;
+    //    .acfm-contact-form__control {
+    //        height: 8.5rem;
+    //    }
+    //}
+
+    .submit-wrapper {
+        text-align: center;
+    }
+
+    &__mail {
+        @include font-size-md();
+        display: inline-block;
+        margin-top: 1em;
+        color: $brand_primary;
+
+        @media #{$md} {
+            //flex-basis: 60%;
+            margin: 0;
+        }
+
+        &::before {
+            display: inline-block;
+            width: 1em;
+            height: 0.8em;
+            margin-right: 0.25em;
+            content: '';
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.393' height='17'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:#{$brand_primary_svg};stroke-linecap:round;stroke-linejoin:round%7D%3C/style%3E%3C/defs%3E%3Cg id='Icon_feather-mail' data-name='Icon feather-mail' transform='translate(-2.304 -5.5)'%3E%3Cpath id='Path_697' d='M5 6h16a2.006 2.006 0 012 2v12a2.006 2.006 0 01-2 2H5a2.006 2.006 0 01-2-2V8a2.006 2.006 0 012-2z' class='cls-1' data-name='Path 697'/%3E%3Cpath id='Path_698' d='M23 9l-10 7L3 9' class='cls-1' data-name='Path 698' transform='translate(0 -1)'/%3E%3C/g%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+    }
+
+    .prfw-btn-primary {
+        @include button_primary();
+        padding: 2.5rem 3rem;
+        margin-top: 2rem;
+
+        &:hover {
+            &::after {
+                transform: none;
+            }
+        }
+    }
+}
+
+.cf7-message {
+    @media #{$md} {
+        height: 11rem;
+    }
+}
+
+.your-phone {
+    span.acfm-contact-form__placeholder {
+        padding-left: 8rem;
+    }
+}
+
+.contact {
+    z-index: 99 !important;
+
+    @media #{$md} {
+        bottom: 6rem;
+    }
+
+    @media #{$lg} {
+        bottom: 17rem;
+    }
+
+    .acfm-list-inline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media #{$md} {
+            left: 4rem;
+            flex-direction: row;
+            align-items: start;
+        }
+
+        @media #{$lg} {
+            bottom: 11rem;
+            left: 1rem;
+        }
+
+        @media #{$xl} {
+            position: relative;
+            bottom: 15rem;
+            left: 4rem;
+        }
+
+        &__item {
+            gap: 0;
+        }
+
+        &__icon {
+            background: transparent;
+            transform: scale(1);
+
+            &:hover {
+                path {
+                    fill: $brand_secondary;
+                }
+            }
+        }
+    }
+}

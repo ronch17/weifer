@@ -1,0 +1,18 @@
+<uib-tabset active="$ctrl.activeCategory" justified="true" class="ngt-categories-count-{{$ctrl.categories.length}}">
+  <div
+    class="{{ $ctrl.styles.item }}"
+    ng-repeat="category in $ctrl.categories track by $index"
+  >
+    <uib-tab
+      index="category"
+      heading="{{ category }}"
+      select="$ctrl.onTabSelected({ tab: category })"
+    >
+        <div ng-if="category === $ctrl.activeCategory">
+        <prf-assets-table
+            assets="$ctrl.activeCategoryAssets">
+        </prf-assets-table>
+      </div>
+    </uib-tab>
+  </div>
+</uib-tabset>

@@ -1,0 +1,47 @@
+version:                   '3'
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - /home/proftit/ssl-for-origin/:/mnt/ssl-for-origin
+      - ./config/prod/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/prod/conf.d:/etc/nginx/conf.d
+    restart: always
+    network_mode: "host"
+
+  wordpress:
+    image: wordpress:6.1.1-php7.4
+    depends_on:
+      - db
+    volumes:
+      - ./app/legal:/var/www/html/legal/
+      - ./app/wp-content:/var/www/html/wp-content/
+      - ./config/wp-config.php:/var/www/html/wp-config.php
+      - ./config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./config/prod/.htaccess:/var/www/html/.htaccess
+      - ./config/prod/.htpasswd:/var/www/html/.htpasswd
+      #- ../ssl:/etc/apache2/certs
+      - ./config/prod/000-default.conf:/etc/apache2/sites-available/000-default.conf
+      - ./config/prod/ports.conf:/etc/apache2/ports.conf
+    env_file:
+      - ./config/prod/.env
+    command:
+      - bash
+      - -c
+      - |
+        a2ensite 000-default
+        docker-entrypoint.sh apache2-foreground
+    restart:               always
+    network_mode: "host"
+
+  db:
+    image:                 mariadb:latest
+    volumes:
+      - ./db:/var/lib/mysql
+    restart:               always
+    environment:
+      MYSQL_ROOT_PASSWORD: proftit_wordpress
+      MYSQL_DATABASE:      wordpress
+      MYSQL_USER:          wordpress
+      MYSQL_PASSWORD:      q+NF6_6rXTxM@?UJ
+    network_mode: "host"
