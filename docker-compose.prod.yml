@@ -19,7 +19,7 @@ services:
       - ./config/wp-config.php:/var/www/html/wp-config.php
       - ./config/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./config/prod/.htaccess:/var/www/html/.htaccess
-      - ./config/prod/.htpasswd:/var/www/html/.htpasswd
+#      - ./config/prod/.htpasswd:/var/www/html/.htpasswd
       #- ../ssl:/etc/apache2/certs
       - ./config/prod/000-default.conf:/etc/apache2/sites-available/000-default.conf
       - ./config/prod/ports.conf:/etc/apache2/ports.conf

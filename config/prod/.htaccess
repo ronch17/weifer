@@ -7,7 +7,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
 
-AuthType Basic
-AuthName "Enter Credentials"
-AuthUserFile /var/www/html/.htpasswd
-Require valid-user
+#AuthType Basic
+#AuthName "Enter Credentials"
+#AuthUserFile /var/www/html/.htpasswd
+#Require valid-user

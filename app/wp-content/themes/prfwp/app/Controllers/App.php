@@ -102,8 +102,7 @@ class App extends Controller {
         } elseif ($widget === 'prf-trading-accounts-summary-widget') {
             return "<${widget} type=\"forex\" ng-if=\"prf.tradingAccount\"></${widget}>";
         } elseif ($widget === 'prf-deposit-widget') {
-            return "<${widget} ng-if=\"prf.tradingAccount\"></${widget}>" .
-                '<script src="https://public.getcrypto.exchange/button.min.js"></script>';
+            return "<${widget} ng-if=\"prf.tradingAccount\"></${widget}>";
         } elseif ($widget === 'prf-refer-a-friend-widget') {
             return "<${widget} ng-if=\"prf.tradingAccount\"></${widget}>";
         } else {

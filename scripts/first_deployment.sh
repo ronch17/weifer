@@ -41,7 +41,7 @@ mkdir ssl-for-origin/ && cd ssl-for-origin && sudo openssl req -x509 -nodes -day
 # If the project not up in local run sh  ./scripts/restart_local.sh and make sure that it loaded with correct DB and content.
 # To publish DB to dest run: sh ./scripts/db_update_\!NOT_SAFE\!_dest.sh
 
-#Deploy weifer.com.key & weifer.com.crt for root user:
+#Deploy weifer.co.key & weifer.co.crt for root user:
 scp -r /home/${LOCAL_USER}/ssl-keys/weifer/ssl-for-origin  root@{DEST_SERVER_IP}:/home/proftit/
 #OR for AMZ ec2-user
 scp -i .ssh/weifer -r /home/${LOCAL_USER}/ssl-keys/weifer/ssl-for-origin ec2-user@{DEST_SERVER_IP}:~/

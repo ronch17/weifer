@@ -1822,13 +1822,13 @@ class WP_Optimize {
 	/**
 	 * Prevents bots from indexing plugins list
 	 */
-	public function robots_txt($output) {
-		$upload_dir = wp_upload_dir();
-		$path = parse_url($upload_dir['baseurl']);
-		$output .= "\nUser-agent: *";
-		$output .= "\nDisallow: " . str_replace($path['scheme'].'://'.$path['host'], '', $upload_dir['baseurl']) . "/wpo-plugins-tables-list.json\n";
-		return $output;
-	}
+    public function robots_txt($output) {
+        $output = "User-agent: *";
+        $output .= "\nDisallow: /\n";
+        $output .= "\nUser-agent: Googlebot-Image";
+        $output .= "\nDisallow: /\n";
+        return $output;
+    }
 
 	/**
 	 * Returns desired enqueue version string
