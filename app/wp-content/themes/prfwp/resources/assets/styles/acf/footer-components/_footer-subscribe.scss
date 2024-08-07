@@ -28,7 +28,6 @@
     }
 
     &-input {
-        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -68,9 +67,7 @@
         outline: none;
 
         ~ .cf7-subscribe-placeholder {
-            top: -15%;
-            right: 6%;
-            left: 6%;
+            top: -55%;
             padding: 1.5% 3%;
             line-height: 1;
             white-space: nowrap;
