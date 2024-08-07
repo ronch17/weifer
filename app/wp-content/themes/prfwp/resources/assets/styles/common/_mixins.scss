@@ -201,7 +201,6 @@
     animation-fill-mode: both;
 }
 
-
 @mixin fadeIn-right-onScroll {
     animation: fadeInRight;
     animation-timeline: scroll();
@@ -231,7 +230,6 @@
         opacity: 100%;
     }
 }
-
 
 @keyframes fadeInBottom {
     from {

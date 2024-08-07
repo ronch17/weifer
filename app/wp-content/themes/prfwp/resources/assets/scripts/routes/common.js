@@ -395,6 +395,13 @@ function revealFunction() {
         reset: false,
     });
 
+    ScrollReveal().reveal('.gallery', {
+        origin: 'bottom',
+        duration: 500,
+        easing: 'ease-in-out',
+        reset: false,
+    });
+
 }
 
 

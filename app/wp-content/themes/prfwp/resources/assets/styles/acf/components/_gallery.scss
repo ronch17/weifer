@@ -5,7 +5,7 @@
         bottom: 17%;
         display: flex;
         width: 10%;
-        animation: fadeInUp 1s;
+
         @media #{$lg} {
             bottom: 30%;
             left: 0%;
@@ -59,7 +59,7 @@
         bottom: 10%;
         display: flex;
         width: 10%;
-        animation: fadeInUp 1s;
+
         @media #{$lg} {
             bottom: 30%;
             left: 0%;
