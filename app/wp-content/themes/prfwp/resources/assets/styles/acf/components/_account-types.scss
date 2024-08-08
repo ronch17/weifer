@@ -18,7 +18,6 @@
     }
 
     &__item {
-        @include fade();
         max-width: em(324, 16);
         height: 100%;
         background: $brand_white;

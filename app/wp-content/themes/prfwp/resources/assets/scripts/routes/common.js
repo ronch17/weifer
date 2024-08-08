@@ -210,16 +210,6 @@ export default {
             ],
         });
 
-        document.querySelectorAll('.splide__arrow').forEach(el =>
-            el.addEventListener('click', function() {
-                let circleElement = document.querySelector('.splide__slide');
-
-                let clonedElement = circleElement.cloneNode(true);
-
-                circleElement.parentNode.replaceChild(clonedElement, circleElement);
-            })
-        );
-
         // // change the header background on specific pages
         //
         // // Function to check if the current slug matches any in the list
@@ -401,7 +391,6 @@ function revealFunction() {
         easing: 'ease-in-out',
         reset: false,
     });
-
 }
 
 

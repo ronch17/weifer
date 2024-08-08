@@ -17,5 +17,5 @@ LOCAL_FILE=`ls -ht ./backup/*.sql.gz  | head -n 1`
 echo "The new dump copied to: $LOCAL_FILE"
 sleep 1
 cp ${LOCAL_FILE}  ./backup/wp-${DEST_DB_EXPORT_NAME}.sql.gz
-zcat ${LOCAL_FILE} | docker exec -i ${LOCAL_DOCKER_NAMESPACE}-db-1 mariadb -u wordpress --password=${DB_PASSWORD} wordpress
+zcat ${LOCAL_FILE} | sed '1d' | docker exec -i ${LOCAL_DOCKER_NAMESPACE}-db-1 mariadb -u wordpress --password=${DB_PASSWORD} wordpress
 echo "Local DB for ${DEST_DOCKER_NAMESPACE} updated successfully ."

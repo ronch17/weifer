@@ -198,7 +198,6 @@
 
 @mixin fade {
     animation: Fade ease-in-out 1s;
-    animation-fill-mode: both;
 }
 
 @mixin fadeIn-right-onScroll {
