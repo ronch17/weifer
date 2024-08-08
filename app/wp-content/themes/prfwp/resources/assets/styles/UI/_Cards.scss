@@ -57,9 +57,7 @@
     @include cards();
 
     @media #{$until_md} {
-        &:nth-child(0), &:nth-child(1) {
-            margin-bottom: 10em !important;
-        }
+        height: 100%;
     }
 }
 
