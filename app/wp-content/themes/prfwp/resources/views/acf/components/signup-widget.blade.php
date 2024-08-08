@@ -2,7 +2,7 @@
 @set($component, get_sub_field('style') ? 'acfm-inline-' . App::layout() : 'acfm-' . App::layout())
 
 <?php
-$default_key = '5bfe9399760e9545853738';
+$default_key = '664b591b7dc8c769857658';
 if ( defined( 'CRM_ENV') && CRM_ENV === 'development' ):
     $form_key = $default_key;
   else:

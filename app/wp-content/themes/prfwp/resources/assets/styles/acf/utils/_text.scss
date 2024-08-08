@@ -1,3 +1,4 @@
+// stylelint-disable
 .acfm-text {
     line-height: (28 / 18);
 
@@ -63,6 +64,9 @@
 
     &-xl {
         @include font-size-xl();
+        @media #{$until_md} {
+            font-size: 2.8rem;
+        }
     }
 
     &-light {

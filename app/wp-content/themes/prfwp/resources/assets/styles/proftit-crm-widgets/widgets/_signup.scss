@@ -20,6 +20,12 @@
         }
     }
 
+    &__phone,
+    &__country {
+        border: 1px solid $brand_gray_border;
+        border-radius: 5rem;
+    }
+
     &__control {
         position: relative;
         width: 100%;

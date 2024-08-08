@@ -61,6 +61,12 @@
     }
 }
 
+.acfm-section:has(.card2) {
+    @media #{$until_xxl} {
+        padding-top: 0;
+    }
+}
+
 .card3 {
     @include cards();
     padding: 0;

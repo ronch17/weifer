@@ -36,6 +36,9 @@
             &:nth-child(3) {
                 animation: levitating 2.8s infinite alternate;
                 translate: 24% -235%;
+                @media #{$until_md} {
+                    translate: 24% -215%;
+                }
             }
 
             &:nth-child(4) {
