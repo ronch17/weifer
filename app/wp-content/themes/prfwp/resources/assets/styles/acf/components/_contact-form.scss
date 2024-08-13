@@ -7,11 +7,11 @@
         padding: 4rem;
     }
 
-    .wpcf7-phonetext {
-        &:focus {
-            background: red;
-        }
-    }
+    //.wpcf7-phonetext {
+    //    &:focus {
+    //        background: red;
+    //    }
+    //}
 
     &__title {
         @include font-size-xs();
