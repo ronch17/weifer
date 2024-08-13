@@ -3,15 +3,8 @@
 .acfm-footer-logo {
     display: flex;
     justify-content: center;
-    transform: scale(0.5);
-
-    @media #{$md} {
-        display: block;
-        margin-left: 13rem;
-    }
 
     &__link {
-        @include logo-dimensions(210, 30, 50, 280);
 
         display: block;
         height: 10rem;
@@ -20,12 +13,12 @@
 
         svg {
             position: relative;
-            transform: scale(2.5);
-            @include transition();
-
+            left: 85%;
             @media #{$md} {
-                right: 4rem;
+                left: 50%;
             }
+            scale: 2;
+            @include transition();
 
             path {
                 fill: currentColor;

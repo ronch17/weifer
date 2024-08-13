@@ -2,20 +2,26 @@
 # This file is distributed under the same license as the Plugins - Search &amp; Replace - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-02 17:47:45+0000\n"
+"PO-Revision-Date: 2024-08-07 18:08:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: GlotPress/4.0.0-beta.3\n"
+"X-Generator: GlotPress/4.0.1\n"
 "Language: de\n"
 "Project-Id-Version: Plugins - Search &amp; Replace - Stable (latest release)\n"
 
+#: inc/templates/credits.php:17
+msgid "Search and Replace is onwend since 2024 by <a href=\"%3$s\">WP Media</a> and refactored in 2015 by <a href=\"%1$s\">Syde GmbH</a>.It is based on the original from <a href=\"%2$s\">Mark Cunningham</a>."
+msgstr "Search and Replace wird seit 2024 von <a href=\"%3$s\">WP Media</a> betrieben und wurde 2015 von der <a href=\"%1$s\">Syde GmbH</a> überarbeitet. Es basiert auf dem Original von <a href=\"%2$s\">Mark Cunningham</a>."
+
 #. Author URI of the plugin
+#: inpsyde-search-replace.php
 msgid "https://wp-media.me/"
 msgstr "https://wp-media.me/"
 
 #. Author of the plugin
+#: inpsyde-search-replace.php
 msgid "WP MEDIA SAS"
 msgstr "WP MEDIA SAS"
 
@@ -55,11 +61,11 @@ msgstr "Suchwert, Austauschwert (je einer pro Zeile)"
 msgid "CSV Format Search/Replace:"
 msgstr "CSV-Format suchen/ersetzen:"
 
-#: inc/Database/Exporter.php:633
+#: inc/Database/Exporter.php:636
 msgid "Cannot Process the file - Search &amp; Replace"
 msgstr "Die Datei kann nicht verarbeitet werden - Suchen &amp; Ersetzen"
 
-#: inc/Database/Exporter.php:632
+#: inc/Database/Exporter.php:635
 msgid "Seems was not possible to create the file for some reason."
 msgstr "Vermutlich konnte die Datei aus irgendwelchen Gründen nicht erstellt werden. "
 
@@ -85,10 +91,12 @@ msgid "Your search contains your current site url. Replacing your site url can c
 msgstr "Dein Suchbegriff enthält die aktuelle Site-URL. Mit der Änderung der Site-URL kann deine Website unbrauchbar werden. Willst du wirklich fortfahren?"
 
 #. Description of the plugin
+#: inpsyde-search-replace.php
 msgid "Search & Replace data in your whole WordPress setup, backup and import your database, change table prefix or migrate your domain to another domain."
 msgstr "Suche und ersetze Daten in deiner ganzen WordPress-Instanz, sichere und importiere die Datenbank, ändere das Tabellen-Präfix oder migriere deine Domain zu einer anderen Domain."
 
 #. Plugin URI of the plugin
+#: inpsyde-search-replace.php
 msgid "https://wordpress.org/plugins/search-and-replace/"
 msgstr "https://wordpress.org/plugins/search-and-replace/"
 
@@ -165,70 +173,13 @@ msgstr "Suche nach:"
 msgid "Create a backup of your database by clicking \"Create SQL File\"."
 msgstr "Erstelle ein Backup von deiner Datenbank, indem du auf „SQL-Datei erstellen“ klickst."
 
-#. translators: $1 is a url
-#: inc/templates/credits.php:125
-msgid "If you love open source and especially WordPress, if you love to organize your working days by yourself, and you want to use your pragmatic problem-solving skills and result-oriented work methods: <a href=\"%s\">join our team</a>!"
-msgstr "Wenn du Open Source und vor allem WordPress liebst, wenn du es liebst, deine Arbeitstage selbst zu organisieren und deine pragmatische Problemlösungskompetenz und ergebnisorientierten Arbeitsmethoden nutzen möchtest: <a href=\"%s\">Schließ dich unserem Team an</a>! "
-
-#: inc/templates/credits.php:114
-msgid "freedom for personal development and responsible, self-reliant action"
-msgstr "Freiheit für persönliche Entwicklung und verantwortliches, selbständiges Handeln"
-
-#: inc/templates/credits.php:113
-msgid "a wide variety of tasks"
-msgstr "eine Vielzahl von Aufgaben"
-
-#: inc/templates/credits.php:112
-msgid "deliberately flat hierarchies and short decision paths"
-msgstr "bewußt flache Hierarchien und kurze Entscheidungswege"
-
-#: inc/templates/credits.php:111
-msgid "flexible working hours in remote office"
-msgstr "flexible Arbeitszeiten im Remote Office"
-
-#: inc/templates/credits.php:110
-msgid "challenging and exciting projects"
-msgstr "herausfordernde und aufregende Projekte"
-
-#: inc/templates/credits.php:103
-msgid "At the moment we’re looking for developers for WordPress based products and services. If you’re not a developer and want to be part of us, we’d be happy to recieve your unsolicited application. At Inpsyde you can expect an open, modern and lively company culture:"
-msgstr "Im Moment sind wir auf der Suche nach Entwicklern für WordPress-basierte Produkte und Dienstleistungen. Wenn du kein Entwickler bist und Teil von uns sein möchtest, freuen wir uns auf deine Initiativbewerbung. Bei Inpsyde erwartet dich eine offene, moderne und lebendige Firmenkultur:"
-
-#: inc/templates/credits.php:96
-msgid "As the biggest WordPress enterprise in Europe, we’re dynamically growing and constantly looking for new employees. So, do you want to shape WordPress in an interesting and exciting work environment? Here we are!"
-msgstr "Als das größte WordPress-Unternehmen in Europa wachsen wir dynamisch und suchen ständig neue Mitarbeiter. Möchtest Du WordPress in einer interessanten und aufregenden Arbeitsumgebung gestalten? Hier sind wir!"
-
-#: inc/templates/credits.php:94
-msgid "Working at Inpsyde"
-msgstr "Arbeiten bei Inpsyde"
-
-#: inc/templates/credits.php:81
-msgid "Look at our other <a href=\"%s\">free WordPress plugins</a>."
-msgstr "Schau dir auch unsere anderen <a href=\"%s\">kostenlosen WordPress-Plugins</a> an."
-
-#: inc/templates/credits.php:63
-msgid "Inpsyde is a WordPress <a href=\"%1$s\">VIP Service Partner</a> and <a href=\"%2$s\">WooCommerce Expert</a>."
-msgstr "Inpsyde ist ein WordPress <a href=\"%1$s\">VIP Service Partner</a>  und <a href=\"%2$s\">WooCommerce Expert</a>."
-
-#: inc/templates/credits.php:54
-msgid "Inpsyde has developed enterprise solutions with the world’s most popular open-source CMS ever since it was a kitten. We still do, inconvincibly convinced."
-msgstr "Inpsyde hat Enterprise-Lösungen mit dem populärsten Open-Source CMS der Welt entwickelt, seit es klein ist und macht es immer noch – unbelehrbar überzeugt."
-
-#: inc/templates/credits.php:52
-msgid "We are Inpsyde"
-msgstr "Wir sind Inpsyde"
-
-#: inc/templates/credits.php:37
+#: inc/templates/credits.php:38
 msgid "You can contribute the Plugin go to the repository on <a href=\"%s\">github</a> making changes, creating issues, or submitting changes."
 msgstr "Du kannst am Plugin mitwirken, indem du im Repository auf <a href=\"%s\">GitHub</a> Änderungen vornimmst, Issues erstellst oder Änderungen einreichst."
 
-#: inc/templates/credits.php:33
+#: inc/templates/credits.php:34
 msgid "You rock! contribute the plugin."
 msgstr "Du rockst! Wirke am Plugin mit."
-
-#: inc/templates/credits.php:17
-msgid "Search and Replace is refactored in 2015 by <a href=\"%1$s\">Inpsyde GmbH</a>, maintained since 2006 and based on the original from <a href=\"%2$s\">Mark Cunningham</a>."
-msgstr "Search and Replace wurde 2015 von <a href=\"%1$s\">Inpsyde GmbH</a> überarbeitet, wird seit 2006 betreut und basiert auf dem Original von <a href=\"%2$s\">Mark Cunningham</a>."
 
 #: inc/templates/credits.php:13
 msgid "Hey nice to have you here!"
@@ -332,8 +283,8 @@ msgid "Errors:"
 msgstr "Fehler:"
 
 #. Plugin Name of the plugin
-#: inc/Page/AbstractPage.php:26 inc/Page/Manager.php:104
-#: inc/Page/SearchReplace.php:85
+#: inpsyde-search-replace.php inc/Page/AbstractPage.php:26
+#: inc/Page/Manager.php:104 inc/Page/SearchReplace.php:85
 msgid "Search & Replace"
 msgstr "Search & Replace"
 
@@ -402,7 +353,7 @@ msgid "There was an error writing a line to the backup script: %s"
 msgstr "Beim Schreiben einer Zeile in das Backup-Skript ist ein Fehler aufgetreten:"
 
 #. translators: $1 is the name of the table
-#: inc/Database/Exporter.php:550
+#: inc/Database/Exporter.php:553
 msgid "End of data contents of table %s"
 msgstr "Ende des Dateninhalts der Tabelle %s"
 
