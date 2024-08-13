@@ -3,8 +3,8 @@
 <div class="{{$component}}-wrapper">
 
   <div class="{{$component}}__switcher-wrapper">
-    <button class="{{$component}}__switcher switcher-first-group active">{{_e('Just Starting', 'sage')}}</button>
-    <button class="{{$component}}__switcher switcher-second-group">{{_e('Next Level', 'sage')}}</button>
+    <button class="{{$component}}__switcher switcher-first-group active">{{_e('Accounts', 'sage')}}</button>
+    <button class="{{$component}}__switcher switcher-second-group">{{_e('Savings', 'sage')}}</button>
   </div>
 
   <ul class="{{$component}}">

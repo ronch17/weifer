@@ -210,39 +210,6 @@ export default {
             ],
         });
 
-        // // change the header background on specific pages
-        //
-        // // Function to check if the current slug matches any in the list
-        // const slugsToCheck = [
-        //     '/deposit/',
-        //     '/personal-info/',
-        //     '/account-summary/',
-        //     '/transactions/',
-        //     '/withdrawal/',
-        //     '/documents-kyc/',
-        //     '/refer-a-friend/',
-        //     '/intrenal-transfer/',
-        // ];
-        // const header = document.querySelector('.prfwp-header');
-        // const navbar = document.getElementById('menu-primary');
-        //
-        // function checkCurrentSlug() {
-        //     const currentSlug = window.location.pathname;
-        //
-        //     for (let i = 0; i < slugsToCheck.length; i++) {
-        //         const slug = slugsToCheck[i];
-        //         if (currentSlug.endsWith(slug)) {
-        //             // console.log(`The slug of the page is ${slug}`);
-        //             navbar.style.color = '#2f363d';
-        //             header.style.display = 'none';
-        //             return; // exit the loop once a match is found
-        //         } else if (currentSlug.endsWith('/open-account/')) {
-        //             header.style.backgroundColor = '#fff';
-        //         }
-        //     }
-        // }
-        //
-        // checkCurrentSlug();
 
         const accSwitcher = document.querySelectorAll('.acfm-account-types__switcher');
         const firstGroup = document.querySelectorAll('.first-group');
@@ -285,6 +252,22 @@ export default {
                 }
             });
         });
+
+        const input = document.querySelector('.wpcf7-phonetext');
+        console.log(input)
+
+        function togglePlaceholder() {
+            if (input.value) {
+                input.setAttribute('placeholder', '');
+            } else {
+                input.setAttribute('placeholder', 'Enter your name');
+            }
+        }
+
+        input.addEventListener('input', togglePlaceholder);
+        input.addEventListener('blur', togglePlaceholder);
+        input.addEventListener('focus', togglePlaceholder);
+
     },
 };
 
