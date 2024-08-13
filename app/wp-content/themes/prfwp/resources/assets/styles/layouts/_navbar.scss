@@ -3,6 +3,12 @@
 .prfwp-navbar {
     z-index: 3;
 
+    //@media #{$until_xl} {
+    //    &__container {
+    //        flex-direction: column;
+    //    }
+    //}
+
     &__container {
         position: relative;
         display: flex;
@@ -119,11 +125,14 @@
     }
 }
 
-div#topNavigation {
-    z-index: 1;
-    position: relative;
-    top: 0;
+@media #{$md} {
+    div#topNavigation {
+        position: relative;
+        top: 0;
+        z-index: 1;
+    }
 }
+
 
 svg#Logo {
     path.logo-text {
