@@ -119,6 +119,12 @@
     }
 }
 
+div#topNavigation {
+    z-index: 1;
+    position: relative;
+    top: 0;
+}
+
 svg#Logo {
     path.logo-text {
         fill: $brand_white;

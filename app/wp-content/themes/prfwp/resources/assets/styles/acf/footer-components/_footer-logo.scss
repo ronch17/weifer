@@ -5,7 +5,6 @@
     justify-content: center;
 
     &__link {
-
         display: block;
         height: 10rem;
         margin-bottom: 2em;
@@ -13,11 +12,12 @@
 
         svg {
             position: relative;
-            left: 85%;
+            left: 15%;
             @media #{$md} {
                 left: 50%;
+                scale: 2;
             }
-            scale: 2;
+
             @include transition();
 
             path {
