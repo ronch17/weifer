@@ -12,8 +12,6 @@ hello.php
 twen*/
 app/wp-content/uploads/cache/
 app/wp-content/updraft/log*
-!/backup/
-backup/**
 !backup/wp-tradelly-test.sql.gz
 !backup/wp-tradelly-com.sql.gz
 !backup/wp-tradelly-io.sql.gz
