@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - UpdraftPlus: WP Backup &amp; Migration Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-30 23:20:58+0000\n"
+"PO-Revision-Date: 2024-09-09 22:14:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1917,10 +1917,6 @@ msgstr "Nachdem du diesen Button gedrückt hast, kannst du aus einer Liste deine
 msgid "You must select at least one remote storage destination to upload this backup set to."
 msgstr "Du musst mindestens ein Remote-Speicherziel auswählen, um dieses Sicherungs-Set hochzuladen."
 
-#: admin.php:1050
-msgid "Local backup upload has started; please check the log file to see the upload progress"
-msgstr "Hochladen der lokalen Sicherung hat begonnen – bitte prüfe den aktuellen Status-Tab, um den Fortschritt zu sehen"
-
 #: admin.php:3330
 msgid "Interested in knowing about your UpdraftPlus.Com password security? Read about it here."
 msgstr "Möchtest du mehr über die Passwortsicherheit von UpdraftPlus.com erfahren? Lies hier mehr darüber."
@@ -2976,10 +2972,6 @@ msgstr "Verfügst du über keinen Online-Speicher?"
 msgid "This button will delete all UpdraftPlus settings and progress information for in-progress backups (but not any of your existing backups from your cloud storage)."
 msgstr "Dieser Button wird alle UpdraftPlus-Einstellungen und Fortschrittsinformationen für laufende Sicherungen löschen (aber keine deiner existierenden Sicherungen in deinem Cloud-Speicher)."
 
-#: admin.php:772
-msgid "Extensions"
-msgstr "Extensions"
-
 #: admin.php:999
 msgctxt "(verb)"
 msgid "Download"
@@ -3036,6 +3028,10 @@ msgstr "Deine gespeicherten Einstellungen betreffen auch den Inhalt der Sicherun
 #: admin.php:3111
 msgid "Backup Contents And Schedule"
 msgstr "Sicherungs-Inhalte und Zeitplan"
+
+#: admin.php:772
+msgid "Extensions"
+msgstr "Erweiterungen"
 
 #: central/translations-central.php:25 includes/class-remote-send.php:555
 msgid "Key created successfully."

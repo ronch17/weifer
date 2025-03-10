@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - UpdraftPlus: WP Backup &amp; Migration Plugin - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-03 11:55:21+0000\n"
+"PO-Revision-Date: 2024-09-16 16:48:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1053,7 +1053,7 @@ msgstr "Versión HTTP no admitida"
 
 #: includes/class-http-error-descriptions.php:73
 msgid "Gateway Timeout"
-msgstr "Gateway Timeout"
+msgstr "Tiempo de espera de la pasarela agotado"
 
 #: includes/class-http-error-descriptions.php:72
 msgid "Generally, this is a temporary state."
